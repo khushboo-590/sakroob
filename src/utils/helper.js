@@ -10,6 +10,15 @@ import support from "../assets/images/svg/support.svg";
 import warranty from "../assets/images/svg/warranty.svg";
 import gift from "../assets/images/svg/gift.svg";
 import heroImg from '../assets/images/png/header-img.png';
+import sensor from '../assets/images/png/close-up-computer.png'
+import pcparts from "../assets/images/png/custom-pc.png"
+import tools from "../assets/images/png/div-tools.png"
+import cables from "../assets/images/png/cable-img.png"
+import controller from '../assets/images/png/gaming-img.png'
+import kits from '../assets/images/png/kits-img.png'
+import pc from "../assets/images/png/image-Photoroom.png"
+import router from "../assets/images/png/computers-Photoroom.png"
+import chair from '../assets/images/png/chair-png-Photoroom.png'
 
 
 export const HEADER_DATA = [
@@ -19,6 +28,12 @@ export const HEADER_DATA = [
     { name: "Televisions", icon: televisions },
     { name: "Smartwatch", icon: smartwatch },
     { name: "Monitors", icon: monitors },
+    { name: "Graphic Card", icon: graphic },
+    // { name: "Televisions", icon: televisions },
+    // { name: "Smartwatch", icon: smartwatch },
+    // { name: "Monitors", icon: monitors },
+
+    
 ];
 export const FEATURES = [
     { icon: delivery, title: "EXPRESS Delivery", desc: "Order Now" },
@@ -41,5 +56,61 @@ export const heroData = [
             'Explore niche tech gear, DIY kits, and pro tools — built for creators, gamers, and engineers.',
         img: heroImg,
     },
-    
+
 ];
+export const POPULAR_DATA = [
+    {
+        title: "Sensors & Modules",
+        image: sensor,
+        bg: "bg-blue-100",
+    },
+    {
+        title: "Custom PC Parts",
+        image: pcparts,
+        bg: "bg-white",
+    },
+    {
+        title: "DIY Tools",
+        image: tools ,
+        bg: "bg-gray-100",
+    },
+    {
+        title: "Cables & Connectors",
+        image: cables,
+        bg: "bg-white",
+    },
+    {
+        title: "Gaming Peripherals",
+        image: controller,
+        bg: "bg-white",
+    },
+    {
+        title: "Raspberry Pi Kits",
+        image: kits,
+        bg: "bg-blue-100",
+    },
+];
+export const bestsellers = [
+    {
+        name: "Vortex Gaming PC",
+        desc: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        image: pc,
+        color: "bg-gray-100", // ✅ use full Tailwind class
+    },
+    {
+        name: "D-Link ADSL Wireless Router DSL2790U",
+        desc: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        image: router,
+        color: "bg-blue-100",
+    },
+    {
+        name: "Gaming Chair",
+        desc: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        image: chair,
+        color: "bg-gray-100",
+    },
+];
+  

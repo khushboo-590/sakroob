@@ -11,12 +11,13 @@ const HeroSlider = () => {
     return (
         <div className="relative max-w-[1384px] mx-auto mb-[66px]">
             <Swiper
-                modules={[Autoplay, Pagination]} 
-                pagination={{ clickable: true  }}
+                modules={[Autoplay, Pagination]}
+                pagination={{ clickable: true }}
                 autoplay={{ delay: 5000 }}
                 loop={true}
+                className="hero-swiper"
             >
-                {heroData.map((item, index) => (
+ {heroData.map((item, index) => (
                     <SwiperSlide key={index}>
                         <div className="relative">
                              <img src={heroImg} alt="Hero" className='w-full' />

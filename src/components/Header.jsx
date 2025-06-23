@@ -4,8 +4,8 @@ import { HEADER_DATA } from '../utils/helper';
 const Header = () => {
     return (
         <div className='bg-white'>
-            <div className="py-4 px-2 overflow-hidden w-full bg-white">
-                <div className="flex gap-3 animate-marquee w-max">
+            <div className=" w-full bg-white">
+                <div className="flex gap-3 animate-marquee ">                  
                     {HEADER_DATA.map((item, index) => (
                         <div
                             key={index}

@@ -6,9 +6,25 @@ body{
   font-family: "Montserrat", sans-serif;
   color: #112D49;
 }
+
+.hero-swiper .swiper-pagination {
+  bottom: 20px !important;
+  text-align: center;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  background: #112D49;
+  opacity: 0.5;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  background: #112D49;
+  opacity: 1;
+}
+
 @keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 
   100% {
@@ -17,28 +33,8 @@ body{
 }
 
 .animate-marquee {
-  animation: marquee 24s linear infinite;
   display: flex;
-  width: fit-content;
-  animation-play-state: running;
-}
-.swiper-pagination-bullet {
-  width: 21px;
-  height: 2px;
-  background-color:#E8E8E8;
-  opacity: 0.5;
-  transform:  translateY(30px);
-  transition: all 0.3s ease-in-out;
-}
-
-.swiper-pagination-bullet:hover {
-  width: 51px;
-  border-radius: 22px;
-  background-color: #112D49;
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  width: 51px;
-  opacity: 1;
+  /* width: fit-content; */
+    animation-play-state: running;
+  animation: marquee 60s linear infinite;
 }

@@ -22,6 +22,8 @@ import chair from '../assets/images/png/chair-png-Photoroom.png'
 import man from "../assets/images/png/man-img.png"
 import girl from "../assets/images/png/girl-img.png"
 import { Icon } from "./icon";
+import blogImg1 from "../assets/images/png/blog-img-1.png";
+import blogImg2 from "../assets/images/png/blog-img-2.png";
 
 
 export const HEADER_DATA = [
@@ -145,5 +147,21 @@ export const CLIENT_DATA = [
             "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,",
         image: man,
         stars: 5,
+    },
+];
+export const blogCard = [
+    {
+        title: "How to Build a Mini NAS",
+        description: "Learn to build your own network storage system with simple components.",
+        linkText: "Read Guide ",
+        image: blogImg1,
+        bgColor: "bg-[#E5E4E2]",
+    },
+    {
+        title: "5 Tools Every Maker Should Own",
+        description: "The essential toolkit for every DIY electronics enthusiast.",
+        linkText: "Read Article ",
+        image: blogImg2,
+        bgColor: "bg-[#EEF4FB]",
     },
 ];

@@ -8,6 +8,8 @@ import BestsellerSlider from './components/BestSelller'
 import Cilent from './components/Cilent'
 import Footer from './components/Footer'
 import SakroobCircle from './components/SakroobCircle'
+import Raspberry from './components/Raspberry'
+import Blog from './components/Blog'
 function App() {
 
   return (
@@ -17,9 +19,11 @@ function App() {
       {/* <HeroSlider/>  */}
       {/* <PopularProducts/> */}
       {/* <BestsellerSlider/> */}
+      <Blog/>
+      <Raspberry />
       <Cilent />
       <SakroobCircle />
-      <Footer/>
+      <Footer />
       
       
       

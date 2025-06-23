@@ -1,12 +1,12 @@
 import React from "react";
-import bgImg from "../assets/images/png/Final -image.png"; 
+import bgImg from "../assets/images/png/Final -image.png";
 import Custombtn from "./common/Custombtn";
 
 const SakroobCircle = () => {
     return (
-        <footer className="relative w-full px-3">
-\            <div
-                className="relative w-full h-[320px] flex items-center justify-center max-w-[1140px] mx-auto rounded-[24px] py-[88px]"
+        <footer className="relative w-full px-3 transform translate-y-[130px]">
+                        <div
+                className="relative w-full  flex items-center justify-center max-w-[1140px] mx-auto rounded-[24px] py-[88px]"
                 style={{
                     backgroundImage: `url(${bgImg})`,
                     backgroundSize: "cover",

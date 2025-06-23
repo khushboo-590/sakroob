@@ -6,7 +6,8 @@ import HeroSlider from './components/HeroSection'
 import PopularProducts from './components/Popular'
 import BestsellerSlider from './components/BestSelller'
 import Cilent from './components/Cilent'
-
+import Footer from './components/Footer'
+import SakroobCircle from './components/SakroobCircle'
 function App() {
 
   return (
@@ -16,7 +17,10 @@ function App() {
       {/* <HeroSlider/>  */}
       {/* <PopularProducts/> */}
       {/* <BestsellerSlider/> */}
-      <Cilent/>
+      <Cilent />
+      <SakroobCircle />
+      <Footer/>
+      
       
       
     </>

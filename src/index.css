@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-body{
+body,html{
   font-family: "Montserrat", sans-serif;
   color: #112D49;
 }
@@ -28,13 +28,13 @@ body{
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
 .animate-marquee {
   display: flex;
-  /* width: fit-content; */
+  width: fit-content;
     animation-play-state: running;
   animation: marquee 60s linear infinite;
 }

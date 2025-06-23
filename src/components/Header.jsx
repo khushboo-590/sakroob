@@ -1,5 +1,5 @@
 import React from 'react';
-import { HEADER_DATA } from '../utils/helper';
+import { HEADER_DATA  } from '../utils/helper';
 
 const Header = () => {
     return (

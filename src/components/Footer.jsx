@@ -4,16 +4,14 @@ import logo from '../assets/images/svg/logo.svg'
 const Footer = () => {
   return (
       <div className="bg-[#0B2341] text-white pt-32 text-center px-4">
-                      <div className="flex justify-center mb-4">
+                      <div className="flex justify-center mb-6">
                           <img src={logo} alt="Sakroob" className="" />
                       </div>
-
-                      <h3 className="font-semibold text-lg mb-2">Sakroob</h3>
-                      <p className="text-sm text-gray-300 mb-4 max-w-md mx-auto">
+                      <p className="text-base leading-[150%]  text-white/80 mb-[27px]  mx-auto max-w-[338px]">
                           Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.
                       </p>
 
-                      <div className="flex flex-wrap justify-center gap-6 text-sm mb-6">
+                      <div className="flex flex-wrap justify-center gap-6 text-base leading-[150%] font-medium mb-[27px]">
                           <a href="#">Shipping</a>
                           <a href="#">Warranty</a>
                           <a href="#">FAQs</a>
@@ -21,10 +19,10 @@ const Footer = () => {
                           <a href="#">Contact</a>
                       </div>
 
-                      <div className="flex justify-center gap-4 mb-4">
-                          <a href="#" className="hover:text-gray-400">FB</a>
-                          <a href="#" className="hover:text-gray-400">IG</a>
-                          <a href="#" className="hover:text-gray-400">TW</a>
+                      <div className="flex justify-center gap-4 mb-[82px]">
+                          <a href="#" className="hover:text-gray-400"></a>
+                          <a href="#" className="hover:text-gray-400"></a>
+                          <a href="#" className="hover:text-gray-400"></a>
                       </div>
 
                       <div className="text-xs text-gray-400">

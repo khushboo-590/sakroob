@@ -19,6 +19,9 @@ import kits from '../assets/images/png/kits-img.png'
 import pc from "../assets/images/png/image-Photoroom.png"
 import router from "../assets/images/png/computers-Photoroom.png"
 import chair from '../assets/images/png/chair-png-Photoroom.png'
+import man from "../assets/images/png/man-img.png"
+import girl from "../assets/images/png/girl-img.png"
+import { Icon } from "./icon";
 
 
 export const HEADER_DATA = [
@@ -96,7 +99,7 @@ export const bestsellers = [
         desc: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$249.99",
         image: pc,
-        color: "bg-gray-100", // ✅ use full Tailwind class
+        color: "bg-gray-100", 
     },
     {
         name: "D-Link ADSL Wireless Router DSL2790U",
@@ -114,3 +117,24 @@ export const bestsellers = [
     },
 ];
   
+export const CLIENT_DATA = [
+    {
+        icon :Icon,
+        name: "William Gate",
+        role: "CEO",
+        message:
+            "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,",
+        image: man,
+        stars: 5,
+    },
+    {
+        icon: Icon,
+        name: "Darrell Steward",
+        role: "Manager",
+        message:
+            "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,",
+
+        image: girl,
+        stars: 5,
+    },
+];

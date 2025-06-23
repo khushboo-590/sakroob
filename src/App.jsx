@@ -5,16 +5,18 @@ import React from 'react'
 import HeroSlider from './components/HeroSection'
 import PopularProducts from './components/Popular'
 import BestsellerSlider from './components/BestSelller'
+import Cilent from './components/Cilent'
 
 function App() {
 
   return (
     <>
-       <Header /> 
+       {/* <Header />  */}
       {/* <Express /> */}
-      <HeroSlider/> 
+      {/* <HeroSlider/>  */}
       {/* <PopularProducts/> */}
-      <BestsellerSlider/>
+      {/* <BestsellerSlider/> */}
+      <Cilent/>
       
       
     </>

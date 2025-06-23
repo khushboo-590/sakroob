@@ -22,94 +22,35 @@ const BestsellerSlider = () => {
                 }}
             >
                 {bestsellers.map((item, i) => (
-                    // <SwiperSlide key={i}>
-                    //     <div className="border rounded-lg shadow-sm p-4 text-left hover:shadow-md transition relative">
-                    //         <img
-                    //             src={item.image}
-                    //             alt={item.name}
-                    //             className="w-full h-48 object-contain mx-auto mb-4"
-                    //         />
-                    //         <h3 className="text-lg font-semibold">{item.name}</h3>
-                    //         <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
-                    //         <p className="text-xl font-semibold mt-4">{item.price}</p>
-
-                    //         <div className="flex items-center text-yellow-400 mt-2">
-                    //             {Array.from({ length: 5 }).map((_, idx) => (
-                    //                 <svg
-                    //                     key={idx}
-                    //                     className="w-5 h-5 fill-current"
-                    //                     xmlns="http://www.w3.org/2000/svg"
-                    //                     viewBox="0 0 20 20"
-                    //                 >
-                    //                     <path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.564-.955L10 0l2.948 5.955 6.564.955-4.756 4.635 1.122 6.545z" />
-                    //                 </svg>
-                    //             ))}
-                    //         </div>
-
-                    //         <button className="mt-4 w-full bg-blue-900 text-white py-2 rounded-full flex items-center justify-center gap-2 hover:bg-blue-700 transition">
-                    //             Shop Now
-                    //             <svg
-                    //                 className="w-5 h-5"
-                    //                 fill="none"
-                    //                 stroke="currentColor"
-                    //                 strokeWidth="2"
-                    //                 viewBox="0 0 24 24"
-                    //             >
-                    //                 <path
-                    //                     strokeLinecap="round"
-                    //                     strokeLinejoin="round"
-                    //                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1 5h13"
-                    //                 />
-                    //             </svg>
-                    //         </button>
-
-                    //         <div className="absolute top-4 right-4 text-blue-500 cursor-pointer">
-                    //             <svg
-                    //                 className="w-6 h-6"
-                    //                 fill="none"
-                    //                 stroke="currentColor"
-                    //                 strokeWidth="2"
-                    //                 viewBox="0 0 24 24"
-                    //             >
-                    //                 <path
-                    //                     strokeLinecap="round"
-                    //                     strokeLinejoin="round"
-                    //                     d="M5 13l4 4L19 7"
-                    //                 />
-                    //             </svg>
-                    //         </div>
-                    //     </div>
-                    // </SwiperSlide>
-                    <SwiperSlide key={i}>
-                        <div className={`border rounded-lg shadow-sm p-4 text-left hover:shadow-md transition relative max-w-[368px] `}>
-                            <img
-                                src={item.image}
-                                alt={item.name}
-                                className={`w-full h-48 object-contain mx-auto mb-4 ${item.color}`}
-                            />
-                            <h3 className="text-2xl font-bold leading-[120%]">{item.name}</h3>
-                            <p className="text-sm leading-[150%] mb-[51px]">{item.desc}</p>
-                            <div className=" flex justify-between">
-                                <p className="text-xl font-semibold mt-4">{item.price}</p>
-                                <img onScroll={star}></img>
-                            </div>
-
-                            <button className="mt-4 w-full bg-blue-900 text-white py-2 rounded-full flex items-center justify-center gap-2 hover:bg-blue-700 transition">
-                                Shop Now
-                                <svg
-                                    className="w-5 h-5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1 5h13"
+                    <SwiperSlide key={i} className="h-full">
+                        <div className="h-full">
+                            <div className={`border rounded-lg shadow-md text-left p-4 transition border-none max-w-[364px] h-full flex flex-col`}>
+                                <div className={`${item.color} p-4`}>
+                                    <img
+                                        src={item.image}
+                                        alt={item.name}
+                                        className="mx-auto mb-4 object-contain h-40"
                                     />
-                                </svg>
-                            </button>
+                                </div>
+
+                                <div className="flex flex-col justify-between flex-grow p-4">
+                                    <div>
+                                        <h3 className="text-2xl font-bold leading-[120%]">{item.name}</h3>
+                                        <p className="text-sm leading-[150%] mb-6 max-w-[332px]">{item.desc}</p>
+                                    </div>
+
+                                    <div>
+                                        <div className="flex justify-between items-center mb-4">
+                                            <p className="text-2xl font-semibold">{item.price}</p>
+                                            <img src={star} alt="Rating" className="" />
+                                        </div>
+
+                                        <button className="w-full bg-blue-900 text-white py-2 rounded-full flex items-center justify-center gap-2 hover:bg-blue-700 transition">
+                                            Shop Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </SwiperSlide>
 

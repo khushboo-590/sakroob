@@ -1,13 +1,12 @@
 import React from "react";
 import { blogCard } from "../utils/helper"
+import CustomHeading from "./common/CustomHeading";
 
 
 const Blog = () => {
     return (
         <div className="max-w-[1384px] mx-auto px-4 py-12">
-            <h2 className="text-5xl md:text-3xl font-bold leading-[100%] text-center  mb-10">
-                Blog, Guides, Build Logs 
-            </h2>
+            <CustomHeading children={"BlBlog, Guides, Build Logs & More"}/>
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
                 {blogCard.map((card, index) => (
                     <div

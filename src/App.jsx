@@ -10,20 +10,32 @@ import Footer from './components/Footer'
 import SakroobCircle from './components/SakroobCircle'
 import Raspberry from './components/Raspberry'
 import Blog from './components/Blog'
+import TopHeader from './components/TopHeader'
+import Cart from './components/Cart'
+import CheckOut from './components/CheckOut'
+import DetailsPage from './components/DetailsPage'
+
+
+
+
 function App() {
 
   return (
     <>
-       {/* <Header />  */}
-      {/* <Express /> */}
-      {/* <HeroSlider/>  */}
-      {/* <PopularProducts/> */}
-      {/* <BestsellerSlider/> */}
-      <Blog/>
+      <TopHeader />
+      <Header />  
+      <HeroSlider />  
+      <Express /> 
+       {/* <PopularProducts/>  */}
+       <BestsellerSlider/>
+      {/* <Blog/>
       <Raspberry />
       <Cilent />
       <SakroobCircle />
-      <Footer />
+      <Footer /> */}
+      {/* <Cart />
+      <CheckOut />
+      <DetailsPage/> */}
       
       
       

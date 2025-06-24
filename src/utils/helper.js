@@ -33,10 +33,13 @@ export const HEADER_DATA = [
     { name: "Televisions", icon: televisions },
     { name: "Smartwatch", icon: smartwatch },
     { name: "Monitors", icon: monitors },
+    { name: "Game", icon: game },
+    { name: "Storage (SSD)", icon: storage },
     { name: "Graphic Card", icon: graphic },
-    // { name: "Televisions", icon: televisions },
-    // { name: "Smartwatch", icon: smartwatch },
-    // { name: "Monitors", icon: monitors },
+    { name: "Televisions", icon: televisions },
+    { name: "Smartwatch", icon: smartwatch },
+    { name: "Monitors", icon: monitors },
+   
 
     
 ];

@@ -6,7 +6,7 @@ import x from "../assets/images/svg/x.svg"
 import cemara from '../assets/images/svg/m.svg'
 const Footer = () => {
     return (
-        <div className="bg-[#0B2341]  pt-32 text-center px-4">
+        <div className="bg-[#0B2341]  pt-32 text-center px-4 mx-auto max-w-[1320px]">
                    <div className="flex justify-center mb-6 mt-[75px]">
                        <img src={logo} alt="Sakroob" className="" />
                    </div>

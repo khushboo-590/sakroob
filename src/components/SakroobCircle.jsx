@@ -5,7 +5,7 @@ import Custombtn from "./common/Custombtn";
 const SakroobCircle = () => {
     return (
         <footer className="relative w-full px-3 transform translate-y-[130px]">
-                        <div
+            <div
                 className="relative w-full  flex items-center justify-center max-w-[1140px] mx-auto rounded-[24px] py-[88px]"
                 style={{
                     backgroundImage: `url(${bgImg})`,

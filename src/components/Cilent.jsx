@@ -6,12 +6,13 @@ import "swiper/css/navigation";
 import { CLIENT_DATA } from "../utils/helper";
 import star from "../assets/images/svg/star.svg";
 import comma from "../assets/images/svg/comma.svg";
+import CustomHeading from "./common/CustomHeading";
 
 const TestimonialSlider = () => {
     return (
-        <div className="max-w-6xl mx-auto text-center px-4 py-[132px] relative">
+        <div className="max-w-[1384px] mx-auto text-center px-4 py-[132px] relative font-montserrat">
             <p className="text-xl italic mb-2 leading-[120%]">Testimonials</p>
-            <h2 className="text-4xl font-bold mb-10 leading-[130%]">What Our Client’s Says</h2>
+            <CustomHeading children={"What Our Client’s Says"}/>
             <button className="custom-prev bg-white shadow-lg rounded-full w-10 h-10 flex items-center max-xl:hidden border-black border justify-center absolute top-1/2 left-[-65px] transform -translate-y-1/2 z-10 hover:bg-black hover:text-white transition-all duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />

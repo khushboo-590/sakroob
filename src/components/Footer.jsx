@@ -6,7 +6,8 @@ import x from "../assets/images/svg/x.svg"
 import cemara from '../assets/images/svg/m.svg'
 const Footer = () => {
     return (
-        <div className="bg-[#0B2341]  pt-32 text-center px-4 mx-auto max-w-[1320px]">
+        <div className=" max-w-[1920px]  text-center mx-auto  font-montserrat  ">
+            <div className=' bg-[#0B2341]  pt-32'>
                    <div className="flex justify-center mb-6 mt-[75px]">
                        <img src={logo} alt="Sakroob" className="" />
                    </div>
@@ -37,13 +38,15 @@ const Footer = () => {
                            <img src={cemara}></img>
         
                        </a>
-                   </div>
+                </div>
+                <div className='border-gradient-top'></div>
         
-                   <div className="text-sm flex justify-between  text-white opacity-80 py-[30px]">
+                   <div className="text-sm flex justify-between  text-white opacity-80 py-[30px] max-w-[1140px] mx-auto">
                        <p className="mb-1">Terms of Service | Privacy Policy</p>
                        <p>© 2025 Sakroob. All rights reserved.</p>
                    </div>
-               </div>
+            </div>
+        </div>
     );
 };
 

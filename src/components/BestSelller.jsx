@@ -33,7 +33,7 @@ const BestsellerSlider = () => {
                 }}
                 loop={true}
                 spaceBetween={24}
-                className="overflow-visible mt-[100px] "
+                className="overflow-visible mt-7 md:mt-[50px] lg:mt-[100px] "
                 breakpoints={{
                     0: { slidesPerView: 1 },
                     640: { slidesPerView: 1 },

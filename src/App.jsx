@@ -30,8 +30,8 @@ function App() {
        <BestsellerSlider/>
       <Blog/>
       <Cilent />
-      {/* <SakroobCircle />
-      <Footer /> */}
+      <SakroobCircle />
+      <Footer />
       {/* <Cart />
       <CheckOut />
       <DetailsPage/> */}

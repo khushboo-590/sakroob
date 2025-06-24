@@ -15,7 +15,7 @@ import pcparts from "../assets/images/png/custom-pc.png"
 import tools from "../assets/images/png/div-tools.png"
 import cables from "../assets/images/png/cable-img.png"
 import controller from '../assets/images/png/gaming-img.png'
-import kits from '../assets/images/png/kits-img.png'
+import kits from '../assets/images/png/pi-kits.png'
 import pc from "../assets/images/png/image-Photoroom.png"
 import router from "../assets/images/png/computers-Photoroom.png"
 import chair from '../assets/images/png/chair-png-Photoroom.png'
@@ -70,32 +70,31 @@ export const POPULAR_DATA = [
     {
         title: "Sensors & Modules",
         image: sensor,
-        bg: "bg-blue-100",
+        bg: "bg-[#D5E8FF]",
     },
     {
         title: "Custom PC Parts",
         image: pcparts,
-        bg: "bg-white",
+        bg: "bg-[#EEF4FB]",
     },
     {
         title: "DIY Tools",
         image: tools ,
-        bg: "bg-gray-100",
+        bg: "bg-[#E5E4E2]",
     },
     {
         title: "Cables & Connectors",
         image: cables,
-        bg: "bg-white",
+        bg: "bg-[#EEF4FB]",
     },
     {
         title: "Gaming Peripherals",
         image: controller,
-        bg: "bg-white",
+        bg: "bg-[#E5E4E2]",
     },
     {
-        title: "Raspberry Pi Kits",
         image: kits,
-        bg: "bg-blue-100",
+        bg: "bg-[#D5E8FF]",
     },
 ];
 export const bestsellers = [

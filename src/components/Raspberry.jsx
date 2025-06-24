@@ -2,11 +2,11 @@ import React from "react";
 import raspberry from '../assets/images/png/comptuer-processor.png'
 import retroConsole from '../assets/images/png/machine.png'
 import Custombtn from "./common/Custombtn";
-const RetroConsoleSection = () => {
+const Raspberry = () => {
     return (
-        <div className="  max-w-[1383px] mx-auto">
+        <div className="  max-w-[1384px] mx-auto mt-6 ">
             <div className="bg-[#D5E8FF]  rounded-[8px] pt-[50px] pb-[34px] px-[18px]  ">
-                <div className=" grid grid-cols-1 md:grid-cols-3 gap-[95px] items-center text-center md:text-left">
+                <div className=" grid grid-cols-1 lg:grid-cols-3 lg:gap-[95px] gap-[20px] items-center text-center md:text-left">
                     <div className="flex justify-center">
                         <img
                             src={raspberry}
@@ -18,7 +18,7 @@ const RetroConsoleSection = () => {
                             Inside a Raspberry Pi <br />
                             <span className="text-gray-900">Retro Console</span>
                         </h2>
-                        <p className="text-base leading-[150%] mt-[12px] mb-7">
+                        <p className="text-base leading-[150%] mt-[12px] mb-7 opacity-80">
                             Step-by-step log of building a retro game machine.</p>
                         <a
                             href="#"
@@ -40,4 +40,4 @@ const RetroConsoleSection = () => {
     );
 };
 
-export default RetroConsoleSection;
+export default Raspberry;

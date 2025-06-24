@@ -22,16 +22,15 @@ function App() {
 
   return (
     <>
-      <TopHeader />
+      {/* <TopHeader /> */}
       <Header />  
       <HeroSlider />  
       <Express /> 
-       {/* <PopularProducts/>  */}
+       <PopularProducts/> 
        <BestsellerSlider/>
-      {/* <Blog/>
-      <Raspberry />
+      <Blog/>
       <Cilent />
-      <SakroobCircle />
+      {/* <SakroobCircle />
       <Footer /> */}
       {/* <Cart />
       <CheckOut />

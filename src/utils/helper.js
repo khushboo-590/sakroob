@@ -104,21 +104,35 @@ export const bestsellers = [
         desc: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$249.99",
         image: pc,
-        color: "bg-gray-100", 
+        color: "bg-[#E5E4E2]", 
     },
     {
         name: "D-Link ADSL Wireless Router DSL2790U",
         desc: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$249.99",
         image: router,
-        color: "bg-blue-100",
+        color: "bg-[#EEF4FB]",
     },
     {
         name: "Gaming Chair",
         desc: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$249.99",
         image: chair,
-        color: "bg-gray-100",
+        color: "bg-[#E5E4E2]",
+    },
+    {
+        name: "D-Link ADSL Wireless Router DSL2790U",
+        desc: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        image: router,
+        color: "bg-[#EEF4FB]",
+    },
+    {
+        name: "Gaming Chair",
+        desc: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        image: chair,
+        color: "bg-[#E5E4E2]",
     },
 ];
   
@@ -168,3 +182,13 @@ export const blogCard = [
         bgColor: "bg-[#EEF4FB]",
     },
 ];
+export const navItems = [
+    { label: "Categories", dropdown: false },
+    { label: "PC Products", dropdown: true },
+    { label: "Services", dropdown: true },
+    { label: "Support", dropdown: true },
+    { label: "About", dropdown: false },
+    { label: "Blog", dropdown: false },
+    { label: "Contact", dropdown: false },
+];
+  

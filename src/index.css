@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .font-montserrat{
   font-family: "Montserrat", sans-serif;
 }
@@ -7,20 +8,8 @@ body{
   color: #112D49;
 }
 
-.hero-swiper .swiper-pagination {
-  bottom: 20px !important;
-  text-align: center;
-}
 
-.hero-swiper .swiper-pagination-bullet {
-  background: #112D49;
-  opacity: 0.5;
-}
 
-.hero-swiper .swiper-pagination-bullet-active {
-  background: #112D49;
-  opacity: 1;
-}
 
 @keyframes marquee {
   0% {
@@ -37,4 +26,10 @@ body{
   width: fit-content;
     animation-play-state: running;
   animation: marquee 60s linear infinite;
+}
+
+.testimonial-swiper,
+.testimonial-swiper .swiper-wrapper,
+.testimonial-swiper .swiper-slide {
+  overflow: visible !important;
 }

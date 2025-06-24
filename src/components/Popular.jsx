@@ -1,14 +1,14 @@
 import React from "react";
 import { POPULAR_DATA } from "../utils/helper";
 import CustomHeading from "./common/CustomHeading";
+import ItalicText from "./common/ItalicText";
 
 const PopularProducts = () => {
     return (
-        <section className="max-w-[1384px] mx-auto px-4 py-10  font-montserrat">
-            <p className="text-sm text-center text-gray-500 mb-2">Featured Categories</p>
-            <CustomHeading className={"" } children={"Shop Our Most Popular Products"}/>
-
-            <div className="flex flex-col gap-6">
+        <div className="max-w-[1384px] mx-auto px-4   font-montserrat mb-[132px]">
+            <ItalicText children={"Featured Categories"} className="mb-2"/>
+            <CustomHeading className={"mb-[57px]" } children={"Shop Our Most Popular Products"}/>
+            {/* <div className="flex flex-col gap-6">
                 <div className="flex flex-col lg:flex-row gap-6">
                     {POPULAR_DATA.slice(0, 3).map((item, index) => (
                         <div
@@ -36,8 +36,8 @@ const PopularProducts = () => {
                         </div>
                     ))}
                 </div>
-            </div>
-        </section>
+            </div> */}
+        </div>
     );
 };
 

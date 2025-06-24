@@ -1,38 +1,42 @@
 import React from "react";
 import logo from '../assets/images/svg/header-logo.svg'
+import { navItems } from "../utils/helper";
 import contactIcon from '../assets/images/svg/contact-icon.svg'
 
 
 const Navbar = () => {
     return (
-        <header className="bg-[#0D2C47] text-white">
-            <div className="max-w-[1384px] mx-auto flex items-center justify-between px-6 py-4">
-                <div className="flex items-center space-x-2 relative">
-                    <div className=" flex items-center justify-center ">
-                       <img src={logo} alt="Sakroob" className=" " />
-                    </div>
-                </div>
-                <nav className="hidden md:flex space-x-6 text-sm">
-                    <a href="#">Categories</a>
-                    <div className="relative group">
-                        <button className="flex items-center gap-1">
-                            PC Products <span>▾</span>
-                        </button>
-                    </div>
-                    <div className="relative group">
-                        <button className="flex items-center gap-1">
-                            Services <span>▾</span>
-                        </button>
-                    </div>
-                    <div className="relative group">
-                        <button className="flex items-center gap-1">
-                            Support <span>▾</span>
-                        </button>
-                    </div>
-                    <a href="#">About</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Contact</a>
+        <header className="bg-[#0D2C47] text-white font-montserrat relative z-10 ">
+            <div className="max-w-[1384px] mx-auto flex items-center justify-between px-6 relative z-20 py-7 ">
+                <div className="">
+                    <img
+                        src={logo}
+                        alt="Sakroob"
+                        className="absolute top-full  transform  -translate-y-[45%]"
+                    />
+
+                </div>     
+                <nav className="hidden md:flex space-x-[32px] ">
+                    {navItems.map((item, index) => (
+                        item.dropdown ? (
+                            <div key={index} className="relative group">
+                                <button className="flex items-center gap-1">
+                                    {item.label} <span>
+                                        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.34863 4.72254L5.3294 7.70331L8.31018 4.72254" stroke="white" stroke-width="0.851649" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+
+                                    </span>
+                                </button>
+                            </div>
+                        ) : (
+                            <a key={index} href="#" className="hover:underline text-base leading-[150%]">
+                                {item.label}
+                            </a>
+                        )
+                    ))}
                 </nav>
+
                 <div className="flex items-center space-x-4 text-white text-lg">
                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 23.2511C4.50108 21.2416 5.64889 19.4525 7.26668 18.1593C8.88446 16.8662 10.8825 16.1407 12.9531 16.0947C15.0237 16.0486 17.052 16.6846 18.7256 17.9045C20.3993 19.1245 21.6255 20.8608 22.2154 22.8461" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -52,7 +56,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-[#F5F9FD] py-4">
+            {/* <div className="bg-[#F5F9FD] py-4 ">
                 <div className="max-w-[700px] mx-auto px-4">
                     <div className="flex items-center bg-white rounded-full shadow-md px-4 py-2">
                         <input
@@ -71,7 +75,7 @@ const Navbar = () => {
                         </svg>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </header>
     );
 };

@@ -3,20 +3,25 @@ import { FEATURES } from '../utils/helper';
 
 const Express = () => {
     return (
-        <div className="bg-[#F5F9FD] max-w-[1384px] mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 px-[71px] py-[43px] mx-auto">
+        <div className="bg-[#F5F9FD] max-w-[1384px] mx-auto mt-6 mb-[132px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 px-4 sm:px-[71px] py-[43px] mx-auto gap-y-6">
                 {FEATURES.map((item, index) => (
                     <div
                         key={index}
-                        className="flex items-center w-full justify-center md:justify-start text-center md:text-left py-[7px] pr-9 relative"
-                    >                        <div className={`flex items-center justify-center ${index !== 0 ? 'pl-[36px]' : ''}`}>
-                            <img src={item.icon} alt={item.title} />
+                        className="flex flex-col sm:flex-row items-center w-full justify-center sm:justify-start text-center sm:text-left py-[7px] relative"
+                    >
+                        <div className={`flex items-center justify-center ${index !== 0 ? 'sm:pl-[36px]' : ''}`}>
+                            <img
+                                src={item.icon}
+                                alt={item.title}
+                                className="w-[48px] h-[48px] object-contain"
+                            />
                         </div>
-                        <div className="text-left whitespace-nowrap ml-3">
-                            <h4 className="text-base font-bold leading-[150%] text-black whitespace-nowrap">
+                        <div className="sm:ml-3 mt-2 sm:mt-0">
+                            <h4 className="text-base font-bold leading-[150%] text-black">
                                 {item.title}
                             </h4>
-                            <p className="text-sm leading-[120%] text-black whitespace-nowrap">
+                            <p className="text-sm leading-[120%] text-black mt-1">
                                 {item.desc}
                             </p>
                         </div>

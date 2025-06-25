@@ -1,7 +1,7 @@
 import React from "react";
 import raspberry from '../assets/images/png/comptuer-processor.png'
 import retroConsole from '../assets/images/png/machine.png'
-import Custombtn from "./common/Custombtn";
+import Custombtn from "./common/CustomButton";
 const Raspberry = () => {
     return (
         <div className="  max-w-[1384px] mx-auto mt-6 ">
@@ -11,7 +11,7 @@ const Raspberry = () => {
                         <img
                             src={raspberry}
                             alt="Raspberry Pi"
-                            className=""/>
+                            className="" />
                     </div>
                     <div className="col-span- text-center ">
                         <h2 className="text-[32px] md:text-3xl font-bold  leading-[120%]">
@@ -33,11 +33,11 @@ const Raspberry = () => {
                         <img
                             src={retroConsole}
                             alt="Retro Console"
-                            className=""/>
+                            className="" />
                     </div>
                 </div></div>
-            <Custombtn btnclass={ "mt-[56px] flex justify-center mx-auto bg-[#112D49] text-white hover:bg-white hover:text-[#112D49] hover:border-[#112D49] hover:border cursor-pointer"} btntext={"View All Blog Posts"}/>
-            </div>
+            <Custombtn btnclass={"mt-[56px] flex justify-center mx-auto bg-[#112D49] text-white hover:bg-white hover:text-[#112D49] hover:border-[#112D49] hover:border cursor-pointer"} btntext={"View All Blog Posts"} />
+        </div>
     );
 };
 

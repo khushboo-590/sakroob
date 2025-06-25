@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import router from "../assets/images/png/computers-Photoroom.png"
 import details from '../assets/images/png/delails-small-img.png'
 import detailsStar from '../assets/images/svg/stars-details.svg'
-import Custombtn from "./common/Custombtn";
+import Custombtn from "./common/CustomButton";
 import Rewiews from './Rewiews'
 import CustomRewiews from './CustomRewiews'
 import PopularProduct from "./PopularProduct";

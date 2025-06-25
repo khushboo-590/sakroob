@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .font-montserrat{
@@ -44,4 +44,49 @@ body{
       #112D49 52.88%,
       rgba(17, 45, 73, 0) 100%);
   border-image-slice: 1;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+* {
+  font-family: "Montserrat", sans-serif;
 }
+
+.carousel .control-dots {
+  bottom: 0px !important;
+  margin: 0px 0 !important;
+}
+
+.carousel .control-dots .dot {
+  opacity: 100% !important;
+  box-shadow: none !important;
+  background: #E8E8E8 !important;
+  border-radius: 22px !important;
+  width: 21px !important;
+  height: 6px !important;
+  margin: 0px 2px !important;
+}
+
+.carousel .control-dots .dot.selected {
+  background: #112D49 !important;
+  width: 51px !important;
+}
+
+.slider-wrapper {
+  padding-bottom: 21px !important;
+}
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+    width: fit-content;
+    animation-play-state: running;
+    animation: marquee 60s linear infinite;}

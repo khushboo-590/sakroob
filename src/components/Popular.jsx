@@ -1,6 +1,6 @@
 import React from "react";
 import { POPULAR_DATA } from "../utils/helper";
-import CustomHeading from "./common/CustomHeading";
+import CustomHeading from "./common/Heading";
 import ItalicText from "./common/ItalicText";
 
 const Popular = () => {
@@ -30,7 +30,7 @@ const Popular = () => {
                                     className={`${index === 0
                                         ? " w-[160px] lg:w-[270px] xl:w-[372px] "
                                         : "w-[174px] h-[213px] object-contain mx-auto"
-                                        }`}/>
+                                        }`} />
                             </div>
                         </div>
                     ))}

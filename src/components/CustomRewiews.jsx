@@ -1,5 +1,5 @@
 import React from "react";
-import Custombtn from "./common/Custombtn"; 
+import Custombtn from "./common/CustomButton";
 
 const ratings = [
     { stars: 5, percent: 100 },

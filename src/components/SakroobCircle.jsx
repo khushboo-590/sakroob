@@ -44,11 +44,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import bgImg from "../assets/images/png/empty-chair.jpg";
+
 import 'react-toastify/dist/ReactToastify.css';
 import CustomButton from "./common/CustomButton";
 import HeadingContent from "./common/HeadingContent";
 
-const JoinCircleSection = () => {
+const SakroobCircle = () => {
     const {
         register,
         handleSubmit,
@@ -66,7 +68,13 @@ const JoinCircleSection = () => {
 
     return (
         <div className="p-6 relative min-h-[386px]">
-            <div className="absolute -bottom-[141px] bg-[url(./assets/img/png/join-us-bg-img.png)] bg-cover bg-no-repeat bg-center min-h-[386px] max-w-[1140px] left-1/2 -translate-x-1/2 rounded-[8px] flex justify-center items-center flex-col w-full">
+            <div className="relative -bottom-[141px]  bg-cover bg-no-repeat bg-center min-h-[386px] max-w-[1140px] left-1/2 -translate-x-1/2 rounded-[8px] flex justify-center items-center flex-col w-full"
+                style={{
+                                backgroundImage: `url(${bgImg})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                }}>
+                <div className="absolute inset-0 bg-[#73A4E0] opacity-[70%] z-0 rounded-[24px]"/>
                 <div className="p-6 relative z-10">
                     <HeadingContent heading={'Join the Sakroob Circle'} para={'Exclusive drops, early access, and maker tips in your inbox.'} headingClass={'md:text-[48px] sm:text-[36px] text-[28px] font-bold text-white leading-[120%] text-center mb-4'} paraClass={'sm:text-[16px] text-[14px] font-normal text-white text-center'} />
                     <form
@@ -100,9 +108,8 @@ const JoinCircleSection = () => {
                         />
                     </form>
                 </div>
-            </div>
-        </div>
+            </div></div>
     );
 };
 
-export default JoinCircleSection;
+export default SakroobCircle;

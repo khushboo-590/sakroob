@@ -1,25 +1,27 @@
 import React from 'react'
-import Marqee from '../components/Marqee'
+import Header from '../components/Header'
 import Hero from '../components/Hero'
-import Services from '../components/Services'
-import FeaturedCategories from '../components/FeaturedCategories'
-import BlogPage from '../components/BlogPage'
-import Testimonials from '../components/Testimonials'
-import BestSellers from '../components/BestSellers'
-import JoinCircleSection from '../components/JoinCircleSection'
+// import Services from '../components/Services'
+import Blog from '../components/Blog'
+import Cilent from '../components/Cilent'
+import BestSeller from '../components/BestSeller'
+import Express from '../components/Express'
+import SakroobCircle from '../components/SakroobCircle'
+import Popular from '../components/Popular'
+import TopHeader from '../components/TopHeader'
 
 const Home = () => {
     return (
         <div>
-            <Marqee />
+        <TopHeader/>
+            <Header />
             <Hero />
-            <Services />
-            <FeaturedCategories />
-            <BestSellers />
-            <BlogPage />
-            <Testimonials />
-            <JoinCircleSection />
-        </div>
+            <Express />
+            <Popular />
+            <BestSeller />
+            <Blog />
+            <Cilent/>
+<SakroobCircle/>        </div>
     )
 }
 

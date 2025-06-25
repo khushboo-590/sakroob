@@ -100,8 +100,9 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import CustomButton from "./common/CustomButton";
+import React from "react";
 import HeadingContent from "./common/HeadingContent";
-import { HERO_SLIDES } from "../utils/heroData";
+import { HERO_SLIDES } from "../utils/helper";
 
 const Hero = () => {
     return (
@@ -118,7 +119,7 @@ const Hero = () => {
                     <div
                         key={index}
                         className="rounded-[8px] bg-center bg-cover bg-no-repeat min-h-[643px] w-full flex flex-col justify-center items-center"
-                        style={{ backgroundImage: `url(${item.imgBg})` }}>
+                        style={{ backgroundImage: `url(${item.bgImg })` }}>
                         <HeadingContent
                             heading={item.heading}
                             para={item.para}

@@ -75,9 +75,9 @@ body{
 .slider-wrapper {
   padding-bottom: 21px !important;
 }
-@keyframes scroll-marquee {
+@keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 
   100% {
@@ -87,6 +87,7 @@ body{
 
 .animate-marquee {
   display: flex;
-    width: fit-content;
-    animation-play-state: running;
-    animation: marquee 60s linear infinite;}
+  width: fit-content;
+  animation-play-state: running;
+  animation: marquee 60s linear infinite;
+}

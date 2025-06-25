@@ -158,7 +158,7 @@ const Footer = () => {
                                 className="h-[32px] w-[32px] flex justify-center items-center border border-white rounded-full cursor-pointer transform hover:scale-125 hover:-rotate-12 transition-transform duration-300 ease-in-out active:scale-90"
                                 target="_blank"
                             >
-                                <img src={m} alt="Facebook" className="" />
+                                <img src={cemara} alt="Facebook" className="" />
                                 </a>
                         </div>
                         <div className="max-w-[1140px] w-full mx-auto mt-[82px] relative z-0 pt-[1px] rounded-[12px] after:content-[''] after:absolute after:inset-0 after:rounded-[12px] after:bg-[linear-gradient(90deg,_#ffffff00_3.37%,_#ffffffcc_51.44%,_#ffffff00_100%)] after:-z-10">

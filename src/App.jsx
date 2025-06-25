@@ -33,26 +33,26 @@
 // }
 
 // export default App
-
+import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import LoginUp from './Pages/LoginUp';
+// import LoginUp from './Pages/LoginUp';
 import Home from './Pages/Home';
 import Footer from './components/Footer';
 
 function App() {
-  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  // const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
   return (
     <>
-      {!isLoggedIn && <LoginUp />}
-      {isLoggedIn && (
+      {/* {!isLoggedIn && <LoginUp />}
+      {isLoggedIn && ( */}
         <>
-          <Header />
+          {/* <Header /> */}
           <Home />
           <Footer />
         </>
-      )}
+      {/* // )} */}
     </>
   );
 }

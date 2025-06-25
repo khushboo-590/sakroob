@@ -81,7 +81,7 @@ import { Navigation } from 'swiper/modules';
 import { TESTMONIAL_DATA } from '../utils/helper';
 import { LeftArrow, LeftQuotationIcon, Rating, RightArrow, RightQuotationIcon } from '../utils/icon';
 
-const Testimonials = () => {
+const Cilent = () => {
     return (
         <div className="px-4 md:px-6 lg:px-8 mt-20">
             <div className="max-w-[1140px] mx-auto">
@@ -156,4 +156,4 @@ const Testimonials = () => {
     );
 };
 
-export default Testimonials;
+export default Cilent;

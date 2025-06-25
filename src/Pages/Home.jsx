@@ -9,6 +9,8 @@ import Express from '../components/Express'
 import SakroobCircle from '../components/SakroobCircle'
 import Popular from '../components/Popular'
 import TopHeader from '../components/TopHeader'
+import DetailPage from '../components/DetailsPage'
+// import Cart from '../components/Cart'
 
 const Home = () => {
     return (
@@ -21,7 +23,11 @@ const Home = () => {
             <BestSeller />
             <Blog />
             <Cilent/>
-<SakroobCircle/>        </div>
+            <SakroobCircle />
+
+{/* <DetailPage/> */}
+            {/* <Cart/> */}
+        </div>
     )
 }
 

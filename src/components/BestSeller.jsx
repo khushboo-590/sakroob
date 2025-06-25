@@ -124,7 +124,7 @@ const BestSeller = () => {
     const topPositionimg = ["bottom-[21px]", "bottom-3", "bottom-[5px]", "bottom-[21px]", "-top-[80px]", "bottom-[5px]",];
 
     return (
-        <div className="relative">
+        <div className="relative max-w-[1440px] mx-auto">
             <div className="max-w-[1272px] mx-auto px-3">
                 <h2 className="md:text-[48px] sm:text-[36px] text-[28px] font-bold text-[#112D49] leading-[120%] text-center mb-4">Bestsellers</h2>
                 <div
@@ -203,6 +203,7 @@ const BestSeller = () => {
                                         <CustomButton
                                             buttonText="Shop Now"
                                             buttonClass="bg-white !text-[#112D49] border border-[#112D49] max-w-[260px] w-full hover:!bg-[#112D49] hover:!text-white"
+                                        
                                         />
                                         {item.shop && <item.shop />}
                                     </div>

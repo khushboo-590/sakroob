@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import chair from "../assets/images/png/gaming-chair.png"
 import gaming from '../assets/images/png/gaming-peripherals.png'
 import deleteIcon from '../assets/images/svg/delete.svg'
-import Custombtn from "./common/CustomButton";
-import Footer from "./Footer";
 import TopHeader from "./TopHeader";
+import CustomButton from "./common/CustomButton";
+import Footer from "./Footer";
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([
@@ -138,15 +138,14 @@ const Cart = () => {
                             <div className="text-base leading-[150%] mt-2 opacity-80">
                                 Taxes, discounts and shipping calculated at checkout.
                             </div>
-                            <Custombtn
-                                btnclass={"bg-[#0D2C47] text-white w-full mt-6 mb-9"}
-                                btntext={"Check Out"}
+                            <CustomButton
+                                buttonClass={"bg-[#0D2C47] text-white w-full mt-6 mb-9"}
+                                buttonText={"Check Out"}
                             />
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer />
 
         </>
 

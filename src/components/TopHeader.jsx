@@ -82,10 +82,7 @@
 
 import React, { useEffect, useState } from 'react';
 import NavLinks from './common/Navlinks';
-// import { DropDownSvg,  Search  } from '../utils/icons';
 import headerLogo from '../assets/images/svg/header-logo.svg'
-
-// import headerLogo2 from '../assets/img/svg/logo2.svg';
 import { NavLink, useNavigate } from 'react-router-dom';
 import contactIcon from '../assets/images/svg/contact-icon.svg'
 
@@ -107,7 +104,7 @@ const TopHeader = () => {
     };
 
     return (
-        <div className="w-full relative">
+        <div className="w-full relative max-w-[1920px] mx-auto">
             <NavLink to="/" className="lg:flex hidden">
                 <img
                     src={headerLogo}

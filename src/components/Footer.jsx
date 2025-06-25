@@ -96,7 +96,7 @@ import Content from "./common/Content";
 const Footer = () => {
     return (
         <>
-            <div className="bg-[#112D49] pt-[210px]">
+            <div className="bg-[#112D49] pt-[210px] max-w-[1920px] mx-auto">
                 <div className="max-w-[1440px] mx-auto px-3">
                     <div className="">
                         <img className="mx-auto flex" src={footerLogo} alt="footer-logo" />

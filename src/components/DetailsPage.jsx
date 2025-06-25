@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import router from "../assets/images/png/computers-Photoroom.png"
 import details from '../assets/images/png/delails-small-img.png'
 import detailsStar from '../assets/images/svg/stars-details.svg'
-import Custombtn from "./common/CustomButton";
 import Rewiews from './Rewiews'
 import CustomRewiews from './CustomRewiews'
 import PopularProduct from "./PopularProduct";
 import CheckOut from "./CheckOut";
+import CustomButton from "./common/CustomButton";
 
 
 
@@ -73,20 +73,20 @@ const DetailPage = () => {
                         </div>
                     </div>
                     <div className="w-full flex flex-col gap-5 mt-[78px]">
-                        <Custombtn
-                            btntext={"Buy Now"}
-                            btnclass={"bg-[#0D2C47] text-white w-full"}
+                        <CustomButton
+                            buttonText={"Buy Now"}
+                            buttonClass={"bg-[#0D2C47] text-white w-full"}
                         />
-                        <Custombtn
-                            btntext={"Add to Cart"}
-                            btnclass={"border border-[#0D2C47] text-[#0D2C47] bg-white w-full"}
+                        <CustomButton
+                            buttonText={"Add to Cart"}
+                            buttonClass={"border border-[#0D2C47] text-[#0D2C47] bg-white w-full"}
                         />
                     </div>
                 </div>
             </div>
             <Rewiews />
             {/* <CustomRewiews/> */}
-            {/* <PopularProduct /> */}
+            <PopularProduct />
             {/* <CheckOut /> */}
         </div>
 

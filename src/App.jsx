@@ -39,20 +39,20 @@ import Header from './components/Header';
 // import LoginUp from './Pages/LoginUp';
 import Home from './Pages/Home';
 import Footer from './components/Footer';
+import TopHeader from './components/TopHeader';
 
 function App() {
   // const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
   return (
     <>
-      {/* {!isLoggedIn && <LoginUp />}
+       {/* {!isLoggedIn && <LoginUp />}
       {isLoggedIn && ( */}
-        <>
-          {/* <Header /> */}
-          <Home />
+      <> 
+        <Home />       
           <Footer />
         </>
-      {/* // )} */}
+       {/* )} */}
     </>
   );
 }

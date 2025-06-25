@@ -24,9 +24,9 @@ import monitors from "../assets/images/svg/monitor-icon.svg";
 // import { Icon } from "./icon";
 // import blogImg1 from "../assets/images/png/blog-img-1.png";
 // import blogImg2 from "../assets/images/png/blog-img-2.png";
-// import popularproduct1 from '../assets/images/png/popularproduct1.png'
-// import popularproduct2 from '../assets/images/png/popularproduct2.png'
-// import popularproduct3 from "../assets/images/png/popularproduct3.png"
+import popularproduct1 from '../assets/images/png/popularproduct1.png'
+import popularproduct2 from '../assets/images/png/popularproduct2.png'
+import popularproduct3 from "../assets/images/png/popularproduct3.png"
 
 
 
@@ -195,32 +195,32 @@ export const HEADER_DATA = [
 //     { label: "Contact", dropdown: false },
 // ];
 
-// export const PRODUCTS_DATA = [
-//     {
-//         id: 1,
-//         title: "NZXT H510 Elite PC Case",
-//         description: "Tempered glass case with clean cable management and optimized airflow.",
-//         price: "$249.99",
-//         image: popularproduct3,
-//         rating: 4,
-//     },
-//     {
-//         id: 2,
-//         title: "MSI GeForce RTX 4070 GPU",
-//         description: "Ray tracing, AI-powered DLSS, and ultra-performance — redefine how you game.",
-//         price: "$349.99",
-//         image: popularproduct2,
-//         rating: 5,
-//     },
-//     {
-//         id: 3,
-//         title: "Gaming Chair",
-//         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-//         price: "$259.99",
-//         image: popularproduct1,
-//         rating: 5,
-//     },
-//   ];
+export const PRODUCTS_DATA = [
+    {
+        id: 1,
+        title: "NZXT H510 Elite PC Case",
+        description: "Tempered glass case with clean cable management and optimized airflow.",
+        price: "$249.99",
+        image: popularproduct3,
+        rating: 4,
+    },
+    {
+        id: 2,
+        title: "MSI GeForce RTX 4070 GPU",
+        description: "Ray tracing, AI-powered DLSS, and ultra-performance — redefine how you game.",
+        price: "$349.99",
+        image: popularproduct2,
+        rating: 5,
+    },
+    {
+        id: 3,
+        title: "Gaming Chair",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$259.99",
+        image: popularproduct1,
+        rating: 5,
+    },
+  ];
 
 import { SmallRating, HeartSvg, ShopSvg } from "./icon";
 // import categorieImg1 from '../assets/img/png/categorieImg-1.png'
@@ -392,7 +392,7 @@ import ServicesIcon5 from "../assets/images/svg/gift.svg";
 import blogImg1 from "../assets/images/png/blog-img-1.png";
 import blogImg2 from "../assets/images/png/blog-img-2.png";
 import blogImg3 from '../assets/images/png/blogimg-3.png'
-import blogImg4 from '../assets/images/png/blog-img4.png'
+import blogImg4 from '../assets/images/png/comptuer-processor.png'
 import categorieImg1 from "../assets/images/png/close-up-computer.png"
 import categorieImg2 from "../assets/images/png/custom-pc.png"
 import categorieImg3 from "../assets/images/png/div-tools.png"

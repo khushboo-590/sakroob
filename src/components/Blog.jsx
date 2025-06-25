@@ -8,7 +8,7 @@ const Blog = () => {
     return (
         <div className="max-w-[1384px] mx-auto px-4 font-montserrat  ">
             <CustomHeading children={"Blog, Guides, Build Logs & More"} className={"mb-16"} />
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
                 {blogCard.map((card, index) => (
                     <div
                         key={index}

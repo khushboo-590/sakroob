@@ -3,9 +3,7 @@ import React from "react";
 const CheckoutPage = () => {
     return (
         <div className="max-w-7xl mx-auto px-4 py-8 grid lg:grid-cols-3 gap-8">
-            {/* Left: Form */}
             <div className="lg:col-span-2 space-y-6">
-                {/* Contact */}
                 <div className="space-y-2">
                     <h2 className="text-lg font-bold">Contact</h2>
                     <input
@@ -15,8 +13,6 @@ const CheckoutPage = () => {
                     />
                     <button className="text-sm text-right text-blue-600">Log in</button>
                 </div>
-
-                {/* Delivery */}
                 <div className="space-y-4">
                     <h2 className="text-lg font-bold">Delivery</h2>
                     <div className="grid md:grid-cols-2 gap-4">
@@ -35,8 +31,6 @@ const CheckoutPage = () => {
                         Save this information for next time
                     </label>
                 </div>
-
-                {/* Shipping Method */}
                 <div className="space-y-2">
                     <h2 className="text-lg font-bold">Shipping method</h2>
                     <div className="border rounded px-4 py-2 flex justify-between">
@@ -44,8 +38,6 @@ const CheckoutPage = () => {
                         <span>AED 20.00</span>
                     </div>
                 </div>
-
-                {/* Payment */}
                 <div className="space-y-4">
                     <h2 className="text-lg font-bold">Payment</h2>
                     <p className="text-sm text-gray-500">All transactions are secure and encrypted.</p>
@@ -71,8 +63,6 @@ const CheckoutPage = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Right: Summary */}
             <div className="bg-[#F5F9FD] p-6 rounded-lg space-y-4">
                 <div className="flex items-center gap-4">
                     <img src="/chair.jpg" className="w-16 h-16 rounded object-cover" />

@@ -14,27 +14,27 @@ const PopularProducts = () => {
                         <div
                             key={index}
                             className={`rounded-[8px] pl-4 pt-4 ${item.bg} shadow flex flex-col justify-center items-center text-center w-full 
-        ${index === 0 ? "lg:w-[680px]" : "lg:w-[328px]"} `}
+        ${index === 0 ? "lg:w-[680px] py-4 md:py-0" : "lg:w-[328px]"} `}
                         >
-                            <div className={`flex ${index === 0 ? "flex-row  items-center gap-8" : "flex-col gap-4"}`}>
+                            <div className={`flex ${index === 0 ? "md:flex-row flex-col  items-center gap-8" : "flex-col gap-4 "}`}>
                                 <h3
                                     className={`${index === 0
-                                            ? "text-[32px] font-bold leading-[120%] text-left  max-w-[162px]"
-                                        : "text-[32px] font-bold leading-[120%] text-center max-w-[213px]"
+                                        ? "text-[32px] font-bold leading-[120%] text-left  max-w-[162px]"
+                                        : "text-[32px] font-bold leading-[120%] text-center max-w-[213px]  "
                                         }`}
                                 >
                                     {item.title}
                                 </h3>
 
-                                 
+
                                 <img
                                     src={item.image}
                                     alt={item.title}
                                     className={`${index === 0
-                                            ? " w-[160px] lg:w-[270px] xl:w-[372px] sm:py-0 py-4 "
-                                            : "w-[174px] h-[213px] object-contain mx-auto"
+                                        ? " w-[160px] lg:w-[270px] xl:w-[372px] "
+                                        : "w-[174px] h-[213px] object-contain mx-auto"
                                         }`}
-                                                                      />
+                                />
                             </div>
                         </div>
                     ))}

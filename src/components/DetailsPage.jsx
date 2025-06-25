@@ -1,104 +1,107 @@
-import React from "react";
-// import { FaStar, FaRegStar } from "react-icons/fa";
+import React,{useState} from "react";
+import router from "../assets/images/png/computers-Photoroom.png"
+import details from '../assets/images/png/delails-small-img.png'
+import detailsStar from '../assets/images/svg/stars-details.svg'
+import Custombtn from "./common/Custombtn";
+import Rewiews from './Rewiews'
+import CustomRewiews from './CustomRewiews'
+import PopularProduct from "./PopularProduct";
+import CheckOut from "./CheckOut";
+
+
 
 const ProductDetailPage = () => {
+    const colors = ["#000000", "#0D2C47", "#1DF085", "#80A9F7"];
+    const [selectedColor, setSelectedColor] = useState(colors[0]);
+    const [quantity, setQuantity] = useState(1);
     return (
-        <div className="max-w-7xl mx-auto px-4 py-8 font-sans">
-            {/* Product Info Top Section */}
-            <div className="grid md:grid-cols-2 gap-10 bg-white p-6 rounded-xl shadow">
-                {/* Left: Product Image and Thumbnails */}
+        <div className="max-w-[1140px] h-[703px] mx-auto  font-montserrat ">
+            <div className="grid lg:grid-cols-2 gap-10 p-6  ">
                 <div>
-                    <img src="/router.jpg" alt="Router" className="w-full rounded-xl mb-4" />
-                    <div className="flex gap-2 justify-center">
-                        {[...Array(4)].map((_, i) => (
-                            <img
-                                key={i}
-                                src="/router.jpg"
-                                alt={`thumb-${i}`}
-                                className="w-14 h-14 rounded border cursor-pointer"
-                            />
-                        ))}
-                    </div>
+                <div className="bg-[#EEF4FB] p-6 lg:p-[42px] lg:w-[517px] h-[240px] md:h-[470px] lg:h-[563px] mb-4" >
+                    <img src={router} alt="Router" className=" w-[180px] mx-auto md:w-[320px] lg:w-[432px] rounded-xl mb-4" />
                 </div>
 
-                {/* Right: Product Description */}
-                <div className="space-y-4">
-                    <h2 className="text-xl font-bold text-[#0D2C47]">
-                        D-Link ADSL Wireless Router DSL2750U
-                    </h2>
-                    <p className="text-sm text-gray-500">
-                        Wireless N 300 ADSL2+ Modem Router with 4 Ethernet Ports and 1 USB 2.0 port for 3G/4G.
-                    </p>
-                    <div className="flex items-center gap-1 text-yellow-400">
-                        {/* {[...Array(4)].map((_, i) => <FaStar key={i} />)}
-                        <FaRegStar /> */}
-                        <span className="text-gray-500 ml-2 text-sm">4.2 (140)</span>
-                    </div>
-                    <div className="text-xl font-bold text-[#0D2C47]">$14.95</div>
-                    <div>
-                        <p className="text-sm mb-1 font-semibold">Color:</p>
-                        <div className="flex gap-2">
-                            <span className="w-6 h-6 rounded-full bg-black border"></span>
-                            <span className="w-6 h-6 rounded-full bg-blue-500 border"></span>
-                            <span className="w-6 h-6 rounded-full bg-green-400 border"></span>
+                    <div className="flex gap-2 justify-center  mx-auto ">
+                        {[...Array(3)].map((_, i) => (
+                            <img
+                                key={i}
+                                src={details}
+                                alt={`thumb-${i}`}
+                                className=" w-[100px] lg:w-[156px] h-[107px] rounded  object-contain cursor-pointer bg-[#F5F5F5] py-[9px] px-[30px]"
+                            />
+                        ))}
+                    </div></div>
+                <div className="space-y-4 max-w-[568px] mx-auto">
+                    <h2 className="text-[34px] font-bold leading-[100%]  mb-4">
+                    D-Link ADSL Wireless Router DSL2790U                    </h2>
+                    <p className="text-base leading-[150%]  mb-4">
+                        The D-Link DSL-2790U is a high-speed ADSL2+ wireless router with speeds up to 300 Mbps—ideal for browsing, streaming, and gaming.
+                    It features four Ethernet ports, strong security, and guest network support. Perfect for reliable internet in homes and small offices                    </p>
+                    <div className="text-[32px] leading-[100%] font-bold  mb-4">$14.95</div>
+                    <img src={detailsStar}  className="mb-6"/>
+
+                        <div className="w-[181px]  font-montserrat ">
+                            <p className="text-base font-semibold mb-[10px] leading-[100%]">Select Color</p>
+                            <div className="flex gap-3">
+                                {colors.map((color, idx) => (
+                                    <button
+                                        key={idx}
+                                        onClick={() => setSelectedColor(color)}
+                                        className={`w-[29px] h-[29px] rounded-full border-2 flex items-center justify-center transition duration-200 ${selectedColor === color ? "border-[#0D2C47]" : "border-transparent"
+                                            }`}
+                                        style={{ backgroundColor: color }}
+                                    >
+                                        {selectedColor === color && (
+                                            <div className="w-2 h-2 rounded-full bg-white"></div>
+                                        )}
+                                    </button>
+                                ))}
+                            </div>
+
+
+                            <p className="text-base font-semibold mt-[35px] mb-[15px] leading-[100%]">Select Quantity</p>
+                            <div className="flex items-center overflow-hidden rounded-lg">
+                                <button
+                                    onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
+                                    className="w-[48px] h-[44px] bg-[#80A9F7] text-white text-xl font-bold"
+                                >
+                                    −
+                                </button>
+                                <div className="w-[85px] h-[44px] bg-white flex items-center justify-center text-[#0D2C47] font-medium">
+                                    {String(quantity).padStart(2, "0")}
+                                </div>
+                                <button
+                                    onClick={() => setQuantity(prev => prev + 1)}
+                                    className="w-[48px] h-[44px] bg-[#0D2C47] text-white text-xl font-bold"
+                                >
+                                    +
+                                </button>
+                            </div>
                         </div>
+                    <div className="w-full flex flex-col gap-5 mt-[78px]">
+                        <Custombtn
+                            btntext={"Buy Now"}
+                            btnclass={"bg-[#0D2C47] text-white w-full"}
+                        />
+                        <Custombtn
+                            btntext={"Add to Cart"}
+                            btnclass={"border border-[#0D2C47] text-[#0D2C47] bg-white w-full"}
+                        />
                     </div>
-                    <div className="flex gap-4 pt-4">
-                        <button className="bg-[#0D2C47] text-white px-6 py-2 rounded-full text-sm">Buy Now</button>
-                        <button className="border border-[#0D2C47] text-[#0D2C47] px-6 py-2 rounded-full text-sm">Add to Cart</button>
-                    </div>
+
                 </div>
             </div>
 
             {/* Tabs */}
-            <div className="mt-10">
-                <div className="flex justify-center gap-6 border-b text-sm">
-                    <button className="py-2 border-b-2 border-[#0D2C47] text-[#0D2C47] font-semibold">Reviews</button>
-                    <button className="py-2 text-gray-500">Specifications</button>
-                    <button className="py-2 text-gray-500">FAQs</button>
-                </div>
-
-                {/* Review Summary */}
-                <div className="grid md:grid-cols-2 gap-6 mt-8">
-                    <div className="bg-white rounded-xl p-6 shadow">
-                        <h4 className="text-sm font-semibold mb-4">Customer Reviews</h4>
-                        {[5, 4, 3, 2, 1].map(star => (
-                            <div key={star} className="flex items-center gap-2 mb-2 text-sm">
-                                <span className="w-10">{star} Star</span>
-                                <div className="bg-gray-200 w-full h-2 rounded">
-                                    <div className="bg-yellow-400 h-2 w-[60%] rounded"></div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Write a Review */}
-                    <div className="bg-white rounded-xl p-6 shadow">
-                        <h4 className="text-sm font-semibold mb-2">Review this Product</h4>
-                        <textarea className="w-full border rounded p-2 text-sm" rows="4" placeholder="Share your thoughts..." />
-                        <button className="mt-3 bg-[#0D2C47] text-white px-4 py-2 rounded-full text-sm">Submit Review</button>
-                    </div>
-                </div>
+            <Rewiews />
+            {/* <CustomRewiews/> */}
+            <PopularProduct />
+                  {/* <CheckOut /> */}
+            
+            
             </div>
-
-            {/* Popular Products */}
-            <div className="mt-14">
-                <h3 className="text-xl font-bold text-center mb-6">Popular Products</h3>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {["PC Case", "RTX 4070", "Gaming Chair"].map((name, i) => (
-                        <div key={i} className="bg-white border rounded-xl p-4 shadow text-center">
-                            <img src="/product.jpg" alt={name} className="w-full h-36 object-contain mb-2" />
-                            <h4 className="font-semibold text-sm mb-1">{name}</h4>
-                            <div className="text-[#0D2C47] font-bold">${(129 + i * 100).toFixed(2)}</div>
-                            <button className="mt-2 text-sm text-blue-600 underline">View</button>
-                        </div>
-                    ))}
-                </div>
-                <div className="flex justify-center mt-6">
-                    <button className="bg-[#0D2C47] text-white px-6 py-2 rounded-full">Explore More</button>
-                </div>
-            </div>
-        </div>
+           
     );
 };
 

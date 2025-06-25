@@ -24,6 +24,10 @@ import girl from "../assets/images/png/girl-img.png"
 import { Icon } from "./icon";
 import blogImg1 from "../assets/images/png/blog-img-1.png";
 import blogImg2 from "../assets/images/png/blog-img-2.png";
+import ac from '../assets/images/png/ac.png'
+import ac1 from '../assets/images/png/ac1.png'
+import ac2 from "../assets/images/png/ac2.png"
+
 
 
 export const HEADER_DATA = [
@@ -191,3 +195,29 @@ export const navItems = [
     { label: "Contact", dropdown: false },
 ];
   
+export const products = [
+    {
+        id: 1,
+        title: "NZXT H510 Elite PC Case",
+        description: "Tempered glass case with clean cable management and optimized airflow.",
+        price: "$249.99",
+        image: ac2, // replace with your path
+        rating: 4,
+    },
+    {
+        id: 2,
+        title: "MSI GeForce RTX 4070 GPU",
+        description: "Ray tracing, AI-powered DLSS, and ultra-performance — redefine how you game.",
+        price: "$349.99",
+        image: ac1, // replace with your path
+        rating: 5,
+    },
+    {
+        id: 3,
+        title: "Gaming Chair",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$259.99",
+        image: ac, // replace with your path
+        rating: 5,
+    },
+  ];

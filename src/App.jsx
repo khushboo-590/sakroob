@@ -12,7 +12,6 @@ import Raspberry from './components/Raspberry'
 import Blog from './components/Blog'
 import TopHeader from './components/TopHeader'
 import Cart from './components/Cart'
-import CheckOut from './components/CheckOut'
 import DetailsPage from './components/DetailsPage'
 
 
@@ -32,9 +31,9 @@ function App() {
       <Cilent />
       <SakroobCircle />
       <Footer />
-      {/* <Cart />
-      <CheckOut />
-      <DetailsPage/> */}
+      <Cart />
+      <DetailsPage />
+
       
       
       

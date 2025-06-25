@@ -21,7 +21,7 @@ const HeroSlider = () => {
                     <SwiperSlide key={index}>
                         <div className="relative font-montserrat">
                             <img src={heroImg} alt="Hero" className='w-full' />
-                            <div className='absolute z-10 max-w-[761px] mx-auto ju top-[25%] px-4 text-center                                 left-1/2 -translate-x-1/2 
+                            <div className='absolute z-10 max-w-[761px] mx-auto  top-[25%] px-4 text-center                                 left-1/2 -translate-x-1/2 
                                 
 '>
                                 <h1 className="text-6xl text-[#112D49] font-bold leading-[120%] mb-3">

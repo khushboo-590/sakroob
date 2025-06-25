@@ -12,7 +12,7 @@ import Custombtn from "./common/Custombtn";
 
 const BestsellerSlider = () => {
     return (
-        <section className="max-w-[1272px] mx-auto px-4 lg:mb-20 md:mb-12 mb-6 text-center overflow-visible font-montserrat relative justify-center">
+        <section className="max-w-[1272px] mx-auto px-4 lg:mb-20 md:mb-12 mb-6 text-center overflow-visible  relative justify-center">
             <CustomHeading children={"Bestsellers"} />
             <button className="custom-prev bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center border border-black absolute top-1/2 left-0 xl:-left-10 transform -translate-y-1/2 z-10 hover:bg-black hover:text-white transition-all duration-300 mx-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
@@ -44,7 +44,7 @@ const BestsellerSlider = () => {
                   
             >
                 {bestsellers.map((item, i) => (
-                    <SwiperSlide key={i} className="!flex !justify-center !items-stretch !overflow-visible mx-auto relative z-0 px-2 ">
+                    <SwiperSlide key={i} className="!flex !justify-center !items-stretch !overflow-visible mx-auto relative z-0 px-2 font-montserrat">
                         <div className="flex flex-col max-w-[364px] min-h-[536px] mt-[79px] !rounded-[8px] mb-6  p-4 shadow-md bg-white relative z-10">
                             <div className={`${item.color} h-[242px] w-[332px]  relative items-center justify-center mx-auto`}>
                                 <img

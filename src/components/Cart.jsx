@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import chair from "../assets/images/png/gaming-chair.png"
+import gaming from '../assets/images/png/gaming-peripherals.png'
+import deleteIcon from '../assets/images/svg/delete.svg'
+import Custombtn from "./common/Custombtn";
 
 const CartPage = () => {
     const [cartItems, setCartItems] = useState([
@@ -7,14 +11,14 @@ const CartPage = () => {
             name: "Gaming Chair",
             price: 249.99,
             quantity: 1,
-            image: "/chair.jpg",
+            image: chair,
         },
         {
             id: 2,
             name: "Gaming Peripherals",
             price: 449.99,
             quantity: 1,
-            image: "/controller.jpg",
+            image: gaming,
         },
     ]);
 
@@ -46,48 +50,100 @@ const CartPage = () => {
     );
 
     return (
-        <div className="max-w-4xl mx-auto p-4">
-            <h1 className="text-2xl font-bold mb-4">Your cart</h1>
+        <div className="max-w-[1140px] mx-auto p-4 font-montserrat">
+            <div className="flex justify-between mt-[94px] mb-[52px] flex-wrap gap-2">
+                <h1 className="text-[34px] font-bold leading-[100%]">Your cart</h1>
+                <p className="font-medium text-base leading-[100%] underline decoration-solid cursor-pointer">
+                    Continue Shopping
+                </p>
+            </div>
 
-            <div className="bg-[#F5F9FD] rounded-lg p-4">
-                {cartItems.map(item => (
-                    <div
-                        key={item.id}
-                        className="flex flex-col sm:flex-row justify-between items-center border-b py-4 gap-4"
-                    >
-                        <div className="flex items-center gap-4">
-                            <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded" />
-                            <div>
-                                <p className="font-semibold">{item.name}</p>
-                                <p className="text-sm text-gray-500">Dhs. {item.price}</p>
-                            </div>
-                        </div>
+            <div className="w-full bg-[#F4F8F7] font-montserrat relative h-[575px] px-4">
+                <div className="overflow-x-auto">
+                    <table className="min-w-[700px] w-full text-left">
+                        <thead className="py-[19px] px-[20px] bg-[#F5F5F5] border-b border-[#112D491A]">
+                            <tr className="text-lg font-medium leading-[150%]">
+                                <th className="py-[19px] px-[20px] font-medium">Product</th>
+                                <th className="py-[19px] px-[20px] text-center font-medium">Quantity</th>
+                                <th className="py-[19px] px-[20px] text-right font-medium">Total</th>
+                            </tr>
+                        </thead>
 
-                        <div className="flex items-center gap-2">
-                            <button onClick={() => decreaseQty(item.id)} className="bg-blue-300 px-2 py-1 rounded text-white">-</button>
-                            <span>{item.quantity}</span>
-                            <button onClick={() => increaseQty(item.id)} className="bg-blue-900 px-2 py-1 rounded text-white">+</button>
-                            <button onClick={() => removeItem(item.id)} className="text-gray-500 ml-2">🗑️</button>
-                        </div>
+                        <tbody>
+                            {cartItems.map((item) => (
+                                <tr key={item.id} className="rounded-lg pb-9 mt-9">
+                                    <td className="pt-9 px-5">
+                                        <div className="flex items-center gap-4">
+                                            <img src={item.image} alt={item.name} className="w-[64px] h-[64px] object-cover rounded" />
+                                            <div>
+                                                <p className="font-medium text-xl leading-[150%]">
+                                                    {item.name}
+                                                </p>
+                                                <p className="text-sm leading-[150%] opacity-50">
+                                                    Dhs. {item.price}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td className="py-4 px-6">
+                                        <div className="flex items-center justify-center">
+                                            <div className="border border-gray-300 rounded-[7px] flex overflow-hidden">
+                                                <button
+                                                    onClick={() => decreaseQty(item.id)}
+                                                    className="w-[48px] h-[44px] bg-blue-300 flex items-center justify-center text-white"
+                                                >
+                                                    −
+                                                </button>
+                                                <span className="w-[85px] h-[44px] bg-white flex items-center justify-center text-sm font-medium">
+                                                    {item.quantity}
+                                                </span>
+                                                <button
+                                                    onClick={() => increaseQty(item.id)}
+                                                    className="w-[48px] h-[44px] bg-blue-900 flex items-center justify-center text-white"
+                                                >
+                                                    +
+                                                </button>
+                                            </div>
+                                            <button
+                                                onClick={() => removeItem(item.id)}
+                                                className="ml-2 flex items-center justify-center"
+                                            >
+                                                <img src={deleteIcon} alt="delete" className="w-5 h-5" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td className="py-4 px-6 text-right text-sm leading-[150%] opacity-50">
+                                        Dhs. {(item.price * item.quantity).toFixed(2)}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
 
-                        <div className="text-right font-semibold">
-                            Dhs. {(item.price * item.quantity).toFixed(2)}
+                <div className="gradient-border mt-[49px]"></div>
+
+                <div className="relative w-full ">
+                    <div className="absolute right-0 max-w-[328px]">
+                        <div className="flex flex-col sm:flex-row justify-between pt-5 gap-[67px]">
+                            Estimated Total:
+                            <span className="font-bold text-[#0D2C47]">
+                                Dhs. {totalPrice.toFixed(2)} AED
+                            </span>
                         </div>
+                        <div className="text-base leading-[150%] mt-2 opacity-80">
+                            Taxes, discounts and shipping calculated at checkout.
+                        </div>
+                        <Custombtn
+                            btnclass={"bg-[#0D2C47] text-white w-full mt-6 mb-9"}
+                            btntext={"Check Out"}
+                        />
                     </div>
-                ))}
-
-                {/* Total & Checkout */}
-                <div className="flex flex-col sm:flex-row justify-between items-center pt-6 gap-4">
-                    <div className="text-sm text-gray-600">
-                        Estimated Total:{" "}
-                        <span className="font-bold text-[#0D2C47]">Dhs. {totalPrice.toFixed(2)} AED</span>
-                    </div>
-                    <button className="bg-[#0D2C47] text-white px-6 py-2 rounded-full text-sm">
-                        Check Out
-                    </button>
                 </div>
             </div>
         </div>
+    
+
     );
 };
 

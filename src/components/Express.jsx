@@ -8,14 +8,12 @@ const Express = () => {
                 {FEATURES.map((item, index) => (
                     <div
                         key={index}
-                        className="flex flex-col sm:flex-row items-center w-full justify-center sm:justify-start text-center sm:text-left py-[7px] relative"
-                    >
+                        className="flex flex-col sm:flex-row items-center w-full justify-center sm:justify-start text-center sm:text-left py-[7px] relative">
                         <div className={`flex items-center justify-center ${index !== 0 ? 'sm:pl-[36px]' : ''}`}>
                             <img
                                 src={item.icon}
                                 alt={item.title}
-                                className="w-[48px] h-[48px] object-contain"
-                            />
+                                className="w-[48px] h-[48px] object-contain"/>
                         </div>
                         <div className="sm:ml-3 mt-2 sm:mt-0">
                             <h4 className="text-base font-bold leading-[150%] text-black">

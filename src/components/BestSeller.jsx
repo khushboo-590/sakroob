@@ -10,7 +10,7 @@ import CustomHeading from "./common/CustomHeading";
 import shopIcon from '../assets/images/svg/shop-icon.svg';
 import Custombtn from "./common/Custombtn";
 
-const BestsellerSlider = () => {
+const Bestseller = () => {
     return (
         <section className="max-w-[1272px] mx-auto px-4 lg:mb-20 md:mb-12 mb-6 text-center overflow-visible  relative justify-center">
             <CustomHeading children={"Bestsellers"} />
@@ -85,7 +85,7 @@ const BestsellerSlider = () => {
     );
 };
 
-export default BestsellerSlider;
+export default Bestseller;
 
 
 

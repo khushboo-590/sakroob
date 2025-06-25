@@ -11,9 +11,7 @@ const SakroobCircle = () => {
                 style={{
                     backgroundImage: `url(${bgImg})`,
                     backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
-            >
+                    backgroundPosition: "center",}}>
                 <div className="absolute inset-0 bg-[#73A4E0] opacity-[70%] z-0 rounded-[24px]" />
                 <div className="relative rounded-[16px] p-8">
                     <CustomHeading children={"Join the Sakroob Circle"} className={"text-white"}/>

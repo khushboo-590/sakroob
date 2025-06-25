@@ -7,7 +7,7 @@ import shopIcon from '../assets/images/svg/shop-icon.svg';
 import Custombtn from "./common/Custombtn";
 import { products } from "../utils/helper";
 
-const BestsellersSection = () => {
+const PopularProduct = () => {
     return (
         <section className=" mx-auto px-4 lg:mb-20 md:mb-12 mb-6 ">
             <div className=" max-w-[1272px] text-center "/>
@@ -17,11 +17,9 @@ const BestsellersSection = () => {
                     {products.map((product, i) => (
                         <div
                             key={i}
-                            className="flex-shrink-0 flex flex-col max-w-[364px] min-h-[536px] rounded-[8px] mb-6 p-4 shadow-md bg-white relative font-montserrat"
-                        >
+                            className="flex-shrink-0 flex flex-col max-w-[364px] min-h-[536px] rounded-[8px] mb-6 p-4 shadow-md bg-white relative font-montserrat">
                             <div
-                                className={`bg-[#E5E4E2] h-[242px] w-[332px] relative items-center justify-center mx-auto`}
-                            >
+                                className={`bg-[#E5E4E2] h-[242px] w-[332px] relative items-center justify-center mx-auto`}>
                                 <img
                                     src={heart}
                                     alt="wishlist"
@@ -66,4 +64,4 @@ const BestsellersSection = () => {
     );
 };
 
-export default BestsellersSection;
+export default PopularProduct;

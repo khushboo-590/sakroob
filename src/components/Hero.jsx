@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { heroData } from '../utils/helper';
 
-const HeroSlider = () => {
+const Hero = () => {
     return (
         <div className="relative max-w-[1384px] mx-auto mb-[43px] ">
             <Swiper
@@ -44,4 +44,4 @@ const HeroSlider = () => {
     );
 };
 
-export default HeroSlider;
+export default Hero;

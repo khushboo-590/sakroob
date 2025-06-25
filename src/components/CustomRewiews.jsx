@@ -9,7 +9,7 @@ const ratings = [
     { stars: 1, percent: 20 },
 ];
 
-const ReviewGrid = () => {
+const CustomRewiews = () => {
     return (
         <div className="max-w-[1140px] mx-auto px-4 text-[#0D2C47] font-montserrat">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -53,4 +53,4 @@ const ReviewGrid = () => {
     );
 };
 
-export default ReviewGrid;
+export default CustomRewiews;

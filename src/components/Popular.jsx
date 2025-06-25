@@ -3,7 +3,7 @@ import { POPULAR_DATA } from "../utils/helper";
 import CustomHeading from "./common/CustomHeading";
 import ItalicText from "./common/ItalicText";
 
-const PopularProducts = () => {
+const Popular = () => {
     return (
         <div className="max-w-[1384px] mx-auto px-4   font-montserrat mb-[132px]">
             <ItalicText children={"Featured Categories"} className="mb-2" />
@@ -14,8 +14,7 @@ const PopularProducts = () => {
                         <div
                             key={index}
                             className={`rounded-[8px] pl-4 pt-4 ${item.bg} shadow flex flex-col justify-center items-center text-center w-full 
-        ${index === 0 ? "lg:w-[680px] py-4 md:py-0" : "lg:w-[328px]"} `}
-                        >
+        ${index === 0 ? "lg:w-[680px] py-4 md:py-0" : "lg:w-[328px]"} `}>
                             <div className={`flex ${index === 0 ? "md:flex-row flex-col  items-center gap-8" : "flex-col gap-4 "}`}>
                                 <h3
                                     className={`${index === 0
@@ -25,20 +24,16 @@ const PopularProducts = () => {
                                 >
                                     {item.title}
                                 </h3>
-
-
                                 <img
                                     src={item.image}
                                     alt={item.title}
                                     className={`${index === 0
                                         ? " w-[160px] lg:w-[270px] xl:w-[372px] "
                                         : "w-[174px] h-[213px] object-contain mx-auto"
-                                        }`}
-                                />
+                                        }`}/>
                             </div>
                         </div>
                     ))}
-
                 </div>
                 <div className="flex flex-col lg:flex-row gap-6">
                     {POPULAR_DATA.slice(3, 6).map((item, index) => (
@@ -53,8 +48,7 @@ const PopularProducts = () => {
                                     src={item.image}
                                     alt={item.title}
                                     className=""
-                                />
-                            ) : (
+                                />) : (
                                 <>
                                     <h3 className="text-[32px] font-bold leading-[120%] text-center max-w-[213px]  py-[21px] ">
                                         {item.title}
@@ -76,4 +70,4 @@ const PopularProducts = () => {
     );
 };
 
-export default PopularProducts;
+export default Popular;

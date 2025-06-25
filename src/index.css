@@ -7,10 +7,6 @@
 body{
   color: #112D49;
 }
-
-
-
-
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -33,7 +29,6 @@ body{
 .testimonial-swiper .swiper-slide {
   overflow: visible !important;
 }
-/* index.css */
 .border-gradient-top {
   border-top: 1px solid;
   border-image-source: linear-gradient(90deg,

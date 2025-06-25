@@ -3,14 +3,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-
 import { CLIENT_DATA } from "../utils/helper";
 import star from "../assets/images/svg/star.svg";
 import comma from "../assets/images/svg/comma.svg";
 import CustomHeading from "./common/CustomHeading";
 import ItalicText from "./common/ItalicText";
 
-const TestimonialSlider = () => {
+const Cilent = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
@@ -44,25 +43,24 @@ const TestimonialSlider = () => {
                         1024: { slidesPerView: 2 },
                     }}
                 >
-                    {CLIENT_DATA.map((t, i) => (
+                    {CLIENT_DATA.map((obj, i) => (
                         <SwiperSlide key={i} className="!flex justify-center overflow-visible">
                             <div
                                 className={`bg-white max-w-[558px] w-full p-6 rounded-lg font-montserrat transition-all duration-300  ${i === activeIndex ? "shadow-md" : ""
-                                    }`}
-                            >
+                                    }`}>
                                 <div className="flex items-center justify-center mb-4">
-                                    <img src={t.image} alt={t.name} className="rounded-full" />
+                                    <img src={obj.image} alt={obj.name} className="rounded-full" />
                                 </div>
                                 <div className="relative px-6">
                                     <img src={comma} alt="quote" className="absolute top-0 left-0" />
                                     <p className="text-base leading-[150%] text-center max-w-[518px] mx-auto opacity-80">
-                                        {t.message}
+                                        {obj.message}
                                     </p>
                                 </div>
                                 <div className="flex flex-col items-center justify-center mt-6">
                                     <img src={star} alt="Rating" className="mb-[10px]" />
-                                    <h4 className="font-semibold text-2xl leading-[100%]">{t.name}</h4>
-                                    <p className="text-base text-gray-500 leading-[161%]">{t.role}</p>
+                                    <h4 className="font-semibold text-2xl leading-[100%]">{obj.name}</h4>
+                                    <p className="text-base text-gray-500 leading-[161%]">{obj.role}</p>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -73,4 +71,4 @@ const TestimonialSlider = () => {
     );
 };
 
-export default TestimonialSlider;
+export default Cilent;

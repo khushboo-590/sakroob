@@ -2,9 +2,9 @@ import './App.css'
 import Express from './components/Express'
 import Header from './components/Header'
 import React from 'react'
-import HeroSlider from './components/HeroSection'
-import PopularProducts from './components/Popular'
-import BestsellerSlider from './components/BestSelller'
+import Hero from './components/Hero'
+import Popular from './components/Popular'
+import BestsellerSlider from './components/BestSeller'
 import Cilent from './components/Cilent'
 import Footer from './components/Footer'
 import SakroobCircle from './components/SakroobCircle'
@@ -14,29 +14,21 @@ import TopHeader from './components/TopHeader'
 import Cart from './components/Cart'
 import DetailsPage from './components/DetailsPage'
 
-
-
-
 function App() {
-
   return (
     <>
-      {/* <TopHeader /> */}
+      <TopHeader />
       <Header />  
-      <HeroSlider />  
+      <Hero />  
       <Express /> 
-       <PopularProducts/> 
+       <Popular/> 
        <BestsellerSlider/>
       <Blog/>
       <Cilent />
       <SakroobCircle />
       <Footer />
       <Cart />
-      <DetailsPage />
-
-      
-      
-      
+      <DetailsPage />     
     </>
   )
 }

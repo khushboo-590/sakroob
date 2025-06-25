@@ -4,7 +4,7 @@ import gaming from '../assets/images/png/gaming-peripherals.png'
 import deleteIcon from '../assets/images/svg/delete.svg'
 import Custombtn from "./common/Custombtn";
 
-const CartPage = () => {
+const Cart = () => {
     const [cartItems, setCartItems] = useState([
         {
             id: 1,
@@ -147,4 +147,4 @@ const CartPage = () => {
     );
 };
 
-export default CartPage;
+export default Cart;

@@ -4,7 +4,7 @@ import { navItems } from "../utils/helper";
 import contactIcon from '../assets/images/svg/contact-icon.svg'
 
 
-const Navbar = () => {
+const TopHeader = () => {
     return (
         <header className="bg-[#0D2C47] text-white font-montserrat relative z-10 ">
             <div className="max-w-[1384px] mx-auto flex items-center justify-between px-6 relative z-20 py-7 ">
@@ -12,9 +12,7 @@ const Navbar = () => {
                     <img
                         src={logo}
                         alt="Sakroob"
-                        className="absolute top-full  transform  -translate-y-[45%]"
-                    />
-
+                        className="absolute top-full  transform  -translate-y-[45%]"/>
                 </div>     
                 <nav className="hidden md:flex space-x-[32px] ">
                     {navItems.map((item, index) => (
@@ -80,4 +78,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default TopHeader;

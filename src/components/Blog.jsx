@@ -12,10 +12,9 @@ const Blog = () => {
                 {blogCard.map((card, index) => (
                     <div
                         key={index}
-                        className={`${card.bgColor} rounded-[10px]   flex flex-col md:flex-row justify-between items-start md:items-center xl:max-w-[668px]`}
-                    >
+                        className={`${card.bgColor} rounded-[10px]   flex flex-col md:flex-row justify-between items-start md:items-center xl:max-w-[668px]`}>
                         <div>
-                            <div className= " py-4 md:py-[32px] pl-[32px]  md:text-left text-center">
+                            <div className=" py-4 md:py-[32px] pl-[32px]  md:text-left text-center">
                                 <h3 className="text-[32px] font-bold leading-[120%]  mb-[12px]">
                                     {card.title}
                                 </h3>
@@ -24,8 +23,7 @@ const Blog = () => {
                                 </p>
                                 <a
                                     href="#"
-                                    className="text-[#112D49] font-medium text-base leading-[100%] inline-flex items-center gap-2 hover:underline"
-                                >
+                                    className="text-[#112D49] font-medium text-base leading-[100%] inline-flex items-center gap-2 hover:underline">
                                     {card.linkText}<svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.4409 1.59326L16.3535 7.50008L10.4409 13.4069" stroke="#112D49" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         <path d="M1.35381 7.5H15.8994" stroke="#112D49" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />

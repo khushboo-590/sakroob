@@ -16,7 +16,7 @@ import DetailsPage from './components/DetailsPage'
 function App() {
   return (
     <>
-      <TopHeader />
+      {/* <TopHeader /> */}
       <Header />  
       <Hero />  
       <Express /> 

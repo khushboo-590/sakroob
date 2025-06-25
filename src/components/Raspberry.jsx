@@ -36,7 +36,7 @@ const Raspberry = () => {
                             className=""/>
                     </div>
                 </div></div>
-            <Custombtn btnclass={ "mt-[56px] flex justify-center mx-auto bg-[#112D49] text-white"} btntext={"View All Blog Posts"}/>
+            <Custombtn btnclass={ "mt-[56px] flex justify-center mx-auto bg-[#112D49] text-white hover:bg-white hover:text-[#112D49] hover:border-[#112D49] hover:border cursor-pointer"} btntext={"View All Blog Posts"}/>
             </div>
     );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { blogCard } from "../utils/helper"
+import {  BLOGCARD_DATA } from "../utils/helper"
 import CustomHeading from "./common/CustomHeading";
 import Raspberry from "./Raspberry";
 
@@ -9,7 +9,7 @@ const Blog = () => {
         <div className="max-w-[1384px] mx-auto px-4 font-montserrat  ">
             <CustomHeading children={"Blog, Guides, Build Logs & More"} className={"mb-16"} />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
-                {blogCard.map((card, index) => (
+                {BLOGCARD_DATA.map((card, index) => (
                     <div
                         key={index}
                         className={`${card.bgColor} rounded-[10px]   flex flex-col md:flex-row justify-between items-start md:items-center xl:max-w-[668px]`}>

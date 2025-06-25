@@ -5,7 +5,7 @@ import heart from '../assets/images/svg/heart.svg';
 import CustomHeading from "./common/CustomHeading";
 import shopIcon from '../assets/images/svg/shop-icon.svg';
 import Custombtn from "./common/Custombtn";
-import { products } from "../utils/helper";
+import {  PRODUCTS_DATA } from "../utils/helper";
 import Footer from "./Footer";
 import TopHeader from "./TopHeader";
 
@@ -18,7 +18,7 @@ const PopularProduct = () => {
             <CustomHeading children={"Popular Products"}  className={"mb-[84px]"}/>
             <div className="mt-10 ">
                 <div className="grid md:grid-cols-2 xl:grid-cols-3 w-max min-w-full gap-4 mx-auto justify-center">
-                    {products.map((product, i) => (
+                    {PRODUCTS_DATA.map((product, i) => (
                         <div
                             key={i}
                             className="flex-shrink-0 flex flex-col max-w-[364px] min-h-[536px] rounded-[8px] mb-6 p-4 shadow-md bg-white relative font-montserrat">

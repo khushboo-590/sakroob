@@ -24,9 +24,9 @@ import girl from "../assets/images/png/girl-img.png"
 import { Icon } from "./icon";
 import blogImg1 from "../assets/images/png/blog-img-1.png";
 import blogImg2 from "../assets/images/png/blog-img-2.png";
-import ac from '../assets/images/png/ac.png'
-import ac1 from '../assets/images/png/ac1.png'
-import ac2 from "../assets/images/png/ac2.png"
+import popularproduct1 from '../assets/images/png/popularproduct1.png'
+import popularproduct2 from '../assets/images/png/popularproduct2.png'
+import popularproduct3 from "../assets/images/png/popularproduct3.png"
 
 
 
@@ -47,7 +47,7 @@ export const HEADER_DATA = [
 
     
 ];
-export const FEATURES = [
+export const FEATURES_DATA = [
     { icon: delivery, title: "EXPRESS Delivery", desc: "Order Now" },
     { icon: returnIcon, title: "Easy Return", desc: "30 days return" },
     { icon: support, title: "24/7 Support", desc: "Premium Services" },
@@ -55,7 +55,7 @@ export const FEATURES = [
     { icon: gift, title: "Best Special Gift", desc: "For Order" },
 ];
 
-export const heroData = [
+export const HERO_Data = [
     {
         title: 'Where Tinkerers Bring Ideas Alive',
         desc:
@@ -101,7 +101,7 @@ export const POPULAR_DATA = [
         bg: "bg-[#D5E8FF]",
     },
 ];
-export const bestsellers = [
+export const BESTSELLER_DATA = [
     {
         name: "Vortex Gaming PC",
         desc: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
@@ -169,7 +169,7 @@ export const CLIENT_DATA = [
         stars: 5,
     },
 ];
-export const blogCard = [
+export const BLOGCARD_DATA = [
     {
         title: "How to Build a Mini NAS",
         description: "Learn to build your own network storage system with simple components.",
@@ -185,7 +185,7 @@ export const blogCard = [
         bgColor: "bg-[#EEF4FB]",
     },
 ];
-export const navItems = [
+export const NAVITEMS_DATA = [
     { label: "Categories", dropdown: false },
     { label: "PC Products", dropdown: true },
     { label: "Services", dropdown: true },
@@ -195,13 +195,13 @@ export const navItems = [
     { label: "Contact", dropdown: false },
 ];
   
-export const products = [
+export const PRODUCTS_DATA = [
     {
         id: 1,
         title: "NZXT H510 Elite PC Case",
         description: "Tempered glass case with clean cable management and optimized airflow.",
         price: "$249.99",
-        image: ac2, // replace with your path
+        image: popularproduct3,
         rating: 4,
     },
     {
@@ -209,7 +209,7 @@ export const products = [
         title: "MSI GeForce RTX 4070 GPU",
         description: "Ray tracing, AI-powered DLSS, and ultra-performance — redefine how you game.",
         price: "$349.99",
-        image: ac1, // replace with your path
+        image: popularproduct2, 
         rating: 5,
     },
     {
@@ -217,7 +217,7 @@ export const products = [
         title: "Gaming Chair",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$259.99",
-        image: ac, // replace with your path
+        image: popularproduct1, 
         rating: 5,
     },
   ];

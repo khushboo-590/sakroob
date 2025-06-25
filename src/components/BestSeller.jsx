@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { bestsellers } from "../utils/helper";
+import { BESTSELLER_DATA, } from "../utils/helper";
 import star from "../assets/images/svg/star.svg";
 import heart from '../assets/images/svg/heart.svg';
 import CustomHeading from "./common/CustomHeading";
@@ -43,7 +43,7 @@ const Bestseller = () => {
                 }}
                   
             >
-                {bestsellers.map((item, i) => (
+                {BESTSELLER_DATA.map((item, i) => (
                     <SwiperSlide key={i} className="!flex !justify-center !items-stretch !overflow-visible mx-auto relative z-0 px-2 font-montserrat">
                         <div className="flex flex-col max-w-[364px] min-h-[536px] mt-[79px] !rounded-[8px] mb-6  p-4 shadow-md bg-white relative z-10">
                             <div className={`${item.color} h-[242px] w-[332px]  relative items-center justify-center mx-auto`}>
@@ -71,7 +71,7 @@ const Bestseller = () => {
                                         <img src={star} alt="Rating" />
                                     </div>
                                     <div className="flex justify-center items-center gap-4">
-                                        <Custombtn btnclass={"w-full  rounded-full border border-[#112D49] text-base font-medium leading-[100%] mt-2 flex items-center justify-center gap-2 transition"}
+                                        <Custombtn btnclass={"w-full   rounded-full border border-[#112D49] cursor-pointer hover:bg-[#112D49] hover:text-white text-base font-medium leading-[100%] mt-2 flex items-center justify-center gap-2 transition"}
                                             btntext={"Shop Now"} />
                                         <img src={shopIcon} alt="Shop" className="" />
                                     </div>

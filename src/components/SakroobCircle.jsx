@@ -26,7 +26,7 @@ const SakroobCircle = () => {
                                 className="px-[18px] py-[22px] w-full rounded-full outline-none bg-white"
                             />
                             <Custombtn
-                                btnclass="absolute right-2 top-1/2 -translate-y-1/2 bg-[#0B2341] text-white rounded-full hover:bg-[#1d3c66] font-medium text-base leading-[100%]"
+                                btnclass="absolute right-2 top-1/2 -translate-y-1/2 bg-[#0B2341] text-white hover:bg-white hover:text-[#112D49] hover:border-[#112D49] hover:border cursor-pointer rounded-full hover:bg-[#1d3c66] font-medium text-base leading-[100%]"
                                 btntext="Join Now"
                             />
                         </div>

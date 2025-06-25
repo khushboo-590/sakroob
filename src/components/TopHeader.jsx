@@ -1,6 +1,6 @@
 import React from "react";
 import logo from '../assets/images/svg/header-logo.svg'
-import { navItems } from "../utils/helper";
+import {  NAVITEMS_DATA } from "../utils/helper";
 import contactIcon from '../assets/images/svg/contact-icon.svg'
 
 
@@ -15,7 +15,7 @@ const TopHeader = () => {
                         className="absolute top-full  transform  -translate-y-[45%]"/>
                 </div>     
                 <nav className="hidden md:flex space-x-[32px] ">
-                    {navItems.map((item, index) => (
+                    {NAVITEMS_DATA.map((item, index) => (
                         item.dropdown ? (
                             <div key={index} className="relative group">
                                 <button className="flex items-center gap-1">
@@ -54,7 +54,7 @@ const TopHeader = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="bg-[#F5F9FD] py-4 ">
+            <div className="bg-[#F5F9FD] py-4 ">
                 <div className="max-w-[700px] mx-auto px-4">
                     <div className="flex items-center bg-white rounded-full shadow-md px-4 py-2">
                         <input
@@ -73,7 +73,7 @@ const TopHeader = () => {
                         </svg>
                     </div>
                 </div>
-            </div> */}
+            </div>
         </header>
     );
 };

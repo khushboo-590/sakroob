@@ -1,11 +1,11 @@
 import React from 'react';
-import { FEATURES } from '../utils/helper';
+import { FEATURES_DATA } from '../utils/helper';
 
 const Express = () => {
     return (
         <div className="bg-[#F5F9FD] max-w-[1384px] mx-auto mt-6 mb-[132px]">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 px-4 sm:px-[71px] py-[43px] mx-auto gap-y-6">
-                {FEATURES.map((item, index) => (
+                {FEATURES_DATA.map((item, index) => (
                     <div
                         key={index}
                         className="flex flex-col sm:flex-row items-center w-full justify-center sm:justify-start text-center sm:text-left py-[7px] relative">
@@ -23,7 +23,7 @@ const Express = () => {
                                 {item.desc}
                             </p>
                         </div>
-                        {index !== FEATURES.length - 1 && (
+                        {index !== FEATURES_DATA.length - 1 && (
                             <div className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2">
                                 <svg
                                     width="1"

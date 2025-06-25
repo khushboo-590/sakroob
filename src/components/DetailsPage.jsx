@@ -7,6 +7,9 @@ import CustomRewiews from './CustomRewiews'
 import PopularProduct from "./PopularProduct";
 import CheckOut from "./CheckOut";
 import CustomButton from "./common/CustomButton";
+import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -14,8 +17,10 @@ const DetailPage = () => {
     const colors = ["#000000", "#0D2C47", "#1DF085", "#80A9F7"];
     const [selectedColor, setSelectedColor] = useState(colors[0]);
     const [quantity, setQuantity] = useState(1);
+    const navigate = useNavigate();
+
     return (
-        <div className="max-w-[1140px] h-[703px] mx-auto  font-montserrat ">
+        <div className="max-w-[1140px] h-[703px] mx-auto  font-montserrat mt-[132px] ">
             <div className="grid lg:grid-cols-2 gap-10 p-6  ">
                 <div>
                     <div className="bg-[#EEF4FB] p-6 lg:p-[42px] lg:w-[517px] h-[240px] md:h-[470px] lg:h-[563px] mb-4" >
@@ -79,14 +84,16 @@ const DetailPage = () => {
                         />
                         <CustomButton
                             buttonText={"Add to Cart"}
+                            onClick={() => navigate('/cart')}
                             buttonClass={"border border-[#0D2C47] text-[#0D2C47] bg-white w-full"}
                         />
                     </div>
                 </div>
             </div>
             <Rewiews />
-            {/* <CustomRewiews/> */}
+            <CustomRewiews/>
             <PopularProduct />
+            <Footer />
             {/* <CheckOut /> */}
         </div>
 

@@ -4,20 +4,17 @@ import star from "../assets/images/svg/star.svg";
 import heart from '../assets/images/svg/heart.svg';
 import CustomHeading from "./common/Heading";
 import shopIcon from '../assets/images/svg/shop-icon.svg';
-import Custombtn from "./common/CustomButton";
 import { PRODUCTS_DATA } from "../utils/helper";
-import Footer from "./Footer";
-import TopHeader from "./TopHeader";
+import CustomButton from "./common/CustomButton";
 
 const PopularProduct = () => {
     return (
         <>
-            <TopHeader />
-            <div className=" mx-auto px-4 lg:mb-20 md:mb-12 mb-6 ">
-                <div className=" max-w-[1272px] text-center " />
+            <div className=" px-4 lg:mb-20 md:mb-12 mb-6 ">
+                <div className=" max-w-[1272px] text-center mx-auto " />
                 <CustomHeading children={"Popular Products"} className={"mb-[84px]"} />
                 <div className="mt-10 ">
-                    <div className="grid md:grid-cols-2 xl:grid-cols-3 w-max min-w-full gap-4 mx-auto justify-center">
+                    <div className="grid md:grid-cols-2 xl:grid-cols-3 w-max min-w-full gap-4 justify-items-center">
                         {PRODUCTS_DATA.map((product, i) => (
                             <div
                                 key={i}
@@ -45,11 +42,11 @@ const PopularProduct = () => {
                                             <img src={star} alt="Rating" />
                                         </div>
                                         <div className="flex justify-center items-center gap-4">
-                                            <Custombtn
-                                                btnclass={
-                                                    "w-full rounded-full border border-[#112D49] text-base font-medium leading-[100%] mt-2 flex items-center justify-center gap-2 transition"
+                                            <CustomButton
+                                                buttonClass={
+                                                    "w-full rounded-full border border-[#112D49] bg-white  text-base font-medium leading-[100%] mt-2 flex items-center justify-center gap-2 transition"
                                                 }
-                                                btntext={"Shop Now"}
+                                                buttonText={"Shop Now"}
                                             />
                                             <img src={shopIcon} alt="Shop" />
                                         </div>
@@ -59,13 +56,12 @@ const PopularProduct = () => {
                         ))}
                     </div>
                 </div>
-                <Custombtn
-                    btnclass="rounded-full border bg-[#112D49] text-white text-base font-medium leading-[100%] mt-[42px] mb-[132px] !mb-[132px] mx-auto flex items-center justify-center gap-2 transition"
-                    btntext="Explore all products"
+                <CustomButton
+                    buttonClass="rounded-full border bg-[#112D49] text-white text-base font-medium leading-[100%] mt-[42px] mb-[132px] !mb-[132px] mx-auto flex items-center justify-center gap-2 transition"
+                    buttonText="Explore all products"
                 />
 
             </div>
-            <Footer />
         </>
     );
 };

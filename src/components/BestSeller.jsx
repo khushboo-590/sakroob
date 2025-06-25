@@ -97,11 +97,15 @@ import "swiper/css/navigation";
 import { BESTSELLER_DATA } from "../utils/helper";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from 'react-router-dom';
+
 import CustomButton from "./common/CustomButton";
 
 const BestSeller = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
+    const navigate = useNavigate();
+
 
     const [favoriteItems, setFavoriteItems] = useState([]);
 
@@ -203,7 +207,8 @@ const BestSeller = () => {
                                         <CustomButton
                                             buttonText="Shop Now"
                                             buttonClass="bg-white !text-[#112D49] border border-[#112D49] max-w-[260px] w-full hover:!bg-[#112D49] hover:!text-white"
-                                        
+                                            onClick={() => navigate('/detailspage')}
+
                                         />
                                         {item.shop && <item.shop />}
                                     </div>

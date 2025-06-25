@@ -5,6 +5,8 @@ import deleteIcon from '../assets/images/svg/delete.svg'
 import TopHeader from "./TopHeader";
 import CustomButton from "./common/CustomButton";
 import Footer from "./Footer";
+import { useNavigate } from 'react-router-dom';
+
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([
@@ -50,10 +52,10 @@ const Cart = () => {
         (total, item) => total + item.price * item.quantity,
         0
     );
+    const navigate = useNavigate();
 
     return (
         <>
-            <TopHeader />
             <div className="max-w-[1140px] mx-auto p-4 font-montserrat">
                 <div className="flex justify-between mt-[94px] mb-[52px] flex-wrap gap-2">
                     <h1 className="text-[34px] font-bold leading-[100%]">Your cart</h1>
@@ -78,7 +80,12 @@ const Cart = () => {
                                     <tr key={item.id} className="rounded-lg pb-9 mt-9">
                                         <td className="pt-9 px-5">
                                             <div className="flex items-center gap-4">
-                                                <img src={item.image} alt={item.name} className="w-[64px] h-[64px] object-cover rounded" />
+                                                <div className="relative w-[64px] h-[64px]">
+                                                    <img src={item.image} alt={item.name} className="w-full h-full object-cover rounded" />
+                                                    <span className="absolute -top-2 -right-2 bg-[#0D2C47] text-white text-[10px] px-2 py-[2px] rounded-full font-semibold">
+                                                        {item.quantity}
+                                                    </span>
+                                                </div>
                                                 <div>
                                                     <p className="font-medium text-xl leading-[150%]">
                                                         {item.name}
@@ -141,6 +148,7 @@ const Cart = () => {
                             <CustomButton
                                 buttonClass={"bg-[#0D2C47] text-white w-full mt-6 mb-9"}
                                 buttonText={"Check Out"}
+                                onClick={() => navigate("/checkout")}
                             />
                         </div>
                     </div>

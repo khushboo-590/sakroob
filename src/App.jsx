@@ -1,58 +1,44 @@
-// import './App.css'
-// import Express from './components/Express'
-// import Header from './components/Header'
-// import React from 'react'
-// import Hero from './components/Hero'
-// import Popular from './components/Popular'
-// import BestsellerSlider from './components/BestSeller'
-// import Cilent from './components/Cilent'
-// import Footer from './components/Footer'
-// import SakroobCircle from './components/SakroobCircle'
-// import Blog from './components/Blog'
-// import TopHeader from './components/TopHeader'
-// import Cart from './components/Cart'
-// import DetailsPage from './components/DetailsPage'
 
-// function App() {
-//   return (
-//     <>
-//       {/* <TopHeader /> */}
-//       <Header />  
-//       <Hero />  
-//       <Express /> 
-//        <Popular/> 
-//        <BestsellerSlider/>
-//       <Blog/>
-//       <Cilent />
-//       <SakroobCircle />
-//       <Footer />
-//       {/* <Cart /> */}
-//       {/* <DetailsPage />      */}
-//     </>
-//   )
-// }
 
-// export default App
+
 import React from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-// import LoginUp from './Pages/LoginUp';
 import Home from './Pages/Home';
+import Cart from './components/Cart';
 import Footer from './components/Footer';
 import TopHeader from './components/TopHeader';
+import DetailsPage from './components/DetailsPage';
+import CheckOut from './components/CheckOut';
+import LoginPage from "./components/LoginPage";
+import SignUpPage from "./components/SignUpPage";
 
 function App() {
-  // const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const location = useLocation();
+  const hideFooterRoutes = ["/detailspage"];
 
   return (
     <>
-       {/* {!isLoggedIn && <LoginUp />}
-      {isLoggedIn && ( */}
-      <> 
-        <Home />       
-          <Footer />
-        </>
-       {/* )} */}
+      {isLoggedIn && <TopHeader />}
+
+      <Routes>
+        {!isLoggedIn ? (
+          <>
+            <Route path="/" element={<LoginPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
+          </>
+        ) : (
+          <>
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/detailspage" element={<DetailsPage />} />
+            <Route path="/checkout" element={<CheckOut />} />
+          </>
+        )}
+      </Routes>
+
+      {isLoggedIn && !hideFooterRoutes.includes(location.pathname) && <Footer />}
     </>
   );
 }

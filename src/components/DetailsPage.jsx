@@ -86,7 +86,7 @@ const DetailPage = () => {
             </div>
             <Rewiews />
             {/* <CustomRewiews/> */}
-            <PopularProduct />
+            {/* <PopularProduct /> */}
             {/* <CheckOut /> */}
         </div>
 

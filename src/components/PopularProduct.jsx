@@ -6,10 +6,14 @@ import CustomHeading from "./common/CustomHeading";
 import shopIcon from '../assets/images/svg/shop-icon.svg';
 import Custombtn from "./common/Custombtn";
 import { products } from "../utils/helper";
+import Footer from "./Footer";
+import TopHeader from "./TopHeader";
 
 const PopularProduct = () => {
     return (
-        <section className=" mx-auto px-4 lg:mb-20 md:mb-12 mb-6 ">
+        <>
+            <TopHeader/>
+        <div className=" mx-auto px-4 lg:mb-20 md:mb-12 mb-6 ">
             <div className=" max-w-[1272px] text-center "/>
             <CustomHeading children={"Popular Products"}  className={"mb-[84px]"}/>
             <div className="mt-10 ">
@@ -60,7 +64,9 @@ const PopularProduct = () => {
     btntext="Explore all products"
 />
 
-        </section>
+        </div>
+        <Footer/>
+        </>
     );
 };
 

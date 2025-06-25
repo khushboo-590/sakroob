@@ -3,6 +3,8 @@ import chair from "../assets/images/png/gaming-chair.png"
 import gaming from '../assets/images/png/gaming-peripherals.png'
 import deleteIcon from '../assets/images/svg/delete.svg'
 import Custombtn from "./common/Custombtn";
+import Footer from "./Footer";
+import TopHeader from "./TopHeader";
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([
@@ -50,6 +52,8 @@ const Cart = () => {
     );
 
     return (
+        <>
+            <TopHeader/>
         <div className="max-w-[1140px] mx-auto p-4 font-montserrat">
             <div className="flex justify-between mt-[94px] mb-[52px] flex-wrap gap-2">
                 <h1 className="text-[34px] font-bold leading-[100%]">Your cart</h1>
@@ -141,8 +145,10 @@ const Cart = () => {
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
+            <Footer/>
     
+        </>
 
     );
 };

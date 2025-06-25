@@ -8,7 +8,6 @@ import BestsellerSlider from './components/BestSeller'
 import Cilent from './components/Cilent'
 import Footer from './components/Footer'
 import SakroobCircle from './components/SakroobCircle'
-import Raspberry from './components/Raspberry'
 import Blog from './components/Blog'
 import TopHeader from './components/TopHeader'
 import Cart from './components/Cart'
@@ -27,8 +26,8 @@ function App() {
       <Cilent />
       <SakroobCircle />
       <Footer />
-      <Cart />
-      <DetailsPage />     
+      {/* <Cart /> */}
+      {/* <DetailsPage />      */}
     </>
   )
 }

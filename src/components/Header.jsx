@@ -4,7 +4,7 @@ import { HEADER_DATA  } from '../utils/helper';
 const Header = () => {
     return (
         <div className='bg-white '>
-            <div className=" w-full bg-white overflow-hidden max-w-[1920px] ">
+            <div className=" w-full bg-white overflow-hidden max-w-[1920px] mx-auto  ">
                 <div className="flex gap-3 animate-marquee mx-auto">                  
                     {HEADER_DATA.map((obj, index) => (
                         <div

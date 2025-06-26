@@ -11,11 +11,9 @@ import CustomButton from "./common/CustomButton";
 import Heading from "./common/Heading";
 
 const BestSeller = () => {
+    const imgPosition = ["bottom-[21px]", "bottom-3", "bottom-[5px]", "bottom-[21px]", "-top-[80px]", "bottom-[5px]"];
     const navigate = useNavigate();
     const [shopClickCounts, setShopClickCounts] = useState({});
-
-    const imgPosition = ["bottom-[21px]", "bottom-3", "bottom-[5px]", "bottom-[21px]", "-top-[80px]", "bottom-[5px]"];
-
     const [wishlist, setWishlist] = useState({});
     const [popupMessage, setPopupMessage] = useState("");
     const [showPopup, setShowPopup] = useState(false);
@@ -30,7 +28,6 @@ const BestSeller = () => {
 
     const handleWishlistClick = (index, title) => {
         const updated = { ...wishlist };
-
         if (updated[index]) {
             delete updated[index];
             showPopupMessage(`${title} removed from wishlist!`);
@@ -38,7 +35,6 @@ const BestSeller = () => {
             updated[index] = true;
             showPopupMessage(`${title} added to wishlist!`);
         }
-
         setWishlist(updated);
     };
     const handleShopClick = (index) => {

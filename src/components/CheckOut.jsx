@@ -9,15 +9,11 @@ import chairImage from '../assets/images/png/chairImg.png';
 
 const CheckOut = () => {
     const [message, setMessage] = useState("");
-
     const handleApplyCoupon = () => {
         setMessage(" applied successfully!");
     };
-      
-      
-    const [checked, setChecked] = useState(false);
     const navigate = useNavigate();
-
+    const [checked, setChecked] = useState(false);
     const [selected, setSelected] = useState("");
     const [coupon, setCoupon] = useState("");
 
@@ -70,8 +66,10 @@ const CheckOut = () => {
             setFormErrors(errors);
             return;
         }
-        setShowSuccessPopup(true);
 
+        console.log("✅ Order Placed:", formData, selected);
+
+        // Reset form
         setFormData({
             email: "",
             country: "",
@@ -85,18 +83,17 @@ const CheckOut = () => {
         setSelected("");
         setChecked(false);
         setCoupon("");
+        setMessage("Order placed successfully!");
+        setFormErrors({});
 
-        setTimeout(() => {
-            setShowSuccessPopup(false);
-        }, 2000);
+        
     };
+    
 
     const basePrice = 357.99;
     const shipping = 20.0;
     const discountPerClick = 10;
-
     const [clickCount, setClickCount] = useState(0);
-
     const handleImageClick = () => {
         setClickCount((prev) => prev + 1);
     };
@@ -305,6 +302,10 @@ const CheckOut = () => {
                                 </label>
                             ))}
                         </div>
+                        <CustomButton
+                            buttonClass="py-4 w-full bg-[#112D49] text-white mt-6"
+                            buttonText="Place Order"
+                            onClick={handleSubmit}/>
                     </div>
                     <div className="w-full lg:w-4/12 relative overflow-visible mt-10 lg:mt-0">
                         <div className="lg:max-w-[364px] w-full shadow-md h-[333px] lg:mb-0 mb-7 ">

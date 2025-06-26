@@ -233,7 +233,7 @@ const CheckoutPage = () => {
                             <div className="bg-white p-[14px] rounded-xl shadow-md w-full lg:max-w-sm">
                                 <div className="flex items-center justify-between mb-[26px]">
                                     <div className="flex items-center gap-3">
-                                        <img
+                 ``                       <img
                                             src={chairImage}
                                             alt="Gaming Chair"
                                             className="w-12 h-12  pointer-events-none object-contain bg-gray-100 rounded"

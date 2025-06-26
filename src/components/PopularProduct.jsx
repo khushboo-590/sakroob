@@ -6,13 +6,14 @@ import CustomHeading from "./common/Heading";
 import shopIcon from '../assets/images/svg/shop-icon.svg';
 import { PRODUCTS_DATA } from "../utils/helper";
 import CustomButton from "./common/CustomButton";
+import Heading from "./common/Heading";
 
 const PopularProduct = () => {
     return (
         <>
             <div className=" px-4 lg:mb-20 md:mb-12 mb-6 ">
                 <div className=" max-w-[1272px] text-center mx-auto " />
-                <CustomHeading children={"Popular Products"} className={"mb-[84px]"} />
+                <Heading headText={"Popular Products"} headClass={"mb-[84px]"} />
                 <div className="mt-10 ">
                     <div className="grid md:grid-cols-2 xl:grid-cols-3 w-max min-w-full gap-4 justify-items-center">
                         {PRODUCTS_DATA.map((product, i) => (
@@ -24,7 +25,7 @@ const PopularProduct = () => {
                                     <img
                                         src={heart}
                                         alt="wishlist"
-                                        className="absolute top-3 right-3 cursor-pointer z-20"
+                                        className="absolute top-3 right-3 cursor-pointer z-20 pointer-events-none"
                                     />
                                     <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[20%] z-10">
                                         <img src={product.image} alt={product.name} className="max-w-none" />
@@ -39,7 +40,7 @@ const PopularProduct = () => {
                                     <div className="mt-auto">
                                         <div className="flex justify-between items-center mb-4">
                                             <p className="text-xl font-bold text-[#0D2C47]">{product.price}</p>
-                                            <img src={star} alt="Rating" />
+                                            <img src={star} alt="Rating" className="pointer-events-none" />
                                         </div>
                                         <div className="flex justify-center items-center gap-4">
                                             <CustomButton
@@ -48,7 +49,7 @@ const PopularProduct = () => {
                                                 }
                                                 buttonText={"Shop Now"}
                                             />
-                                            <img src={shopIcon} alt="Shop" />
+                                            <img src={shopIcon} alt="Shop" className="pointer-events-none" />
                                         </div>
                                     </div>
                                 </div>

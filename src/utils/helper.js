@@ -10,12 +10,12 @@ import monitors from "../assets/images/svg/monitor-icon.svg";
 // import warranty from "../assets/images/svg/warranty.svg";
 // import gift from "../assets/images/svg/gift.svg";
 // import heroImg from '../assets/images/png/header-img.png';
-// import sensor from '../assets/images/png/close-up-computer.png'
-// import pcparts from "../assets/images/png/custom-pc.png"
-// import tools from "../assets/images/png/div-tools.png"
-// import cables from "../assets/images/png/cable-img.png"
-// import controller from '../assets/images/png/gaming-img.png'
-// import kits from '../assets/images/png/pi-kits.png'
+import sensor from '../assets/images/png/close-up-computer.png'
+import pcparts from "../assets/images/png/custom-pc.png"
+import tools from "../assets/images/png/div-tools.png"
+import cables from "../assets/images/png/cable-img.png"
+import controller from '../assets/images/png/gaming-img.png'
+import kits from '../assets/images/png/pi-kits.png'
 // import pc from "../assets/images/png/image-Photoroom.png"
 // import router from "../assets/images/png/computers-Photoroom.png"
 // import chair from '../assets/images/png/chair-png-Photoroom.png'
@@ -70,37 +70,37 @@ export const HEADER_DATA = [
 //     },
 
 // ];
-// export const POPULAR_DATA = [
-//     {
-//         title: "Sensors & Modules",
-//         image: sensor,
-//         bg: "bg-[#D5E8FF]",
-//     },
-//     {
-//         title: "Custom PC Parts",
-//         image: pcparts,
-//         bg: "bg-[#EEF4FB]",
-//     },
-//     {
-//         title: "DIY Tools",
-//         image: tools ,
-//         bg: "bg-[#E5E4E2]",
-//     },
-//     {
-//         title: "Cables & Connectors",
-//         image: cables,
-//         bg: "bg-[#EEF4FB]",
-//     },
-//     {
-//         title: "Gaming Peripherals",
-//         image: controller,
-//         bg: "bg-[#E5E4E2]",
-//     },
-//     {
-//         image: kits,
-//         bg: "bg-[#D5E8FF]",
-//     },
-// ];
+export const POPULAR_DATA = [
+    {
+        title: "Sensors & Modules",
+        image: sensor,
+        bg: "bg-[#D5E8FF]",
+    },
+    {
+        title: "Custom PC Parts",
+        image: pcparts,
+        bg: "bg-[#EEF4FB]",
+    },
+    {
+        title: "DIY Tools",
+        image: tools ,
+        bg: "bg-[#E5E4E2]",
+    },
+    {
+        title: "Cables & Connectors",
+        image: cables,
+        bg: "bg-[#EEF4FB]",
+    },
+    {
+        title: "Gaming Peripherals",
+        image: controller,
+        bg: "bg-[#E5E4E2]",
+    },
+    {
+        image: kits,
+        bg: "bg-[#D5E8FF]",
+    },
+];
 // export const BESTSELLER_DATA = [
 //     {
 //         name: "Vortex Gaming PC",
@@ -559,14 +559,7 @@ export const BLOG_PAGE_DATA = [
         active: false
 
     },
-    {
-        heading: 'Inside a Raspberry Pi Retro Console',
-        para: 'Step-by-step log of building a retro game machine.',
-        button: 'Read Guide',
-        blogPageImg: blogImg4,
-        blogPageImg_1: blogImg3,
-        active: true
-    },
+  
 ];
 
 // export const SERVICES_LIST = [

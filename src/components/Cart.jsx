@@ -4,7 +4,6 @@ import gaming from '../assets/images/png/gaming-peripherals.png'
 import deleteIcon from '../assets/images/svg/delete.svg'
 import TopHeader from "./TopHeader";
 import CustomButton from "./common/CustomButton";
-import Footer from "./Footer";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -81,7 +80,7 @@ const Cart = () => {
                                         <td className="pt-9 px-5">
                                             <div className="flex items-center gap-4">
                                                 <div className="relative w-[64px] h-[64px]">
-                                                    <img src={item.image} alt={item.name} className="w-full h-full object-cover rounded" />
+                                                    <img src={item.image} alt={item.name} className="w-full  pointer-events-none h-full object-cover rounded" />
                                                     <span className="absolute -top-2 -right-2 bg-[#0D2C47] text-white text-[10px] px-2 py-[2px] rounded-full font-semibold">
                                                         {item.quantity}
                                                     </span>

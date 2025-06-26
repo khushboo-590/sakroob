@@ -15,7 +15,6 @@ const CustomRewiews = () => {
     return (
         <div className="max-w-[1140px] mx-auto px-4 text-[#0D2C47] bg-white font-montserrat shadow-lg p-4 mb-[132px]">
             <div className="flex flex-wrap gap-y-6 justify-between">
-                {/* Card 1 */}
                 <div className="w-[211px]">
                     <h2 className="text-[22px] leading-[170%] font-semibold mb-2">Customer Reviews</h2>
                     <div className="flex items-center gap-2 mb-1 text-yellow-400 text-xl">
@@ -67,7 +66,6 @@ const CustomRewiews = () => {
                         </div>
                     </div>
 
-                    {/* Card 3 */}
                     <div className="w-[279px] mt-[105px]">
                         <p className="text-[22px] leading-[170%] font-semibold mb-[6px]">Review this Product</p>
                         <p className="text-sm leading-[170%] font-medium mb-[25px]">
@@ -87,7 +85,7 @@ const CustomRewiews = () => {
                     <img
                         src={user}
                         alt="user"
-                        className=""
+                        className="pointer-events-none"
                     />
                     <div className="flex-1">
                         <div className="flex gap-[9px] items-center flex-wrap ">

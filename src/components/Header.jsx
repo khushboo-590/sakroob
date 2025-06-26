@@ -11,7 +11,7 @@ const Header = () => {
                             key={index}
                             className="flex  items-center min-w-[207px] h-[91px] text-center p-4 my-6 gap-[14px] rounded-[8px] border-[#112D491A] border-1">
                             <div className="bg-[#112D49]  flex items-center justify-center rounded-full mb-2">
-                                <img src={obj.icon} alt={obj.name} className="" />
+                                <img src={obj.icon} alt={obj.name} className="pointer-events-none" />
                             </div>
                             <span className="text-base leading-[120%] font-bold font-montserrat">{obj.name}</span>
                         </div>

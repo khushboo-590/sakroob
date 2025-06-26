@@ -5,10 +5,9 @@ import detailsStar from '../assets/images/svg/stars-details.svg'
 import Rewiews from './Rewiews'
 import CustomRewiews from './CustomRewiews'
 import PopularProduct from "./PopularProduct";
-import CheckOut from "./CheckOut";
 import CustomButton from "./common/CustomButton";
-import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
+import Footer from "./footer";
 
 
 
@@ -32,7 +31,7 @@ const DetailPage = () => {
                                 key={i}
                                 src={details}
                                 alt={`thumb-${i}`}
-                                className=" w-[100px] lg:w-[156px] h-[107px] rounded  object-contain cursor-pointer bg-[#F5F5F5] py-[9px] px-[30px]"
+                                className=" w-[100px] lg:w-[156px] pointer-events-none h-[107px] rounded  object-contain cursor-pointer bg-[#F5F5F5] py-[9px] px-[30px]"
                             />
                         ))}
                     </div></div>
@@ -93,9 +92,7 @@ const DetailPage = () => {
             <Rewiews />
             <CustomRewiews/>
             <PopularProduct />
-            <Footer />
-            {/* <CheckOut /> */}
-        </div>
+<Footer/>        </div>
 
     );
 };

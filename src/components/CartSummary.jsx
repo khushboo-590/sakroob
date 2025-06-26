@@ -12,7 +12,7 @@ const CartSummary = () => {
                                <img
                                    src={chairImage}
                                    alt="Gaming Chair"
-                                   className="w-12 h-12 object-contain bg-gray-100 rounded"
+                          className="w-12 h-12  pointer-events-none object-contain bg-gray-100 rounded"
                                />
                                <span className="text-sm leading-[150%]">Gaming Chair</span>
                            </div>

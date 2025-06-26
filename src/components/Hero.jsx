@@ -20,7 +20,7 @@ const Hero = () => {
                 {HERO_SLIDES.map((item, index) => (
                     <div
                         key={index}
-                        className="rounded-[8px] bg-center pointer-events-none bg-cover bg-no-repeat min-h-[643px] w-full flex flex-col justify-center items-center"
+                        className="rounded-[8px] bg-center  bg-cover bg-no-repeat min-h-[643px] w-full flex flex-col justify-center items-center"
                         style={{ backgroundImage: `url(${item.bgImg })` }}>
                         <HeadingContent
                             heading={item.heading}
@@ -30,11 +30,11 @@ const Hero = () => {
                         />
                         <div className="flex justify-center items-center gap-4.5 mt-8.5">
                             <CustomButton
-                                buttonClass="bg-[#112D49] text-white hover:bg-white hover:text-[#112D49] border hover:border-[#112D49]"
+                                buttonClass="bg-[#112D49] text-white hover:bg-white hover:text-[#112D49] border hover:border-[#112D49] cursor-pointer"
                                 buttonText="Browse Products"
                             />
                             <CustomButton
-                                buttonClass="hover:bg-[#112D49] text-[#112D49] hover:text-white bg-transparent border border-[#112D49]"
+                                buttonClass="hover:bg-[#112D49] text-[#112D49] hover:text-white bg-transparent border border-[#112D49]  cursor-pointer"
                                 buttonText="Starter Kits"
                             />
                         </div>

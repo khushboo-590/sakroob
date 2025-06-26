@@ -7,7 +7,7 @@ import CustomRewiews from './CustomRewiews'
 import PopularProduct from "./PopularProduct";
 import CustomButton from "./common/CustomButton";
 import { useNavigate } from "react-router-dom";
-import Footer from "./footer";
+import Footer from "./Footer";
 
 
 
@@ -92,7 +92,9 @@ const DetailPage = () => {
             <Rewiews />
             <CustomRewiews/>
             <PopularProduct />
-<Footer/>        </div>
+            <Footer/>
+
+       </div>
 
     );
 };

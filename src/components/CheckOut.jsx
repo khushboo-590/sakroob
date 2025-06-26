@@ -22,6 +22,20 @@ const CheckoutPage = () => {
             setTimeout(() => setCouponMessage(""), 3000);
         }
     };
+    const basePrice = 357.99;
+    const shipping = 20.0;
+    const discountPerClick = 10;
+
+    const [clickCount, setClickCount] = useState(0);
+
+    const handleImageClick = () => {
+        setClickCount((prev) => prev + 1);
+    };
+
+    const discount = discountPerClick * clickCount;
+    const subtotal = basePrice - discount;
+    const total = subtotal + shipping;
+
 
     return (
         <div className="min-h-screen py-8 md:py-16 lg:py-[120px] overflow-hidden px-4">
@@ -232,14 +246,19 @@ const CheckoutPage = () => {
                         <div className="lg:max-w-[364px] w-full shadow-md h-[333px] lg:mb-0 mb-7 ">
                             <div className="bg-white p-[14px] rounded-xl shadow-md w-full lg:max-w-sm">
                                 <div className="flex items-center justify-between mb-[26px]">
-                                    <div className="flex items-center gap-3">
-                 ``                       <img
-                                            src={chairImage}
-                                            alt="Gaming Chair"
-                                            className="w-12 h-12  pointer-events-none object-contain bg-gray-100 rounded"
-                                        />
-                                        <span className="text-sm leading-[150%]">Gaming Chair</span>
+                                    <div className="flex items-center justify-between mb-6">
+                                        <div className="flex items-center gap-3">
+                                            <img
+                                                src={chairImage}
+                                                alt="Gaming Chair"
+                                                onClick={handleImageClick}
+                                                className="w-12 h-12 bg-gray-100 rounded cursor-pointer object-contain"
+                                            />
+                                            <span className="text-sm">Gaming Chair</span>
+                                        </div>
+                                        <span className="text-sm">AED {basePrice.toFixed(2)}</span>
                                     </div>
+
                                     <span className="text-sm leading-[150%]">AED 357.99</span>
                                 </div>
                                 <p className="text-[13px] text-[#73A4E0] leading-[150%] font-medium cursor-pointer">
@@ -267,13 +286,25 @@ const CheckoutPage = () => {
                                 <div className="mb-3 space-y-1 text-base">
                                     <div className="flex justify-between">
                                         <span>Subtotal</span>
-                                        <span>AED 357.99</span>
+                                        <span>AED {subtotal.toFixed(2)}</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span>Shipping</span>
-                                        <span>AED 20.00</span>
+                                        <span>AED {shipping.toFixed(2)}</span>
                                     </div>
+                                    {discount > 0 && (
+                                        <div className="flex justify-between text-green-600">
+                                            <span>Discount ({clickCount} clicks)</span>
+                                            <span>- AED {discount.toFixed(2)}</span>
+                                        </div>
+                                    )}
                                 </div>
+
+                                <div className="flex justify-between mt-4 text-base font-semibold">
+                                    <span>Total</span>
+                                    <span className="text-[#0D2C47]">AED {total.toFixed(2)}</span>
+                                </div>
+                            </div>
                                 <CustomButton
                                     buttonClass="py-4 w-full border border-[#112D49] hover:text-[#112D49] text-white"
                                     buttonText="Convert"
@@ -284,11 +315,11 @@ const CheckoutPage = () => {
                                 </div>
                             </div>
                             </div>
+                        
 
                         </div>
                     </div>
                 </div>
-            </div>
     );
 };
 

@@ -36,7 +36,10 @@ const Raspberry = () => {
                             className="pointer-events-none" />
                     </div>
                 </div></div>
-            <CustomButton buttonClass={"mt-[56px] flex justify-center mx-auto bg-[#112D49] text-white hover:bg-white hover:text-[#112D49] hover:border-[#112D49] hover:border cursor-pointer"} buttonText={"View All Blog Posts"} />
+            <CustomButton
+                buttonClass="mt-[56px] flex justify-center mx-auto bg-[#112D49] text-white border border-[#112D49] cursor-pointer transition-transform duration-300 transform hover:scale-105"
+                buttonText="View All Blog Posts"
+            />
         </div>
     );
 };

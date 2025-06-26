@@ -8,6 +8,7 @@ import DetailsPage from './components/DetailsPage';
 import CheckOut from './components/CheckOut';
 import SignUpPage from './components/SignUpPage';
 import LoginPage from './components/LogInPage';
+import BackToTop from './components/common/BackTotop';
 
 function App() {
   const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
@@ -37,6 +38,7 @@ function App() {
       </Routes>
 
       {isLoggedIn && !hideFooterRoutes.includes(location.pathname) && <Footer />}
+      <BackToTop/>
     </>
   );
 }

@@ -60,25 +60,23 @@ const BestSeller = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
             </button>
-
-            {/* Swiper Carousel */}
             <Swiper
                 modules={[Navigation]}
                 navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
                 loop={true}
-                spaceBetween={24}
+                spaceBetween={20}
                 className="overflow-visible mt-7 md:mt-[50px] lg:mt-[100px]"
                 breakpoints={{
                     0: { slidesPerView: 1 },
                     640: { slidesPerView: 1 },
                     768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 2 },
+                    1024: { slidesPerView: 2,  spaceBetween:10},
                     1200: { slidesPerView: 3 },
                 }}
             >
                 {BESTSELLER_DATA.map((item, i) => (
                     <SwiperSlide key={i} className="!flex !justify-center !items-stretch !overflow-visible mx-auto relative z-0 px-2 font-montserrat">
-                        <div className="flex flex-col max-w-[364px] min-h-[536px] mt-[79px] !rounded-[8px] mb-6 p-4 shadow-md bg-white relative z-10">
+                        <div className="flex flex-col max-w-[364px] min-h-[536px] mt-[79px] !rounded-[8px] mb-6 p-4 shadow-md bg-white relative z-10 cursor-pointer">
                             <div className="h-[242px] w-[332px] bg-[#E5E4E2] relative flex justify-center items-center mx-auto rounded-[4px]">
 
                                 {/* Heart Icon */}

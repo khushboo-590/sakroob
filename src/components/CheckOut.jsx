@@ -24,7 +24,7 @@ const CheckoutPage = () => {
     };
 
     return (
-        <div className="min-h-screen py-[120px] overflow-hidden px-4">
+        <div className="min-h-screen py-8 md:py-16 lg:py-[120px] overflow-hidden px-4">
             <div className="max-w-[1140px] mx-auto px-3">
                 <div className="flex flex-col lg:flex-row gap-6">
                     <div className="w-full lg:w-8/12">

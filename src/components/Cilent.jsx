@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 import { TESTMONIAL_DATA } from '../utils/helper';
-import { LeftArrow, LeftQuotationIcon, Rating, RightArrow, RightQuotationIcon } from '../utils/icon';
+import { LeftArrow, LeftQuotationIcon, Rating, RightArrow,  } from '../utils/icon';
 import Heading from './common/Heading';
 
 const Cilent = () => {
@@ -13,7 +13,7 @@ const Cilent = () => {
                 <p className="text-center italic text-lg md:text-xl text-[#112D49] mb-2">
                     Testimonials
                 </p>
-                <Heading headClass={"mb-[59px]" } headText={"What our client’s says "}/>
+                <Heading headClass={" mb-6 md:mb-[40px]lg:mb-[59px]" } headText={"What our client’s says "}/>
                 <div className="mt-10 relative">
                     <div className="max-xl:hidden flex xl:absolute top-1/2 xl:-left-14 xl:-right-14 2xl:-left-20 2xl:-right-20 transform -translate-y-1/2 justify-between items-center px-4 z-10">
                         <div className="swiper-arrow prev-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">

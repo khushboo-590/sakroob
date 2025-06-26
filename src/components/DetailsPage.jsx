@@ -8,9 +8,6 @@ import CustomButton from "./common/CustomButton";
 import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 
-
-
-
 const DetailPage = () => {
     const colors = ["#000000", "#0D2C47", "#1DF085", "#80A9F7"];
     const [selectedColor, setSelectedColor] = useState(colors[0]);

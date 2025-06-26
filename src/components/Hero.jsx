@@ -8,7 +8,7 @@ import { HERO_SLIDES } from "../utils/helper";
 
 const Hero = () => {
     return (
-        <div className="px-2 max-w-[1432px] w-full mx-auto mt-[31px] mb-[43px]">
+        <div className="px-2 max-w-[1432px] w-full mx-auto mt-4 lg:mt-[25px] xl:mt-[31px]  mb-4 lg:mb-[25px] xl:mb-[43px]">
             <Carousel
                 showArrows={false}
                 showThumbs={false}
@@ -30,11 +30,12 @@ const Hero = () => {
                         />
                         <div className="flex justify-center items-center gap-4.5 mt-8.5">
                             <CustomButton
-                                buttonClass="bg-[#112D49] text-white hover:bg-white hover:text-[#112D49] border hover:border-[#112D49] cursor-pointer"
+                                buttonClass="bg-[#112D49] text-white border border-[#112D49] cursor-pointer transition-transform duration-300 transform hover:scale-105"
                                 buttonText="Browse Products"
                             />
+
                             <CustomButton
-                                buttonClass="hover:bg-[#112D49] text-[#112D49] hover:text-white bg-transparent border border-[#112D49]  cursor-pointer"
+                                buttonClass="bg-transparent text-[#112D49] border border-[#112D49] cursor-pointer transition-transform duration-300 transform hover:scale-105"
                                 buttonText="Starter Kits"
                             />
                         </div>

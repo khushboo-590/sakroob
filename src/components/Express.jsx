@@ -3,19 +3,19 @@ import { FEATURES_DATA } from '../utils/helper';
 
 const Express = () => {
     return (
-        <div className="bg-[#F5F9FD] max-w-[1384px] mx-auto mt-6 mb-10 md:mb-[180px] lg:mb-[132px]">
+        <div className="bg-[#F5F9FD] max-w-[1384px] mx-auto mt-6 mb-10 md:mb-[100px] lg:mb-[132px]">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 px-4 sm:px-[71px] py-[43px] mx-auto gap-y-6">
                 {FEATURES_DATA.map((item, index) => (
                     <div
                         key={index}
                         className="flex flex-col sm:flex-row items-center w-full justify-center sm:justify-start text-center sm:text-left py-[7px] relative">
-                        <div className={`flex items-center justify-center ${index !== 0 ? 'sm:pl-[36px]' : ''}`}>
+                        <div className={`flex items-center justify-center ${index !== 0 ? 'lg:pl-[36px]' : ''}`}>
                             <img
                                 src={item.icon}
                                 alt={item.title}
                                 className=" object-contain pointer-events-none" />
                         </div>
-                        <div className="sm:ml-3 mt-2 sm:mt-0">
+                        <div className="sm:ml-3 mt-2 sm:mt-0 lg:mr-0 mr-3">
                             <h4 className="text-base font-bold leading-[150%] text-black">
                                 {item.title}
                             </h4>
@@ -24,7 +24,7 @@ const Express = () => {
                             </p>
                         </div>
                         {index !== FEATURES_DATA.length - 1 && (
-                            <div className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2">
+                            <div className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 ">
                                 <svg
                                     width="1"
                                     height="63"

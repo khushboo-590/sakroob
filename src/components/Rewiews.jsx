@@ -39,7 +39,7 @@ const Reviews = () => {
             </div>
             {activeTab === "Reviews" && (
                 <div className="mx-auto px-4 text-[#0D2C47] bg-white shadow-lg p-4">
-                    <div className="flex flex-wrap gap-y-6 justify-between">
+                    <div className="flex flex-wrap gap-y-6 lg:justify-between">
                         <div className="w-[211px]">
                             <h2 className="text-[22px] leading-[170%] font-semibold mb-2">
                                 Customer Reviews
@@ -69,8 +69,8 @@ const Reviews = () => {
                             </p>
                         </div>
 
-                        <div className="flex flex-col md:flex-row items-start gap-[165px]">
-                            <div className="w-[359px] mt-[69px] space-y-2">
+                        <div className="flex flex-col lg:flex-row lg:items-start gap-4 md:gap-10 lg:gap-[165px]">
+                            <div className="w-[359px] mt-4 md:mt10 lg:mt-[69px] space-y-2">
                                 {ratings.map((item) => (
                                     <div
                                         key={item.stars}
@@ -104,7 +104,7 @@ const Reviews = () => {
                                 ))}
                             </div>
 
-                            <div className="w-[279px] mt-[105px]">
+                            <div className="w-[279px] mt-7 md:mt-[60px] lg:mt-[105px]">
                                 <p className="text-[22px] leading-[170%] font-semibold mb-[6px]">
                                     Review this Product
                                 </p>
@@ -122,12 +122,16 @@ const Reviews = () => {
                     <p className="mt-4 text-sm underline cursor-pointer font-medium flex gap-1 mb-[56px]">
                         See all Customers Reviews <span className="text-base">→</span>
                     </p>
-                    <div className="max-w-[951px] mt-[34px]">
-                        <div className="flex items-start gap-4">
-                            <img src={user} alt="user" className="pointer-events-none" />
-                            <div className="flex-1">
-                                <div className="flex gap-[9px] items-center flex-wrap">
-                                    <div className="flex items-center gap-1 text-yellow-400">
+                    <div className="max-w-[951px] mt-8 lg:mt-[34px] w-full px-4 sm:px-6 mx-auto">
+                        <div className="flex flex-col sm:flex-row items-start gap-4">
+                            <img
+                                src={user}
+                                alt="user"
+                                className="pointer-events-none w-20 h-20 object-cover rounded-full mx-auto sm:mx-0"
+                            />
+                            <div className="flex-1 ">
+                                <div className="flex flex-wrap gap-[9px] items-center justify-center sm:justify-start">
+                                    <div className="flex items-center gap-1 text-yellow-400 ">
                                         {Array(5)
                                             .fill()
                                             .map((_, i) => (
@@ -145,19 +149,28 @@ const Reviews = () => {
                                                     />
                                                 </svg>
                                             ))}
-                                        <span className="text-sm font-medium text-[#0D2C47]">
-                                            23/05/2025
-                                        </span>
                                     </div>
+                                    <span className="text-sm font-medium text-[#0D2C47]">
+                                        23/05/2025
+                                    </span>
                                 </div>
-                                <p className="text-xl font-semibold text-[#0D2C47] mb-[23px]">
+                                <p className="text-xl font-semibold text-[#0D2C47] mt-2 mb-4 text-center sm:text-left">
                                     Kathryn Murphy
                                 </p>
-                                <p className="text-base leading-[150%]">
-                                    Excellent router that offers great value for its price. The setup process is straightforward and user-friendly, making it easy even for non-technical users. With two powerful 5 dBi antennas, the router delivers a strong and stable network connection throughout the home or office, ensuring no lag or disconnections during browsing, streaming, or gaming. Its compact design fits well in any space, making it both efficient and unobtrusive. Highly recommended for reliable everyday internet use.                                </p>
+                                <p className="text-base leading-[150%] text-center sm:text-left">
+                                    Excellent router that offers great value for its price. The setup
+                                    process is straightforward and user-friendly, making it easy even
+                                    for non-technical users. With two powerful 5 dBi antennas, the
+                                    router delivers a strong and stable network connection throughout
+                                    the home or office, ensuring no lag or disconnections during
+                                    browsing, streaming, or gaming. Its compact design fits well in any
+                                    space, making it both efficient and unobtrusive. Highly recommended
+                                    for reliable everyday internet use.
+                                </p>
                             </div>
                         </div>
                     </div>
+
                 </div>
             )}
             {activeTab === "Specifications" && (

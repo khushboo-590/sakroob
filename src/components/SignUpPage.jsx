@@ -36,7 +36,7 @@ const SignUpPage = () => {
         toast.success("Sign up successful!");
         reset();
         setTimeout(() => navigate("/"), 1500);
-        
+
     };
 
     return (
@@ -47,18 +47,19 @@ const SignUpPage = () => {
                 <CustomInput
                     placeholder="First Name"
                     type="text"
-                    className="mb-2 mt-[24px] rounded-[102px] bg-[#F4F8F7] "
+                    className="mb-2 mt-[24px] rounded-[102px] bg-[#F4F8F7] border-none outline-none focus:outline-none focus:ring-0 focus:border-none"
                     {...register('firstName', {
                         required: 'First name is required',
                         minLength: { value: 2, message: 'Minimum 2 characters' },
                     })}
                 />
+
                 {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName.message}</p>}
 
                 <CustomInput
                     placeholder="Last Name"
                     type="text"
-                    className="mb-2 rounded-[102px] bg-[#F4F8F7]"
+                    className="mb-2 mt-[24px] rounded-[102px] bg-[#F4F8F7] border-none outline-none focus:outline-none focus:ring-0 focus:border-none"
 
                     {...register('lastName', {
                         required: 'Last name is required',
@@ -69,7 +70,7 @@ const SignUpPage = () => {
                 <CustomInput
                     placeholder="Email address"
                     type="email"
-                    className="mb-2 rounded-[102px] bg-[#F4F8F7]"
+                    className="mb-2 mt-[24px] rounded-[102px] bg-[#F4F8F7] border-none outline-none focus:outline-none focus:ring-0 focus:border-none"
 
                     {...register('email', {
                         required: 'Email is required',
@@ -84,7 +85,7 @@ const SignUpPage = () => {
                 <div className="relative mb-2">
                     <CustomInput
                         placeholder="Password"
-                        className="mb-2 rounded-[102px] bg-[#F4F8F7]"
+                        className="mb-2 mt-[24px] rounded-[102px] bg-[#F4F8F7] border-none outline-none focus:outline-none focus:ring-0 focus:border-none"
 
                         type={showPassword ? 'text' : 'password'}
                         {...register('password', {
@@ -96,7 +97,6 @@ const SignUpPage = () => {
                         onClick={() => setShowPassword(!showPassword)}
                         className="absolute right-3 top-2 cursor-pointer"
                     >
-                        {/* Eye Icon */}
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M2 8C2 8 6.477 3 12 3C17.523 3 22 8 22 8" stroke="#3F566B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M21.544 13.045C21.848 13.471 22 13.685 22 14C22 14.316 21.848 14.529 21.544 14.955C20.178 16.871 16.689 21 12 21C7.31 21 3.822 16.87 2.456 14.955C2.152 14.529 2 14.315 2 14C2 13.684 2.152 13.471 2.456 13.045C3.822 11.129 7.311 7 12 7C16.69 7 20.178 11.13 21.544 13.045Z" stroke="#3F566B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

@@ -27,7 +27,9 @@
   background: #112D49 !important;
   width: 51px !important;
 }
-
+body{
+  color:#112D49;
+}
 .slider-wrapper {
   padding-bottom: 21px !important;
 }
@@ -63,3 +65,27 @@
       #112D49 52.88%,
       rgba(17, 45, 73, 0) 100%);
   border-image-slice: 1;}
+
+    :root {
+      --color-light-blue: #D5E8FF;
+      --color-bg-blue: #EEF4FB;
+      --color-silver: #E5E4E2;
+      --color-sky: #73A4E01A;
+    }
+  
+    /* ---------- CUSTOM BACKGROUND CLASSES ---------- */
+    .bg-light-blue {
+      background-color: var(--color-light-blue);
+    }
+  
+    .bg-blue {
+      background-color: var(--color-bg-blue);
+    }
+  
+    .bg-silver {
+      background-color: var(--color-silver);
+    }
+  
+    .bg-sky {
+      background-color: var(--color-sky);
+    }

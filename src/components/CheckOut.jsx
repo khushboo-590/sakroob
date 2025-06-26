@@ -1,4 +1,3 @@
-
 import CustomButton from "./common/CustomButton";
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -9,13 +8,18 @@ import paypal from "../assets/images/png/paypal.png";
 import chairImage from '../assets/images/png/chairImg.png';
 
 const CheckOut = () => {
+    const [message, setMessage] = useState("");
+
+    const handleApplyCoupon = () => {
+        setMessage(" applied successfully!");
+    };
+      
+      
     const [checked, setChecked] = useState(false);
-    const usenavigate = useNavigate();
+    const navigate = useNavigate();
 
     const [selected, setSelected] = useState("");
-    const [couponApplied, setCouponApplied] = useState(false);
     const [coupon, setCoupon] = useState("");
-    const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 
 
     const [formData, setFormData] = useState({
@@ -30,15 +34,6 @@ const CheckOut = () => {
     });
 
     const [formErrors, setFormErrors] = useState({});
-
-    const handleApplyCoupon = () => {
-        if (coupon.trim() !== "") {
-            setCouponApplied(true);
-            setTimeout(() => {
-                setCouponApplied(false);
-            }, 1000);
-        }
-    };
 
     const handleChange = (field, value) => {
         setFormData((prev) => ({
@@ -95,9 +90,6 @@ const CheckOut = () => {
             setShowSuccessPopup(false);
         }, 2000);
     };
-
-    const navigate = useNavigate();
-    const [selectedMethod, setSelectedMethod] = useState("credit");
 
     const basePrice = 357.99;
     const shipping = 20.0;
@@ -336,37 +328,37 @@ const CheckOut = () => {
                                 <p className="text-[13px] text-[#73A4E0] leading-[150%] font-medium cursor-pointer">
                                     Have a coupon? Click here to enter your code
                                 </p>
-                                <div className="flex mt-4 mb-2">
-                                    <input
-                                        type="text"
-                                        placeholder="Coupon code"
-                                        value={coupon}
-                                        onChange={(e) => setCoupon(e.target.value)}
-                                        className="flex-1 bg-[#F4F8F7] pl-[14px] py-[5px] rounded-full text-base border border-gray-300"
-                                    />
-                                    <CustomButton
-                                        buttonClass="py-[8px] px-[15px] bg-white text-[#0D2C47] border border-[#0D2C47] ml-2"
-                                        buttonText="Apply Now"
-                                        onClick={handleApplyCoupon}
-                                    />
+                                <div className="flex flex-col mt-4 mb-2">
+                                    <div className="flex">
+                                        <input
+                                            type="text"
+                                            placeholder="Coupon code"
+                                            value={coupon}
+                                            onChange={(e) => setCoupon(e.target.value)}
+                                            className="flex-1 bg-[#F4F8F7] pl-[14px] py-[5px] rounded-full text-base border border-gray-300"
+                                        />
+                                        <CustomButton
+                                            buttonClass="py-[8px] px-[15px] bg-white text-[#0D2C47] border border-[#0D2C47] ml-2"
+                                            buttonText="Apply Now"
+                                            onClick={handleApplyCoupon}
+                                        />
+                                    </div>
+                                    {message && (
+                                        <p className="mt-2 text-sm text-green-600">{message}</p>
+                                    )}
                                 </div>
-                                {/* {couponMessage && (
-                                        <p className={`text-sm ${couponMessage.includes("successfully") ? "text-green-600" : "text-red-500"}`}>
-                                            {couponMessage}
-                                        </p>
-                                    )} */}
+                              
                                 <div className="mb-3 space-y-1 text-base">
                                     <div className="flex justify-between">
                                         <span>Subtotal</span>
                                         <span>AED {subtotal.toFixed(2)}</span>
                                     </div>
                                     <div className="flex justify-between">
-                                        <span>Shipping</span>
                                         <span>AED {shipping.toFixed(2)}</span>
                                     </div>
                                     {discount > 0 && (
                                         <div className="flex justify-between text-green-600">
-                                            <span>Discount ({clickCount} clicks)</span>
+                                            <span>Discount {clickCount} </span>
                                             <span>- AED {discount.toFixed(2)}</span>
                                         </div>
                                     )}
@@ -380,11 +372,7 @@ const CheckOut = () => {
                             <CustomButton
                                 buttonClass="py-4 w-full border border-[#112D49] hover:text-[#112D49] text-white"
                                 buttonText="Convert"
-                            />
-                            <div className="flex justify-between mt-4 text-base">
-                                <span>Total</span>
-                                <span className="text-[#0D2C47] font-semibold">AED 377.99</span>
-                            </div>
+                            />                           
                         </div>
                     </div>
 

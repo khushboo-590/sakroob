@@ -81,7 +81,7 @@ const DetailPage = () => {
                         <div className="w-full flex flex-col gap-5 mt-[78px]">
                             <CustomButton
                                 buttonText={"Buy Now"}
-                                buttonClass={"bg-[#0D2C47] text-white w-full"}
+                                buttonClass={"bg-[#0D2C47] text-white w-full hover:text-[#0D2C47] hover:bg-white hover:border border-[#0D2C47] "}
                             />
                             <CustomButton
                                 buttonText={"Add to Cart"}
@@ -89,7 +89,7 @@ const DetailPage = () => {
                                     navigate('/cart');
                                     window.scrollTo(0, 0); 
                                 }}
-                                buttonClass={"border border-[#0D2C47] text-[#0D2C47] bg-white w-full"}
+                                buttonClass={"border border-[#0D2C47] text-[#0D2C47] bg-white w-full hover:bg-[#0D2C47] hover:text-white "}
                             />
 
                         </div>

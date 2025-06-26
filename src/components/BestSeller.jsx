@@ -41,9 +41,7 @@ const BestSeller = () => {
     };
 
     return (
-        <div className="max-w-[1272px] mx-auto px-4 mb-10 md:mb-[180px] lg:mb-[132px] text-center overflow-visible relative justify-center">
-
-            {/* ✅ Custom Popup Message */}
+        <div className="max-w-[1272px] mx-auto px-4 mb-10 md:mb-[100px] lg:mb-[132px] text-center overflow-visible relative justify-center">
             {showPopup && (
                 <div className="fixed top-5 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 rounded-md shadow-lg z-50 transition-opacity duration-300">
                     {popupMessage}
@@ -51,8 +49,6 @@ const BestSeller = () => {
             )}
 
             <Heading headText={"Bestsellers"} headClass={"mb-4"} />
-
-            {/* Navigation Buttons */}
             <button className="custom-prev bg-white shadow-lg cursor-pointer rounded-full w-10 h-10 flex items-center justify-center border border-black absolute top-1/2 left-0 xl:-left-10 transform -translate-y-1/2 z-10 hover:bg-black hover:text-white transition-all duration-300 mx-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
@@ -114,8 +110,10 @@ const BestSeller = () => {
                                         <CustomButton
                                             buttonText="Shop Now"
                                             buttonClass="w-full rounded-full border border-[#112D49] hover:text-white hover:bg-[#112D49] bg-white text-[#112D49] text-base font-medium leading-[100%] flex items-center justify-center gap-2 transition"
-                                            onClick={() => navigate('/detailspage')}
-                                        />
+                                            onClick={() => {
+                                                navigate('/detailspage');
+                                                window.scrollTo(0, 0);
+                                            }}                                     />
                                         {item.shop && <item.shop />}
                                     </div>
                                 </div>

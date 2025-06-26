@@ -58,7 +58,7 @@ const PopularProduct = () => {
                     </div>
                 </div>
                 <CustomButton
-                    buttonClass="rounded-full border bg-[#112D49] text-white text-base font-medium leading-[100%] mt-[42px] mb-[132px] !mb-[132px] mx-auto flex items-center justify-center gap-2 transition"
+                    buttonClass="rounded-full border hover:text-[#112D49]  hover:bg-white bg-[#112D49] text-white border hover:border-[#0D2C47] text-base font-medium leading-[100%] mt-[42px] mb-[132px] !mb-[132px] mx-auto flex items-center justify-center gap-2 transition"
                     buttonText="Explore all products"
                 />
 

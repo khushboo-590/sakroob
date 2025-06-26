@@ -55,12 +55,19 @@ const Cart = () => {
 
     return (
         <>
-            <div className="max-w-[1140px] mx-auto p-4 font-montserrat">
-                <div className="flex justify-between mt-[94px] mb-[52px] flex-wrap gap-2">
+            <div className="max-w-[1140px] mx-auto p-4 mb-10 md:mb-[100px] lg:mb-[132px] text-[#0D2C47]  ">
+                <div className="flex justify-between mt-7 lg:mt-[94px] mb-7 lg:mb-[52px] flex-wrap gap-2 items-center">
                     <h1 className="text-[34px] font-bold leading-[100%]">Your cart</h1>
-                    <p className="font-medium text-base leading-[100%] underline decoration-solid cursor-pointer">
+                    <p
+                        className="font-medium text-base leading-[100%] underline decoration-solid cursor-pointer"
+                        onClick={() => {
+                            navigate('/');
+                            window.scrollTo(0, 0);
+                        }}
+                    >
                         Continue Shopping
                     </p>
+
                 </div>
 
                 <div className="w-full bg-[#F4F8F7] font-montserrat relative h-[575px] px-4">
@@ -81,7 +88,7 @@ const Cart = () => {
                                             <div className="flex items-center gap-4">
                                                 <div className="relative w-[64px] h-[64px]">
                                                     <img src={item.image} alt={item.name} className="w-full  pointer-events-none h-full object-cover rounded" />
-                                                    <span className="absolute -top-2 -right-2 bg-[#0D2C47] text-white text-[10px] px-2 py-[2px] rounded-full font-semibold">
+                                                    <span className="absolute -top-2 -right-2 bg-[#C7C7C7]  text-[10px] px-2 py-[2px] rounded-[39px] font-semibold">
                                                         {item.quantity}
                                                     </span>
                                                 </div>
@@ -135,7 +142,7 @@ const Cart = () => {
 
                     <div className="relative w-full ">
                         <div className="absolute right-0 max-w-[328px]">
-                            <div className="flex flex-col sm:flex-row justify-between pt-5 gap-[67px]">
+                            <div className="flex flex-col sm:flex-row justify-between pt-5 gap-2 lg:gap-[67px]">
                                 Estimated Total:
                                 <span className="font-bold text-[#0D2C47]">
                                     Dhs. {totalPrice.toFixed(2)} AED

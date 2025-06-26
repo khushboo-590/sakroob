@@ -1,211 +1,127 @@
-import React, { useRef, useState } from "react";
-import CustomButton from "./common/CustomButton";
-import user from "../assets/images/png/user.png";
 
-const ratings = [
-    { stars: 5, percent: 100 },
-    { stars: 4, percent: 88 },
-    { stars: 3, percent: 42 },
-    { stars: 2, percent: 58 },
-    { stars: 1, percent: 20 },
+import React, { useState } from "react";
+import user from "../assets/images/png/user.png";
+import CustomButton from "./common/CustomButton";
+
+const reviewsSummary = [
+    { stars: 5, percent: 80 },
+    { stars: 4, percent: 10 },
+    { stars: 3, percent: 5 },
+    { stars: 2, percent: 3 },
+    { stars: 1, percent: 2 },
 ];
 
-const Reviews = () => {
-    const tabs = ["Reviews", "Specifications", "FAQs"];
-    const [activeTab, setActiveTab] = useState("Reviews");
-    const [reviewMessage, setReviewMessage] = useState("");
-    const handleReviewClick = () => {
-        setReviewMessage(" Thank you for your review!");
-        setTimeout(() => {
-            setReviewMessage(""); 
-        }, 3000);
-    };
-      
+const Review = () => {
+    const [activeTab, setActiveTab] = useState("reviews");
 
     return (
-        <div className="max-w-[1140px] mx-auto mb-[132px]">
-            <div className="mt-[124px] mb-[34px] overflow-x-auto">
-                <div className="w-full overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
-                    <div className="flex min-w-[500px] text-center text-base font-semibold justify-between border-b pb-4">
-                        {tabs.map((tab) => (
-                            <button
-                                key={tab}
-                                onClick={() => setActiveTab(tab)}
-                                className={`relative text-lg font-semibold px-4 h-[52px] text-[#0D2C47] transition-all duration-300 group`}
-                            >
-                                {tab}
-                                <span
-                                    className={`absolute left-0 bottom-0 h-[2px] w-full transition-all duration-300 ${activeTab === tab ? "bg-[#0D2C47] h-[4px]" : "bg-transparent h-[2px]"
-                                        }`}
-                                />
-                            </button>
-                        ))}
-                    </div>
-
-                </div>
-
+        <div className="p-4 sm:p-6 lg:p-8">
+            <div className="flex justify-between mb-6 ">
+                {["reviews", "Specifications", "faq"].map((tab) => (
+                    <button
+                        key={tab}
+                        onClick={() => setActiveTab(tab)}
+                        className={`py-3 text-sm sm:text-base font-semibold capitalize text-[#112D49] transition-all duration-300
+              ${activeTab === tab ? "border-b-2 border-[#112D49] w-70 " : "border-b-2 border-transparent  w-70  "}`}
+                    >
+                        {tab}
+                    </button>
+                ))}
             </div>
-            {activeTab === "Reviews" && (
-                <div className="mx-auto px-4 text-[#0D2C47] bg-white shadow-lg p-4">
-                    <div className="flex flex-wrap gap-y-6 lg:justify-between">
-                        <div className="w-[211px]">
-                            <h2 className="text-[22px] leading-[170%] font-semibold mb-2">
-                                Customer Reviews
-                            </h2>
-                            <div className="flex items-center gap-2 mb-1 text-yellow-400 text-xl">
-                                {Array(5)
-                                    .fill(0)
-                                    .map((_, i) => (
-                                        <span key={i}>
-                                            <svg
-                                                width="16"
-                                                height="16"
-                                                viewBox="0 0 16 16"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    d="M8.00049 12.2217L3.45146 15L4.68816 9.81482L0.640625 6.34771L5.9535 5.92206L8.00049 1L10.0475 5.92206L15.3611 6.34771L11.3128 9.81482L12.5495 15L8.00049 12.2217Z"
-                                                    fill="#FFD900"
-                                                />
-                                            </svg>
-                                        </span>
-                                    ))}
+            <div className="rounded-xl shadow border border-[#E5EAF1] bg-white p-6 sm:p-8">
+                {activeTab === "reviews" && (
+                    <div>
+                        <div className="flex flex-col lg:flex-row gap-8 ">
+                            <div className="flex flex-col lg:min-w-[220px]">
+                                <div className="text-[20px] sm:text-[22px] font-semibold text-[#112D49] mb-1">Customer Reviews</div>
+                                <div className="mb-2">
+                                    <span className="text-[#FFD600] text-xl font-bold">★★★★★</span>
+                                    <p className="font-medium text-[#112D49] mt-1">Based on 1 review</p>
+                                </div>
+                                <a href="#" className="text-[#112D49] mt-10 text-sm font-medium hover:underline flex items-center gap-1">
+                                    See all Customers Reviews <span className="ml-1">&gt;</span>
+                                </a>
                             </div>
-                            <p className="text-sm mb-4 leading-[170%] font-medium">
-                                Based on 1 review
-                            </p>
-                        </div>
-
-                        <div className="flex flex-col lg:flex-row lg:items-start gap-4 md:gap-10 lg:gap-[165px]">
-                            <div className="w-[359px] mt-4 md:mt10 lg:mt-[69px] space-y-2">
-                                {ratings.map((item) => (
-                                    <div
-                                        key={item.stars}
-                                        className="flex items-center gap-4"
-                                    >
-                                        <span className="text-sm w-4 text-yellow-500 flex items-center">
-                                            {item.stars}
-                                            <svg
-                                                width="16"
-                                                height="16"
-                                                viewBox="0 0 16 16"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    d="M8.00049 12.2217L3.45146 15L4.68816 9.81482L0.640625 6.34771L5.9535 5.92206L8.00049 1L10.0475 5.92206L15.3611 6.34771L11.3128 9.81482L12.5495 15L8.00049 12.2217Z"
-                                                    fill="#FFD900"
-                                                />
-                                            </svg>
-                                        </span>
-                                        <div className="w-full bg-gray-100 rounded-full h-[8px] relative overflow-hidden">
-                                            <div
-                                                className="absolute top-0 left-0 h-full bg-yellow-400 rounded-full"
-                                                style={{ width: `${item.percent}%` }}
-                                            />
+                            <div className="flex-1 max-w-full sm:max-w-[360px] pt-4">
+                                <div className="space-y-2">
+                                    {reviewsSummary.map((r) => (
+                                        <div key={r.stars} className="flex items-center gap-2">
+                                            <span className="text-sm w-6 flex gap-1">
+                                                <span className="text-[#112D49] font-medium">{r.stars}</span>
+                                                <span className="text-[#FFD600] font-medium">★</span>
+                                            </span>
+                                            <div className="flex-1 bg-[#F1F4F9] rounded h-1.5 overflow-hidden">
+                                                <div className="bg-[#FFD600] h-1.5" style={{ width: `${r.percent}%` }} />
+                                            </div>
+                                            <span className="text-xs font-semibold text-gray-500 w-8 text-right">{r.percent}%</span>
                                         </div>
-                                        <span className="text-sm w-10 text-right">
-                                            {item.percent}%
-                                        </span>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
-
-                            <div className="w-[279px] mt-7 md:mt-[60px] lg:mt-[105px]">
-                                <p className="text-[22px] leading-[170%] font-semibold mb-[6px]">
-                                    Review this Product
-                                </p>
-                                <p className="text-sm leading-[170%] font-medium mb-[25px]">
-                                    Share your thought with other customers
-                                </p>
-                                <CustomButton
-                                    buttonText={"Write a Customer Review"}
-                                    buttonClass={"bg-[#0D2C47] text-white hover:text-[#0D2C47] hover:bg-white hover border-[#0D2C47] border"}
-                                    onClick={handleReviewClick}
-                                />
-
-                                {reviewMessage && (
-                                    <p className="mt-2 text-red-600 text-sm">{reviewMessage}</p>
-                                )}
-
+                            <div className="flex-1 lg:min-w-[250px] flex flex-col items-start lg:items-end">
+                                <div className="rounded-xl p-5 sm:p-6 w-full max-w-xs bg-[#F9FAFB]">
+                                    <h4 className="text-lg font-semibold text-[#112D49] mb-1">Review this Product</h4>
+                                    <p className="text-xs text-gray-500 mb-4">Share your thought with other customers</p>
+                                    <CustomButton buttonText={" Write a Customer Review"}
+                                        buttonClass="mt-4 w-full bg-[#112D49] cursor-pointer text-white py-4 rounded-full font-semibold hover:bg-[#0E243E]"
+                                        onClick={() => {
+                                            alert("Review Submitted");
+                                        }}
+                                    />
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <p className="mt-4 text-sm underline cursor-pointer font-medium flex gap-1 mb-[56px]">
-                        See all Customers Reviews <span className="text-base">→</span>
-                    </p>
-                    <div className="max-w-[951px] mt-8 lg:mt-[34px] w-full px-4 sm:px-6 mx-auto">
-                        <div className="flex flex-col sm:flex-row items-start gap-4">
+                        <div className="my-8 border border-gray-200" />
+                        <div className="flex items-start gap-4 flex-col sm:flex-row">
                             <img
                                 src={user}
-                                alt="user"
-                                className="pointer-events-none w-20 h-20 object-cover rounded-full mx-auto sm:mx-0"
+                                alt="Kathryn Murphy"
+                                className="w-14 h-14 rounded-full object-cover border-2 border-[#E5EAF1]"
                             />
-                            <div className="flex-1 ">
-                                <div className="flex flex-wrap gap-[9px] items-center justify-center sm:justify-start">
-                                    <div className="flex items-center gap-1 text-yellow-400 ">
-                                        {Array(5)
-                                            .fill()
-                                            .map((_, i) => (
-                                                <svg
-                                                    key={i}
-                                                    width="16"
-                                                    height="16"
-                                                    viewBox="0 0 16 16"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path
-                                                        d="M8.00049 12.2217L3.45146 15L4.68816 9.81482L0.640625 6.34771L5.9535 5.92206L8.00049 1L10.0475 5.92206L15.3611 6.34771L11.3128 9.81482L12.5495 15L8.00049 12.2217Z"
-                                                        fill="#FFD900"
-                                                    />
-                                                </svg>
-                                            ))}
-                                    </div>
-                                    <span className="text-sm font-medium text-[#0D2C47]">
-                                        23/05/2025
-                                    </span>
+                            <div>
+                                <div className="flex items-center gap-2 flex-wrap">
+                                    <span className="text-[#FFD600] text-base">★★★★★</span>
+                                    <span className="text-gray-400 text-xs">23/05/2025</span>
                                 </div>
-                                <p className="text-xl font-semibold text-[#0D2C47] mt-2 mb-4 text-center sm:text-left">
-                                    Kathryn Murphy
-                                </p>
-                                <p className="text-base leading-[150%] text-center sm:text-left">
-                                    Excellent router that offers great value for its price. The setup
-                                    process is straightforward and user-friendly, making it easy even
-                                    for non-technical users. With two powerful 5 dBi antennas, the
-                                    router delivers a strong and stable network connection throughout
-                                    the home or office, ensuring no lag or disconnections during
-                                    browsing, streaming, or gaming. Its compact design fits well in any
-                                    space, making it both efficient and unobtrusive. Highly recommended
-                                    for reliable everyday internet use.
-                                </p>
+                                <div className="font-semibold text-[#112D49] text-base">Kathryn Murphy</div>
+                                <div className="text-gray-600 text-sm mt-2 max-w-2xl">
+                                    Excellent router that offers great value for its price.The D-Link DSL-2790U is a high-speed ADSL2+ wireless router with speeds up to 300 Mbps—ideal for browsing, streaming, and gaming.
+                                    It features four Ethernet ports, strong security, and guest network support....
+                                </div>
                             </div>
                         </div>
                     </div>
+                )}
 
-                </div>
-            )}
-            {activeTab === "Specifications" && (
-                <div className="mb-24 px-4">
-                    <h2 className="text-2xl font-bold mb-4">Specifications</h2>
-                    <p className="text-gray-700">
-                        This is the Specifications section. Show technical product details
-                        here.
-                    </p>
-                </div>
-            )}
-            {activeTab === "FAQs" && (
-                <div className="mb-24 px-4">
-                    <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-                    <p className="text-gray-700">
-                        This is the FAQs section. Show common customer queries and answers.
-                    </p>
-                </div>
-            )}
+                {activeTab === "Specifications" && (
+                    <div>
+                        <h3 className="text-xl font-semibold text-[#112D49] mb-4">Specifications</h3>
+                        <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm sm:text-base">
+                            <li>ADSL2+ Router with 300 Mbps speed</li>
+                            <li>
+                                <span className="font-semibold text-[#112D49]">4</span> Ethernet Ports + 1 WAN
+                            </li>
+                            <li>Dual 5dBi External Antennas</li>
+                        </ul>
+                    </div>
+                )}
+
+                {activeTab === "faq" && (
+                    <div className="text-center text-gray-500 text-lg py-12"> <p className="text-base leading-[150%] text-center sm:text-left">
+                        Excellent router that offers great value for its price. The setup
+                        process is straightforward and user-friendly, making it easy even
+                        for non-technical users. With two powerful 5 dBi antennas, the
+                        router delivers a strong and stable network connection throughout
+                        the home or office, ensuring no lag or disconnections during
+                        browsing, streaming, or gaming. Its compact design fits well in any
+                        space, making it both efficient and unobtrusive. Highly recommended
+                        for reliable everyday internet use.
+                    </p></div>
+                )}
+            </div>
+            
         </div>
     );
 };
 
-export default Reviews;
+export default Review;

@@ -34,7 +34,7 @@ const DetailPage = () => {
                                 />
                             ))}
                         </div></div>
-                    <div className="space-y-4 max-w-[568px] mx-auto">
+                    <div className="space-y-4 w-full xl:max-w-[568px] mx-auto">
                         <h2 className="text-[34px] font-bold leading-[100%]  mb-4">
                             D-Link ADSL Wireless Router DSL2790U                    </h2>
                         <p className="text-base leading-[150%]  mb-4">

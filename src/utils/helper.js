@@ -1,4 +1,4 @@
-import game from "../assets/images/svg/game-icon.svg";
+import gameIcon from "../assets/images/svg/game-icon.svg";
 import storage from "../assets/images/svg/stroage-icon.svg";
 import graphic from "../assets/images/svg/graphics-icon.svg";
 import televisions from "../assets/images/svg/television.-icon.svg";
@@ -25,19 +25,16 @@ import categorieImg3 from "../assets/images/png/div-tools.png"
 import categorieImg4 from "../assets/images/png/cable-img.png"
 import categorieImg5 from '../assets/images/png/gaming-img.png'
 import categorieImg6 from '../assets/images/png/pi-kits.png'
-import delivery from "../assets/images/svg/delivery.svg";
-import returnIcon from "../assets/images/svg/returnIcon.svg";
-import support from "../assets/images/svg/support.svg";
-import warranty from "../assets/images/svg/warranty.svg";
-import gift from "../assets/images/svg/gift.svg";
 import popularproduct1 from '../assets/images/png/popularproduct1.png'
 import popularproduct2 from '../assets/images/png/popularproduct2.png'
 import popularproduct3 from "../assets/images/png/popularproduct3.png"
+import { game,  Express, Return, Support, Premium, Gift } from "../utils/icon";
+
 
 
 
 export const HEADER_DATA = [
-    { name: "Game", icon: game },
+    { name: "Game", icon: gameIcon },
     { name: "Storage (SSD)", icon: storage },
     { name: "Graphic Card", icon: graphic },
     { name: "Televisions", icon: televisions },
@@ -125,6 +122,15 @@ export const HERO_SLIDES = [
         bgImg: bgImage,
     },
     {
+        heading: 'Build. Tinker. Repeat.',
+        para: 'From pro hardware to DIY kits, we support all tech enthusiasts.',
+        bgImg: bgImage,
+    },
+    {
+        heading: 'Build. Tinker. Repeat.',
+        para: 'From pro hardware to DIY kits, we support all tech enthusiasts.',
+        bgImg: bgImage,
+    }, {
         heading: 'Build. Tinker. Repeat.',
         para: 'From pro hardware to DIY kits, we support all tech enthusiasts.',
         bgImg: bgImage,
@@ -264,9 +270,29 @@ export const BLOG_PAGE_DATA = [
 
 
 export const FEATURES_DATA = [
-    { icon: delivery, title: "EXPRESS Delivery", desc: "Order Now" },
-    { icon: returnIcon, title: "Easy Return", desc: "30 days return" },
-    { icon: support, title: "24/7 Support", desc: "Premium Services" },
-    { icon: warranty, title: "Premium Warranty", desc: "Up to 2 years" },
-    { icon: gift, title: "Best Special Gift", desc: "For Order" },
+    {
+        icon: Express,
+        text: "EXPRESS Delivery",
+        para: "Order Now",
+    },
+    {
+        icon: Return,
+        text: "Easy Return ",
+        para: "30 days return",
+    },
+    {
+        icon: Support,
+        text: "24/7 Support",
+        para: "Premium Services",
+    },
+    {
+        icon: Premium,
+        text: "Premium Warranty",
+        para: "Up to 2 years",
+    },
+    {
+        icon: Gift,
+        text: "Best Special Gift",
+        para: "For Order",
+    },
 ];

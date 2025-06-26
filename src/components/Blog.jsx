@@ -8,7 +8,7 @@ import Heading from './common/Heading';
 const Blog = () => {
     return (
         <div className="max-w-[1384px] mx-auto px-4  mb-10 md:mb-[180px] lg:mb-[132px]">
-            <Heading headClass={ "max-w-[618px] mb-4 md:mb-10 lg:mb-16"} headText={"Blog, Guides, Build Logs & More"}/>
+            <Heading headClass={ "max-w-[618px] mb-6 md:mb-10 lg:mb-16"} headText={"Blog, Guides, Build Logs & More"}/>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
                 {BLOG_PAGE_DATA.map((item, index) => (
                     <div

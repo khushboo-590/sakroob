@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import CustomInput from './common/CustomInput';
 import 'react-toastify/dist/ReactToastify.css';
 import { useForm } from 'react-hook-form';
+import CustomButton from "./common/CustomButton";
 
 const LoginPage = ({ onLogin }) => {
     const [showPassword, setShowPassword] = useState(false);
@@ -63,7 +64,7 @@ const LoginPage = ({ onLogin }) => {
                                     message: "Invalid email format",
                                 },
                             })}
-                            className="bg-[#F4F8F7] py-[14px] px-[28px] max-w-[462px] w-full rounded-full"
+                            className="bg-[#F4F8F7] max-w-[462px] w-full rounded-full"
                         />
                         {errors.email && (
                             <p className="text-red-600 text-sm mt-1 px-2">
@@ -108,9 +109,9 @@ const LoginPage = ({ onLogin }) => {
                             Forgot password?
                         </a>
 
-                        <Buttons
-                            btnText="Log in"
-                            btnClass="mt-[40px] !max-w-[462px] !w-full"
+                        <CustomButton
+                            buttonText="Log in"
+                            buttonClass="mt-[40px] !max-w-[462px] !w-full text-white"
                             type="submit"
                         />
 

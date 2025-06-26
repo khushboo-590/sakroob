@@ -24,7 +24,7 @@ const CustomInput = forwardRef(
                     ref={ref}
                     type={type}
                     placeholder={placeholder}
-                    className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 ${error
+                    className={`w-full px-4 py-3  rounded-md ${error
                         ? 'border-red-500 focus:ring-red-400'
                         : 'border-gray-300 focus:ring-blue-400'
                         }`}

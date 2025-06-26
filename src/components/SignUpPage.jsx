@@ -18,7 +18,6 @@ const SignUpPage = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-        // Save signup data in localStorage (simulate registration)
         localStorage.setItem("user", JSON.stringify(data));
         alert("Signup successful!");
         navigate("/login");
@@ -39,7 +38,7 @@ const SignUpPage = () => {
                                 type="text"
                                 placeholder="First name"
                                 {...register("firstName", { required: "First name is required" })}
-                                className="bg-[#F4F8F7] py-[14px] px-[28px] max-w-[462px] w-full rounded-full"
+                                className="bg-[#F4F8F7]  max-w-[462px] w-full "
                             />
                             {errors.firstName && (
                                 <p className="text-red-600 text-sm mt-1 px-2">
@@ -53,7 +52,7 @@ const SignUpPage = () => {
                                 type="text"
                                 placeholder="Last name"
                                 {...register("lastName", { required: "Last name is required" })}
-                                className="bg-[#F4F8F7] py-[14px] px-[28px] max-w-[462px] w-full rounded-full"
+                                className="bg-[#F4F8F7]  max-w-[462px] w-full "
                             />
                             {errors.lastName && (
                                 <p className="text-red-600 text-sm mt-1 px-2">
@@ -73,7 +72,7 @@ const SignUpPage = () => {
                                         message: "Invalid email format",
                                     },
                                 })}
-                                className="bg-[#F4F8F7] py-[14px] px-[28px] max-w-[462px] w-full rounded-full"
+                                className="  max-w-[462px] w-full rounded-full"
                             />
                             {errors.email && (
                                 <p className="text-red-600 text-sm mt-1 px-2">
@@ -113,7 +112,7 @@ const SignUpPage = () => {
                         <CustomButton
                             type="submit"
                             buttonText="Sign up"
-                            buttonClass="mt-[40px] !max-w-[462px] !w-full"
+                            buttonClass="mt-[40px] !max-w-[462px] !w-full text-white"
                         />
 
                         <p className="text-[#41576D] pt-[20px] text-center">

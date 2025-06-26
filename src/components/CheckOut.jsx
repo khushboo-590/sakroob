@@ -95,7 +95,7 @@ const CheckoutPage = () => {
                         />
                     </div>
                 </div>
-                     <div className="max-w-[752px] w-full mx-auto  font-montserrat text-[#0D2C47] mb-7 md:mb-[70] lg:mb-[108px]">
+                     <div className="max-w-[752px] w-full mx-auto   text-[#0D2C47] mb-7 md:mb-[70] lg:mb-[108px]">
                                 <h2 className="text-2xl font-bold leading-[120%] mb-1">Payment</h2>
                                 <p className="text-base leading-[150%] opacity-80 mb-5">
                                     All transactions are secure and encrypted.
@@ -135,9 +135,9 @@ const CheckoutPage = () => {
                                         </div>
                                         <div className="w-full    flex gap-4 mb-[14px] ">
                                             <label className="text-lg w-1/2 leading-[150%] text-[#112D49]  font-medium ">
-                                                Credit number                    </label>
+                                                Credit Number                    </label>
                                             <label className="text-lg w-1/2 leading-[150%] text-[#112D49] block  font-medium ">
-                                                name on card
+                                                Name on Card
                                             </label>
                                         </div>
                                         <div className="flex flex-col sm:flex-row gap-4 pr-4 mb-7">

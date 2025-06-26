@@ -19,7 +19,7 @@ const DetailPage = () => {
             <div className="max-w-[1140px] mx-auto">
                 <div className="grid xl:grid-cols-2 gap-10 p-6  ">
                     <div>
-                        <div className="bg-[#EEF4FB] p-6 lg:p-[42px] lg:w-[517px] h-[240px] md:h-[470px] lg:h-[563px] mb-4"
+                        <div className="bg-[#EEF4FB] p-6 lg:p-[42px] lg:w-[517px] h-[240px] md:h-[470px] lg:h-[563px] mb-4 pointer-events-none"
                             style={{ backgroundColor: selectedColor }}
 >
                             <img src={router} alt="Router" className=" w-[180px] mx-auto md:w-[320px] lg:w-[432px] rounded-xl mb-4 justify-center" />
@@ -64,14 +64,14 @@ const DetailPage = () => {
                             <div className="flex items-center overflow-hidden rounded-lg">
                                 <button
                                     onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
-                                    className="w-[48px] h-[44px] bg-[#80A9F7] text-white text-xl font-bold">−
+                                    className="w-[48px] h-[44px] bg-[#80A9F7] text-white text-xl font-bold cursor-pointer">−
                                 </button>
                                 <div className="w-[85px] h-[44px] bg-white flex items-center justify-center text-[#0D2C47] font-medium">
                                     {String(quantity).padStart(2, "0")}
                                 </div>
                                 <button
                                     onClick={() => setQuantity(prev => prev + 1)}
-                                    className="w-[48px] h-[44px] bg-[#0D2C47] text-white text-xl font-bold">+
+                                    className="w-[48px] h-[44px] bg-[#0D2C47] text-white text-xl font-bold cursor-pointer">+
                                 </button>
                             </div>
                         </div>

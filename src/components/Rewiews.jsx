@@ -13,6 +13,14 @@ const ratings = [
 const Reviews = () => {
     const tabs = ["Reviews", "Specifications", "FAQs"];
     const [activeTab, setActiveTab] = useState("Reviews");
+    const [reviewMessage, setReviewMessage] = useState("");
+    const handleReviewClick = () => {
+        setReviewMessage(" Thank you for your review!");
+        setTimeout(() => {
+            setReviewMessage(""); 
+        }, 3000);
+    };
+      
 
     return (
         <div className="max-w-[1140px] mx-auto mb-[132px]">
@@ -114,7 +122,13 @@ const Reviews = () => {
                                 <CustomButton
                                     buttonText={"Write a Customer Review"}
                                     buttonClass={"bg-[#0D2C47] text-white hover:text-[#0D2C47] hover:bg-white hover border-[#0D2C47] border"}
+                                    onClick={handleReviewClick}
                                 />
+
+                                {reviewMessage && (
+                                    <p className="mt-2 text-red-600 text-sm">{reviewMessage}</p>
+                                )}
+
                             </div>
                         </div>
                     </div>

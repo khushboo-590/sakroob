@@ -27,7 +27,7 @@ const PopularProduct = () => {
                                         alt="wishlist"
                                         className="absolute top-3 right-3 cursor-pointer z-20 pointer-events-none"
                                     />
-                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[20%] z-10">
+                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[20%] z-10  pointer-events-none">
                                         <img
                                             src={product.image}
                                             alt={product.name}

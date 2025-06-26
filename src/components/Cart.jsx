@@ -107,7 +107,7 @@ const Cart = () => {
                                                 <div className="border border-gray-300 rounded-[7px] flex overflow-hidden">
                                                     <button
                                                         onClick={() => decreaseQty(item.id)}
-                                                        className="w-[48px] h-[44px] bg-blue-300 flex items-center justify-center text-white"
+                                                        className="w-[48px] h-[44px] bg-blue-300 flex items-center justify-center text-white cursor-pointer"
                                                     >
                                                         −
                                                     </button>
@@ -116,7 +116,7 @@ const Cart = () => {
                                                     </span>
                                                     <button
                                                         onClick={() => increaseQty(item.id)}
-                                                        className="w-[48px] h-[44px] bg-blue-900 flex items-center justify-center text-white"
+                                                        className="w-[48px] h-[44px] bg-blue-900 flex items-center justify-center text-white cursor-pointer"
                                                     >
                                                         +
                                                     </button>

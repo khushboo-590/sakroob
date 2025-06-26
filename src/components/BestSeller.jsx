@@ -12,6 +12,8 @@ import Heading from "./common/Heading";
 
 const BestSeller = () => {
     const navigate = useNavigate();
+    const [shopClickCounts, setShopClickCounts] = useState({});
+
     const imgPosition = ["bottom-[21px]", "bottom-3", "bottom-[5px]", "bottom-[21px]", "-top-[80px]", "bottom-[5px]"];
 
     const [wishlist, setWishlist] = useState({});
@@ -39,6 +41,13 @@ const BestSeller = () => {
 
         setWishlist(updated);
     };
+    const handleShopClick = (index) => {
+        setShopClickCounts((prev) => ({
+            ...prev,
+            [index]: (prev[index] || 0) + 1,
+        }));
+    };
+
 
     return (
         <div className="max-w-[1272px] mx-auto px-4 mb-10 md:mb-[100px] lg:mb-[132px] text-center overflow-visible relative justify-center">
@@ -70,16 +79,16 @@ const BestSeller = () => {
                     0: { slidesPerView: 1 },
                     640: { slidesPerView: 1 },
                     768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 2,  spaceBetween:10},
+                    1024: { slidesPerView: 2, spaceBetween: 10 },
                     1200: { slidesPerView: 3 },
                 }}
             >
                 {BESTSELLER_DATA.map((item, i) => (
                     <SwiperSlide key={i} className="!flex !justify-center !items-stretch !overflow-visible mx-auto relative z-0 px-2 font-montserrat">
-                        <div className="flex flex-col max-w-[364px] min-h-[536px] mt-[79px] !rounded-[8px] mb-6 p-4 shadow-md bg-white relative z-10 cursor-pointer">
-                            <div className="h-[242px] w-[332px] bg-[#E5E4E2] relative flex justify-center items-center mx-auto rounded-[4px]">
-
-                                {/* Heart Icon */}
+                        <div
+                            className={`flex flex-col max-w-[364px] min-h-[536px] mt-[79px] rounded-[8px] mb-6 p-4 shadow-md bg-white relative z-10 cursor-pointer  `}
+                        >
+                            <div className="h-[242px] w-[332px] bg-[#E5E4E2] relative flex justify-center items-center mx-auto rounded-[4px] ">
                                 <img
                                     src={wishlist[i] ? heartFilled : heart}
                                     alt="wishlist"
@@ -111,9 +120,25 @@ const BestSeller = () => {
                                             onClick={() => {
                                                 navigate('/detailspage');
                                                 window.scrollTo(0, 0);
-                                            }}                                     />
-                                        {item.shop && <item.shop />}
+                                            }}
+                                        />
+                                        {item.shop && (
+                                            <div
+                                                onClick={() => handleShopClick(i)}
+                                                className="relative cursor-pointer flex flex-col items-center"
+                                            >
+                                                <item.shop />
+                                                {shopClickCounts[i] > 0 && (
+                                                    <span className="absolute -top-2 right-2 text-[10px] bg-red-500 text-white px-1.5 rounded-full">
+                                                        {shopClickCounts[i]}
+                                                    </span>
+                                                )}
+                                            </div>
+                                        )}
+
+
                                     </div>
+
                                 </div>
                             </div>
                         </div>

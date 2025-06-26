@@ -5,6 +5,7 @@ import deleteIcon from '../assets/images/svg/delete.svg'
 import TopHeader from "./TopHeader";
 import CustomButton from "./common/CustomButton";
 import { useNavigate } from 'react-router-dom';
+import { MinusSvg, PlusSvg } from "../utils/icon";
 
 
 const Cart = () => {
@@ -109,7 +110,7 @@ const Cart = () => {
                                                         onClick={() => decreaseQty(item.id)}
                                                         className="w-[48px] h-[44px] bg-blue-300 flex items-center justify-center text-white cursor-pointer"
                                                     >
-                                                        −
+                                                        <MinusSvg/>
                                                     </button>
                                                     <span className="w-[85px] h-[44px] bg-white flex items-center justify-center text-sm font-medium">
                                                         {item.quantity}
@@ -118,7 +119,7 @@ const Cart = () => {
                                                         onClick={() => increaseQty(item.id)}
                                                         className="w-[48px] h-[44px] bg-blue-900 flex items-center justify-center text-white cursor-pointer"
                                                     >
-                                                        +
+                                                        <PlusSvg/>
                                                     </button>
                                                 </div>
                                                 <button

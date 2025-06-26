@@ -7,6 +7,7 @@ import PopularProduct from "./PopularProduct";
 import CustomButton from "./common/CustomButton";
 import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
+import { MinusSvg, PlusSvg } from "../utils/icon";
 
 const DetailPage = () => {
     const colors = ["#000000", "#0D2C47", "#1DF085", "#80A9F7"];
@@ -64,14 +65,14 @@ const DetailPage = () => {
                             <div className="flex items-center overflow-hidden rounded-lg">
                                 <button
                                     onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
-                                    className="w-[48px] h-[44px] bg-[#80A9F7] text-white text-xl font-bold cursor-pointer">−
+                                    className="w-[48px] h-[44px] bg-[#80A9F7] text-white text-xl font-bold cursor-pointer"><MinusSvg/>
                                 </button>
                                 <div className="w-[85px] h-[44px] bg-white flex items-center justify-center text-[#0D2C47] font-medium">
                                     {String(quantity).padStart(2, "0")}
                                 </div>
                                 <button
                                     onClick={() => setQuantity(prev => prev + 1)}
-                                    className="w-[48px] h-[44px] bg-[#0D2C47] text-white text-xl font-bold cursor-pointer">+
+                                    className="w-[48px] h-[44px] bg-[#0D2C47] text-white text-xl font-bold cursor-pointer"><PlusSvg/>
                                 </button>
                             </div>
                         </div>

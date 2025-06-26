@@ -28,10 +28,7 @@ import categorieImg6 from '../assets/images/png/pi-kits.png'
 import popularproduct1 from '../assets/images/png/popularproduct1.png'
 import popularproduct2 from '../assets/images/png/popularproduct2.png'
 import popularproduct3 from "../assets/images/png/popularproduct3.png"
-import { game,  Express, Return, Support, Premium, Gift } from "../utils/icon";
-
-
-
+import { Express, Return, Support, Premium, Gift } from "../utils/icon";
 
 export const HEADER_DATA = [
     { name: "Game", icon: gameIcon },
@@ -40,46 +37,13 @@ export const HEADER_DATA = [
     { name: "Televisions", icon: televisions },
     { name: "Smartwatch", icon: smartwatch },
     { name: "Monitors", icon: monitors },
-    { name: "Game", icon: game },
+    { name: "Game", icon: gameIcon },
     { name: "Storage (SSD)", icon: storage },
     { name: "Graphic Card", icon: graphic },
     { name: "Televisions", icon: televisions },
     { name: "Smartwatch", icon: smartwatch },
     { name: "Monitors", icon: monitors },
 ]
-
-export const POPULAR_DATA = [
-    {
-        title: "Sensors & Modules",
-        image: sensor,
-        bg: "bg-[#D5E8FF]",
-    },
-    {
-        title: "Custom PC Parts",
-        image: pcparts,
-        bg: "bg-[#EEF4FB]",
-    },
-    {
-        title: "DIY Tools",
-        image: tools ,
-        bg: "bg-[#E5E4E2]",
-    },
-    {
-        title: "Cables & Connectors",
-        image: cables,
-        bg: "bg-[#EEF4FB]",
-    },
-    {
-        title: "Gaming Peripherals",
-        image: controller,
-        bg: "bg-[#E5E4E2]",
-    },
-    {
-        image: kits,
-        bg: "bg-[#D5E8FF]",
-    },
-];
-
 
 export const PRODUCTS_DATA = [
     {
@@ -106,9 +70,7 @@ export const PRODUCTS_DATA = [
         image: popularproduct1,
         rating: 5,
     },
-  ];
-
-
+];
 
 export const HERO_SLIDES = [
     {
@@ -264,10 +226,8 @@ export const BLOG_PAGE_DATA = [
         active: false
 
     },
-  
+
 ];
-
-
 
 export const FEATURES_DATA = [
     {

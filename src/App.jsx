@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './Pages/Home';
 import Cart from './components/Cart';
@@ -7,38 +8,52 @@ import TopHeader from './components/TopHeader';
 import DetailsPage from './components/DetailsPage';
 import CheckOut from './components/CheckOut';
 import SignUpPage from './components/SignUpPage';
-import LoginPage from './components/LogInPage';
+import LoginUp from './Pages/LoginUp';
 import BackToTop from './components/common/BackTotop';
 
 function App() {
-  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const location = useLocation();
   const hideFooterRoutes = ['/detailspage'];
+
+  useEffect(() => {
+    const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+    setIsLoggedIn(loggedIn);
+  }, []);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("loginTime", new Date().toLocaleTimeString());
+  };
 
   return (
     <>
       {isLoggedIn && <TopHeader />}
 
       <Routes>
-        {!isLoggedIn ? (
+        <Route path="/" element={<Navigate to={isLoggedIn ? "/home" : "/login"} />} />
+        <Route
+          path="/login/*"
+          element={isLoggedIn ? <Navigate to="/home" /> : <LoginUp onLogin={handleLogin} />}
+        />
+        <Route
+          path="/signup"
+          element={isLoggedIn ? <Navigate to="/home" /> : <SignUpPage />}
+        />
+        {isLoggedIn && (
           <>
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/signup" element={<SignUpPage />} />
-            <Route path="*" element={<Navigate to="/login" />} />
-          </>
-        ) : (
-          <>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/detailspage" element={<DetailsPage />} />
             <Route path="/checkout" element={<CheckOut />} />
-            <Route path="*" element={<Navigate to="/" />} />
           </>
         )}
+        <Route path="*" element={<Navigate to={isLoggedIn ? "/home" : "/login"} />} />
       </Routes>
 
       {isLoggedIn && !hideFooterRoutes.includes(location.pathname) && <Footer />}
-      <BackToTop/>
+      <BackToTop />
     </>
   );
 }

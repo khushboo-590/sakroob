@@ -1,5 +1,5 @@
-import React,{useState} from "react";
-import visa from "../assets/images/png/visa.png"; 
+import React, { useState } from "react";
+import visa from "../assets/images/png/visa.png";
 import mastercard from "../assets/images/png/master.png";
 import amex from "../assets/images/png/express.png";
 import paypal from "../assets/images/png/paypal.png";
@@ -17,10 +17,17 @@ const Payment = () => {
             <div className="bg-[#FBFBFB] py-[20px] px-7 rounded-lg  border-[#112D4914] border">
                 <div className="flex justify-between items-center flex-wrap gap-4">
                     <div className="flex items-center gap-2 bg-white mb-[19px]">
-                        <input type="radio" name="method"
-                            checked={selectedMethod === "paypal"}
-                            onChange={() => setSelectedMethod("paypal")}/>
-                        <img src={paypal} alt="PayPal" className="h-6" />
+                        <label className="flex items-center gap-2">
+                            <input
+                                type="radio"
+                                name="method"
+                                checked={selectedMethod === "paypal"}
+                                onChange={() => setSelectedMethod("paypal")}
+                                className="scale-125 accent-blue-600"
+                            />
+                            <img src={paypal} alt="PayPal" className="h-6" />
+                        </label>
+
                     </div>
                     <div className="flex items-center gap-2">
                         <img src={visa} alt="Visa" className="h-6" />
@@ -29,36 +36,36 @@ const Payment = () => {
                     </div>
                 </div>
                 <div className="bg-[#FBFBFB] ">
-                <div className="flex items-center gap-2 mb-[26px]">
+                    <div className="flex items-center gap-2 mb-[26px]">
 
-                <input
-                    type="radio"
-                    name="method"
+                        <input
+                            type="radio"
+                            name="method"
                             checked={selectedMethod === "credit"}
-                            onChange={() => setSelectedMethod("credit")}                    className="accent-blue-600"
-                />
+                            onChange={() => setSelectedMethod("credit")} className="accent-blue-600 scale-125"
+                        />
                         <label className="text-base leading-[150%] opacity-80">  Credit Card/ Debit Card</label>
-            </div>
+                    </div>
                     <div className="w-full    flex gap-4 mb-[14px] ">
                         <label className="text-lg w-1/2 leading-[150%] text-[#112D49]  font-medium ">
-                        Credit number                    </label>
+                            Credit number                    </label>
                         <label className="text-lg w-1/2 leading-[150%] text-[#112D49] block  font-medium ">
-                       name on card
-                    </label>
+                            name on card
+                        </label>
                     </div>
                     <div className="flex flex-col sm:flex-row gap-4 pr-4 mb-7">
                         <input
                             type="text"
                             placeholder=""
-                        className="flex-1 bg-[#F4F8F7] rounded-lg h-[52px] text-base text-[#112D49] outline-none"
+                            className="flex-1 bg-[#F4F8F7] rounded-lg h-[52px] text-base text-[#112D49] outline-none"
                         />
                         <input
                             type="text"
                             placeholder=""
-                        className="flex-1 bg-[#F4F8F7] rounded-lg h-[52px] text-base text-[#112D49] outline-none"
+                            className="flex-1 bg-[#F4F8F7] rounded-lg h-[52px] text-base text-[#112D49] outline-none"
                         />
                     </div>
-                   
+
                     <div className="w-full flex gap-4 mb-[14px]">
                         <label className="w-1/2 text-lg leading-[150%] text-[#112D49] font-medium text-left">
                             Expire Date
@@ -90,16 +97,49 @@ const Payment = () => {
 
                 </div>
                 <div className="mt-4 flex items-center gap-2">
-                    <input type="radio" name="method"
+                    <input
+                        type="radio"
+                        name="method"
                         checked={selectedMethod === "bank"}
-                        onChange={() => setSelectedMethod("bank")}/>
+                        onChange={() => setSelectedMethod("bank")}
+                        className="scale-125 accent-blue-600"
+                    />
                     <span className="text-base leading-[150%] font-medium opacity-80">
                         Bank Transfer
                     </span>
                 </div>
-                
+
+                {selectedMethod === "bank" && (
+                    <div className="mt-4 p-4    space-y-3">
+                        <div>
+                            <label className="block text-lg leading-[150%] text-[#112D49] font-medium ">Bank Name</label>
+                            <input
+                                type="text"
+                                placeholder="Enter Bank Name"
+                                className="w-full px-3 py-2 border rounded-md  text-base leading-[150%] opacity-80 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            />
+                        </div>
+                        <div>
+                            <label className="block text-lg leading-[150%] text-[#112D49] font-medium mb-1 ">Account Number</label>
+                            <input
+                                type="text"
+                                placeholder="Enter Account Number"
+                                className="w-full px-3 py-2 border rounded-md text-base leading-[150%] opacity-80 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            />
+                        </div>
+                        <div>
+                            <label className="block text-lg leading-[150%] text-[#112D49]  font-medium  mb-1">IFSC Code</label>
+                            <input
+                                type="text"
+                                placeholder="Enter IFSC Code"
+                                className="w-full px-3 py-2 border rounded-md focus:outline-none text-base leading-[150%] opacity-80 focus:ring-2 focus:ring-blue-400"
+                            />
+                        </div>
+                    </div>
+                )}
+
             </div>
-        
+
         </div>
 
     );

@@ -20,7 +20,7 @@ const Hero = () => {
                 {HERO_SLIDES.map((item, index) => (
                     <div
                         key={index}
-                        className="rounded-[8px] bg-center  bg-cover bg-no-repeat min-h-[643px] w-full flex flex-col justify-center items-center"
+                        className="rounded-[8px] bg-center  bg-cover bg-no-repeat min-h-[443px] sm:min-h-[643px] w-full flex flex-col justify-center items-center"
                         style={{ backgroundImage: `url(${item.bgImg })` }}>
                         <HeadingContent
                             heading={item.heading}

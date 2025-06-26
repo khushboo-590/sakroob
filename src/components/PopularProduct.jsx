@@ -45,7 +45,7 @@ const PopularProduct = () => {
                                         <div className="flex justify-center items-center gap-4">
                                             <CustomButton
                                                 buttonClass={
-                                                    "w-full rounded-full border border-[#112D49] bg-white  text-base font-medium leading-[100%] mt-2 flex items-center justify-center gap-2 transition"
+                                                    "w-full rounded-full border border-[#112D49] bg-white  hover:text-white hover:bg-[#112D49] text-base font-medium leading-[100%] mt-2 flex items-center justify-center gap-2 transition"
                                                 }
                                                 buttonText={"Shop Now"}
                                             />

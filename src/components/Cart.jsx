@@ -147,8 +147,12 @@ const Cart = () => {
                             <CustomButton
                                 buttonClass={"bg-[#0D2C47] text-white w-full mt-6 mb-9"}
                                 buttonText={"Check Out"}
-                                onClick={() => navigate("/checkout")}
+                                onClick={() => {
+                                    navigate("/checkout");
+                                    window.scrollTo(0, 0); 
+                                }}
                             />
+
                         </div>
                     </div>
                 </div>

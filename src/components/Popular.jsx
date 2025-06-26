@@ -15,7 +15,7 @@ const Popular = () => {
                         <div
                             key={index}
                             className={`rounded-[8px] pl-4 pt-4 ${item.bg} shadow flex flex-col justify-center items-center text-center w-full
-        ${index === 0 ? "lg:w-[680px] py-4 md:py-0" : "lg:w-[328px]"} `}>
+        ${index === 0 ? "lg:w-[680px] py-4 2xl:py-0" : "lg:w-[328px]"} `}>
                             <div className={`flex ${index === 0 ? "md:flex-row flex-col  items-center gap-8" : "flex-col gap-4 "}`}>
                                 <h3
                                     className={`${index === 0

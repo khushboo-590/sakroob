@@ -6,30 +6,53 @@ import "swiper/css/navigation";
 import { BESTSELLER_DATA } from "../utils/helper";
 import { useNavigate } from 'react-router-dom';
 import heart from '../assets/images/svg/heart.svg';
-import heartFilled from '../assets/images/svg/heartcolor.svg'; 
+import heartFilled from '../assets/images/svg/heartcolor.svg';
 import CustomButton from "./common/CustomButton";
 import Heading from "./common/Heading";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const BestSeller = () => {
     const navigate = useNavigate();
     const imgPosition = ["bottom-[21px]", "bottom-3", "bottom-[5px]", "bottom-[21px]", "-top-[80px]", "bottom-[5px]"];
+
     const [wishlist, setWishlist] = useState({});
+    const [popupMessage, setPopupMessage] = useState("");
+    const [showPopup, setShowPopup] = useState(false);
+
+    const showPopupMessage = (message) => {
+        setPopupMessage(message);
+        setShowPopup(true);
+        setTimeout(() => {
+            setShowPopup(false);
+        }, 2000);
+    };
 
     const handleWishlistClick = (index, title) => {
-        const updated = { ...wishlist, [index]: !wishlist[index] };
-        setWishlist(updated);
+        const updated = { ...wishlist };
+
         if (updated[index]) {
-            toast.success(`${title} added to wishlist!`);
+            delete updated[index];
+            showPopupMessage(`${title} removed from wishlist!`);
         } else {
-            toast.info(`${title} removed from wishlist.`);
+            updated[index] = true;
+            showPopupMessage(`${title} added to wishlist!`);
         }
+
+        setWishlist(updated);
     };
 
     return (
         <div className="max-w-[1272px] mx-auto px-4 mb-10 md:mb-[180px] lg:mb-[132px] text-center overflow-visible relative justify-center">
+
+            {/* ✅ Custom Popup Message */}
+            {showPopup && (
+                <div className="fixed top-5 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 rounded-md shadow-lg z-50 transition-opacity duration-300">
+                    {popupMessage}
+                </div>
+            )}
+
             <Heading headText={"Bestsellers"} headClass={"mb-4"} />
+
+            {/* Navigation Buttons */}
             <button className="custom-prev bg-white shadow-lg cursor-pointer rounded-full w-10 h-10 flex items-center justify-center border border-black absolute top-1/2 left-0 xl:-left-10 transform -translate-y-1/2 z-10 hover:bg-black hover:text-white transition-all duration-300 mx-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
@@ -42,6 +65,7 @@ const BestSeller = () => {
                 </svg>
             </button>
 
+            {/* Swiper Carousel */}
             <Swiper
                 modules={[Navigation]}
                 navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
@@ -60,12 +84,15 @@ const BestSeller = () => {
                     <SwiperSlide key={i} className="!flex !justify-center !items-stretch !overflow-visible mx-auto relative z-0 px-2 font-montserrat">
                         <div className="flex flex-col max-w-[364px] min-h-[536px] mt-[79px] !rounded-[8px] mb-6 p-4 shadow-md bg-white relative z-10">
                             <div className="h-[242px] w-[332px] bg-[#E5E4E2] relative flex justify-center items-center mx-auto rounded-[4px]">
+
+                                {/* Heart Icon */}
                                 <img
                                     src={wishlist[i] ? heartFilled : heart}
                                     alt="wishlist"
                                     className="absolute top-3 right-3 cursor-pointer z-20"
                                     onClick={() => handleWishlistClick(i, item.title)}
                                 />
+
                                 <img
                                     src={item.img}
                                     alt={item.title}
@@ -97,7 +124,6 @@ const BestSeller = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <ToastContainer position="top-right" autoClose={2000} />
         </div>
     );
 };

@@ -4,15 +4,27 @@ import InputField from './common/InputField';
 import CustomButton from './common/CustomButton';
 import Payment from './Payment';
 import CartSummary from './CartSummary';
+import { useNavigate } from 'react-router-dom';
+
 
 const CheckoutPage = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="max-w-[1140px] mx-auto mt-[132px] px-4 grid grid-cols-1 lg:grid-cols-3 gap-6 font-montserrat">
             <div className="lg:col-span-2">
                 <div className="mb-[35px]">
                     <div className="flex justify-between items-center mb-5">
                         <h4 className="text-2xl font-bold text-[#112D49]">Contact</h4>
-                        <CustomButton buttonClass="text-white" buttonText="Log in" />
+                        <CustomButton
+                            buttonClass="text-white"
+                            buttonText="Log in"
+                            onClick={() => {
+                                navigate('/');
+                                window.scrollTo(0, 0);
+                            }}
+                        />
+
                     </div>
                     <InputField label="Email or phone number" value="tim.jennings@example.com" />
                 </div>
